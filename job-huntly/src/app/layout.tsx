@@ -1,8 +1,14 @@
 import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from 'next';
+import { Epilogue } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] })
+const epilogue = Epilogue({subsets:['latin']});
+
+const clashFont = localFont({
+  src:'./fonts/ClashDisplay-Regular.otf',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clashFont.className}>{children}</body>
     </html>
   )
 }
