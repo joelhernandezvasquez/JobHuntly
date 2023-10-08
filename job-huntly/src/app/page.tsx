@@ -1,10 +1,11 @@
-import Image from 'next/image'
-
+import MobileHeader from "@/components/MobileNavHeader/MobileHeader";
 
 export default function Home() {
   return (
     <main>
-     <h1>Hello world</h1>
+      <header>
+        <MobileHeader/>
+      </header>
     </main>
   )
 }
