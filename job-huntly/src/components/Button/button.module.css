@@ -1,0 +1,27 @@
+
+.button{
+    border:none;
+    cursor: pointer;
+    font-family: var(--epilogue_font);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.primary{
+    background-color: var(--primary_brand_clr);
+    color:var(--neutral_0_clr);
+}
+
+.small{
+ padding: 10px 21px;
+ font-size: .875rem;
+}
+.medium{
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+.large{
+    padding: 14px 27px;
+    font-size: 1.125rem;
+}

@@ -14,12 +14,14 @@
 
   /* Neutral Colors  */
   --neutral_100_clr:#25324B;
-  --neutral_80_clr:#515B6F;
-  --neutral_60_clr:#7C8493;
+  --neutral_80_clr:#515b6f;
+  --neutral_60_clr:#7c8493;
   --neutral_40_clr:#A8ADB7;
   --neutral_20_clr:#D6DDEB;
   --neutral_10_clr:#F8F8FD;
   --neutral_0_clr:#FFFFFF;
+
+  --epilogue_font:'Epilogue', sans-serif;
 }
 
 /*
@@ -81,5 +83,9 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+ul{
+  list-style-type: none;
 }
 
