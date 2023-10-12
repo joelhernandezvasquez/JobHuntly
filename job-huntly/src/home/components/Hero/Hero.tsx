@@ -23,7 +23,6 @@ const Hero = () => {
             </p>
 
             <JobSearch/>
-
           </div>
       </MaxWidthWrapper>
     </section>
