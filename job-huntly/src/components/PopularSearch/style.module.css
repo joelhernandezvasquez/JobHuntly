@@ -1,0 +1,24 @@
+
+ .popularSearch_wrapper{
+    margin-top:1rem;
+    padding:0 1rem;
+    font-family: var(--epilogue_font);
+    color:rgba(32, 36, 48,0.7);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.popularSearch_list{
+    display:flex;
+    flex-wrap: wrap;
+    gap:.5rem;
+    margin-top: 4px;
+}
+
+.popularSearch_list_item a{
+    text-decoration: none;
+    color:inherit;
+}
+.popularSearch_list_item a:hover{
+ text-decoration: underline;
+}

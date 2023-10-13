@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import useToogle from '@/hooks/useToogle';
 import Button from '../Button/Button';
-import { dropdownOptions } from '@/helper/constants/jobLocationsData'; // TODO: remove type and array later only temporary
+import { dropdownOptions } from '@/helper/data/jobLocationsData'; // TODO: remove type and array later only temporary
 import style from './style.module.css';
 
 const JobSearch = () => {
