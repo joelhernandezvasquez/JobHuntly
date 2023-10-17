@@ -38,14 +38,14 @@ const JobSearch = () => {
         </svg>
 
         <div className={style.job_search_dropdown_wrapper_header}>
-          <div role='button' className={style.job_search_dropdown_header} onClick={handleToggle}>
-            <span>{jobLocation}</span>
+          <div id='toggle-btn' className={style.job_search_dropdown_header} onClick={handleToggle}>
+            <span id="job-location">{jobLocation}</span>
             <svg className={`${isToggle && style.down_arrow_icon}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M12.6666 5.6665L7.99992 10.3332L3.33325 5.6665" stroke="#7C8493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
 
-          <ul className={`${style.job_search_dropdown_options} ${isToggle && style.show_dropdown}`}>
+          <ul role='list' id="dropdown-menu" className={`${style.job_search_dropdown_options} ${isToggle && style.show_dropdown}`}>
             {dropdownOptions.map(({ id, option }) => {
               return (option !== jobLocation && <li className={style.option_item} key={id} onClick={() => handleJobLocationSelection(option)}>{option}</li>)
             })}

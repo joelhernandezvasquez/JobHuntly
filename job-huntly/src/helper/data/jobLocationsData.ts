@@ -5,19 +5,19 @@ type LocationOptions = {
 
 export const dropdownOptions:LocationOptions [] = [
     {
-      id:crypto.randomUUID(),
+      id:'001',
       option:'Florence, Italy'
     },
     {
-      id:crypto.randomUUID(),
+      id:'002',
       option:'Barcelona, Spain'
     },
     {
-      id:crypto.randomUUID(),
+      id:'003',
       option:'New York, NY'
     },
     {
-      id:crypto.randomUUID(),
+      id:'004',
       option:'Bronx, NY'
     }
   ]

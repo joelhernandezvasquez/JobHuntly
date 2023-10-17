@@ -2,37 +2,37 @@ import { PopularSearch } from "../interfaces/popularSearch";
 
 export const popularSearch: PopularSearch [] = [
 {
-  id:crypto.randomUUID(),
+  id:'005',
   text:'Front End',
   keyword:'frontend'
 },
 {
-  id:crypto.randomUUID(),
+  id:'006',
   text:'UI/UX Designer',
   keyword:'ui'
 },
 {
-  id:crypto.randomUUID(),
+  id:'007',
   text:'Back End',
   keyword:'backend'
 },
 {
-  id:crypto.randomUUID(),
+  id:'008',
   text:'UX Analist',
   keyword:'ux analist'
 },
 {
-  id:crypto.randomUUID(),
+  id:'009',
   text:'Project Managment',
   keyword:'project manager'
 },
 {
-  id:crypto.randomUUID(),
+  id:'010',
   text:'Designer',
   keyword:'designer'
 },
 {
-  id:crypto.randomUUID(),
+  id:'011',
   text:'Mobile Developer',
   keyword:'mobile development'
 },
