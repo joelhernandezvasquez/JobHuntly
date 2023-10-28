@@ -1,7 +1,7 @@
 import { SubMenuContentKey } from "./SubMenuContent";
 
 export interface MobileMenuLinks {
-    item:SubMenuContentKey,
+    item:SubMenuContentKey | string,
     hasSubMenu:boolean
     url?:string
 }
