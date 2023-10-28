@@ -1,5 +1,5 @@
 
-export type SubMenuContentKey = "product" | "solutions" | "plans";
+export type SubMenuContentKey = "product" | "solutions" | "plans" | "pricing" | "contact";
 
 export type Items = {
     name:string,
