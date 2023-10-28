@@ -5,11 +5,18 @@
     font-family: var(--epilogue_font);
     font-style: normal;
     font-weight: 700;
+    border-radius: 5px;
 }
 
 .primary{
     background-color: var(--primary_brand_clr);
     color:var(--neutral_0_clr);
+}
+
+.secondary{
+    background-color: none;
+    color:var(--primary_brand_clr);
+    border: 1px solid var(--secondary_brand_clr);
 }
 
 .small{
