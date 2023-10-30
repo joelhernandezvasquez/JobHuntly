@@ -27,10 +27,10 @@
     gap:.7rem;
 }
 .team_logo_icon path{
-    fill:var(--neural_90_clr);
+    fill:var(--neutral_90_clr);
 }
 .team_logo_menu_item_headline{
-    color:var(--neural_90_clr);
+    color:var(--neutral_90_clr);
     font-weight: 700;
     font-size: 1.5rem;
 }
