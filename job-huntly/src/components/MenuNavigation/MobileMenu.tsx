@@ -8,7 +8,7 @@ const MobileMenu = () => {
         <ul className={style.mobile_menu} role='list'>
             {mobileMenuLinks.map((mobileLink) => {
                 return (
-                    <MobileMenuItem key={mobileLink.item} mobileLink = {mobileLink}/>
+                    <MobileMenuItem  key={mobileLink.item} mobileLink = {mobileLink}/>
                 )
             })}
         </ul>

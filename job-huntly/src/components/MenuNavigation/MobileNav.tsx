@@ -11,7 +11,7 @@ interface Prop{
 
 const MobileNav = ({closeMenu}:Prop) => {
   return (
-    <nav className={style.mobile_nav_wrapper}>
+    <nav data-testid="mobile-nav" className={style.mobile_nav_wrapper}>
       <MaxWidthWrapper>
           <div className={style.mobile_nav_header}>
             <CompanyLogo/>

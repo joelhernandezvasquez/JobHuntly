@@ -7,22 +7,22 @@ import bubleLogo from '../../assets/Union.jpg';
 
 export const teamLogos:TeamLogo [] = [
     {
-        id:crypto.randomUUID(),
+        id:'100',
         companyName:'Wave',
         logo:waveLogo
     },
     {
-        id:crypto.randomUUID(),
+        id:'200',
         companyName:'Dsign.',
         logo:DsignLogo
     },
     {
-        id:crypto.randomUUID(),
+        id:'300',
         companyName:'Jobox',
         logo:joboxLogo
     },
     {
-        id:crypto.randomUUID(),
+        id:'400',
         companyName:'Twins',
         logo:twinsLogo
     }

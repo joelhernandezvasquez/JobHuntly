@@ -11,7 +11,7 @@ const SubMenu = ({item}:Props) => {
   const {isToggle,handleToggle} = useToogle();
   
   return (
-   <li role='button' onClick={handleToggle}>
+   <li  role='listitem' onClick={handleToggle}>
       <div className={style.mobile_menu_item}>
         {item}
         <svg className={`${style.arrow_icon} ${isToggle && style.rotate}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">

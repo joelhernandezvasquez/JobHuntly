@@ -10,7 +10,7 @@ const SubMenuGroup = ({item}:Props) => {
     const {subMenuContent} = useSubMenuContent();
   
     return (
-    <div className={style.submenu_wrapper}>
+    <div data-testid="submenu-content" className={style.submenu_wrapper}>
     { subMenuContent[item].headlineTitle &&
        <h2 className={style.submenu_wrapper_headline}>{subMenuContent[item].headlineTitle}</h2>}
     <ul>

@@ -13,7 +13,7 @@ const MobileMenuItem = ({mobileLink}:Props) => {
    <>
     { mobileLink.hasSubMenu 
       ? <SubMenu item={mobileLink.item as SubMenuContentKey}/>
-      : <li className={style.mobile_menu_item}> <Link href={'/'}>  {mobileLink.item} </Link></li>}
+      : <li role='listitem' className={style.mobile_menu_item}> <Link href={'/'}>  {mobileLink.item} </Link></li>}
    </>
    
   )
