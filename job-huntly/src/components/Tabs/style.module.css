@@ -1,0 +1,46 @@
+.tabs_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.tabItem{
+    text-transform: capitalize;
+    color:var(--neutral_80_clr);
+    font-size: 1rem;
+    font-weight: 700;
+    padding:.3rem 0;
+    border-bottom: 3px solid transparent;
+    transition:all ease-in-out 200ms;
+    
+}
+
+.tab_content{
+ display:flex;
+ flex-direction: column;
+ gap:1.2rem;
+ padding:1.5rem;
+ margin-top:1.5rem;
+ background:var(--accent_light_purple_bg);
+ border-radius: 20px;
+}
+
+.tab_header{
+ color:var(--neutral_100_clr);
+}
+.tab_header_content{
+    font-family: var(--epilogue_font);
+    color:var(--neutral_100_clr);
+    font-weight: 500;
+}
+
+.tab_header_illustration{
+    object-fit: cover;
+}
+
+.active_tab{
+   color:var(--primary_brand_clr);
+   font-weight: bold;
+   border-bottom: 3px solid var(--primary_brand_clr);
+}

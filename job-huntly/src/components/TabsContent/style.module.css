@@ -1,0 +1,7 @@
+
+.tabsContent{
+    display:none;
+}
+.tabsContent.isActive{
+    display:block;
+}
