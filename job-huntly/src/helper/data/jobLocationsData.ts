@@ -1,23 +1,43 @@
-type LocationOptions = {
+import { v4 as uuidv4 } from 'uuid';
+
+type ExperienceLevels = 'internship' | 'entryLevel' | 'associate' | 'midSeniorLevel' |'director' | 'executive';
+interface ExperienceLevelOptions {
     id:string,
-    option:string
+    typeExperience:ExperienceLevels,
+    option:string,
+
   }
 
-export const dropdownOptions:LocationOptions [] = [
+export const dropdownOptions:ExperienceLevelOptions [] = [
     {
-      id:'001',
-      option:'Florence, Italy'
+      id:uuidv4(),
+      typeExperience:'internship',
+      option:'Internship'
     },
     {
-      id:'002',
-      option:'Barcelona, Spain'
+      id:uuidv4(),
+      typeExperience:'entryLevel',
+      option:'Entry Level'
     },
     {
-      id:'003',
-      option:'New York, NY'
+      id:uuidv4(),
+      typeExperience:'associate',
+      option:'Associate'
     },
     {
-      id:'004',
-      option:'Bronx, NY'
-    }
+      id:uuidv4(),
+      typeExperience:'midSeniorLevel',
+      option:'Mid-Senior level'
+    },
+    {
+      id:uuidv4(),
+      typeExperience:'director',
+      option:'Director'
+    },
+    {
+      id:uuidv4(),
+      typeExperience:'executive',
+      option:'Executive'
+    },
+    
   ]

@@ -22,3 +22,17 @@ export default function Home() {
     </main>
   )
 }
+import { NextResponse, NextRequest } from "next/server";
+
+interface Segments{
+    params:{
+        search:string
+    }
+}
+export async function GET(request:Request,response:NextResponse,{params}:Segments) {
+    const {searchParams} = new URL(request.url);
+    const experienceLevel = searchParams.get('experienceLevel');
+    
+    return NextResponse.json({keyword:params.search});
+    
+}

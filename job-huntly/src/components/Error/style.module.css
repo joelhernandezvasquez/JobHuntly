@@ -1,0 +1,9 @@
+
+.error_message{
+    font-size: .875rem;
+    padding :.5rem;
+    margin-left: .5rem;
+    color:var(--accent_red_clr);
+    font-weight: bold;
+    font-family: 700;
+}
