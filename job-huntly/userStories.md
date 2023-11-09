@@ -1,8 +1,5 @@
 
-
-[] need to start the refactoring
-  [] create the input component
-  
+[] create a dropdown component
+[] need to style the dropdown
 [] check how can I refactor the job search component to react server component
-[] fix the styling
 [] need to close the dropdown when click outside
