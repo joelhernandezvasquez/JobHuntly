@@ -1,6 +1,5 @@
-'use client';
 
-import { useState } from 'react';
+import { useState} from 'react';
 import useToogle from '@/hooks/useToogle';
 import { DropdownOptions, variant } from './interface';
 import style from './style.module.css';

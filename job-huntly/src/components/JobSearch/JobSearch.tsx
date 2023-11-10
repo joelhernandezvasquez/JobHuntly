@@ -1,42 +1,39 @@
 'use client';
 
-import { useState} from 'react';
+import { FormEvent, useState} from 'react';
 import { useRouter } from 'next/navigation';
-import useToogle from '@/hooks/useToogle';
+import useForm from '@/hooks/useForm';
 import Button from '../Button/Button';
-import { dropdownOptions } from '@/helper/data/jobLocationsData';
-import style from './style.module.css';
 import Input from '../Input/Input';
 import Dropdown from '../Dropdown/Dropdown';
+import { dropdownOptions } from '@/helper/data/jobLocationsData';
+import style from './style.module.css';
 
 const JobSearch = () => {
 
   const [experienceLevel,setExperienceLevel] = useState(dropdownOptions[0].option);
   const [jobSearch,setJobSearch] = useState('');
-  const [isFormSubmitted,setIsFormSubmitted] = useState(false);
-  const { isToggle, handleToggle } = useToogle();
+  const {isFormSubmitted,updateFormStatus} = useForm();
   const router = useRouter();
 
   const handleExperienceLevelSelection = (option: string) => {
     setExperienceLevel(option);
   }
 
-  const onSubmitJobSearch = (event:SubmitEvent) => {
+  const onSubmitJobSearch = (event:FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsFormSubmitted(true);
+    updateFormStatus(true);
 
-    if(jobSearch===''){
+    if(jobSearch === '' ){
       return;
     }
     router.push(`/Jobs/${jobSearch}?experienceLevel=${experienceLevel}`);
   }
 
   return (
-    
     <form className={style.jobSearch_wrapper} onSubmit={(event) => onSubmitJobSearch(event)}>
 
       <div className={style.jobSearch_form_field}>
-    
         <Input
          id = 'search-job'
          name = 'searchJob'
@@ -54,19 +51,15 @@ const JobSearch = () => {
           <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 11.0005C14.5 9.61924 13.3808 8.5 12.0005 8.5C10.6192 8.5 9.5 9.61924 9.5 11.0005C9.5 12.3808 10.6192 13.5 12.0005 13.5C13.3808 13.5 14.5 12.3808 14.5 11.0005Z" stroke="#25324B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9995 21.5C10.801 21.5 4.5 16.3984 4.5 11.0633C4.5 6.88664 7.8571 3.5 11.9995 3.5C16.1419 3.5 19.5 6.88664 19.5 11.0633C19.5 16.3984 13.198 21.5 11.9995 21.5Z" stroke="#25324B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-
-          <Dropdown options = {dropdownOptions}  onSelectOptionCallback={handleExperienceLevelSelection}
-         />
         
+        <Dropdown options = {dropdownOptions}  onSelectOptionCallback={handleExperienceLevelSelection}/>  
       </div>
 
       <Button type='primary' size='large'>
-        Search my job {isToggle}
+        Search my job 
       </Button>
     </form>
   )
-  
 }
 
 export default JobSearch
-
