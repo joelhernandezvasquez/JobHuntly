@@ -95,3 +95,7 @@ a{
   text-decoration: none;
   color:inherit;
 }
+
+.purple_text{
+  color:var(--primary_brand_clr);
+}

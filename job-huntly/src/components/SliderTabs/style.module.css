@@ -1,0 +1,32 @@
+
+.slider_tabs_wrapper{
+    margin:1.5rem 0;
+}
+.slider_tabs_grid{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: 220px;
+    gap:.5rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline:1rem ;
+}
+
+.slider_tabs_item{
+    display:flex;
+    flex-direction: column;
+    min-width: 220px;
+    min-height:204px;
+    background:var(--accent_light_purple_bg);
+    border-radius: 20px;
+    margin:1rem 0;
+    padding:1rem;
+    scroll-snap-align: start;
+    transform: scale(0.9);
+    transition: transform 300ms ease-in-out;
+}
+.active_slider_tab{
+    border:1px solid var(--neutral_20_clr);
+    transform: scale(1);
+}

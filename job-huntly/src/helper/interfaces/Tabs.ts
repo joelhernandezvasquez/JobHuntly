@@ -9,3 +9,8 @@ export interface TabsItem{
         illustration?:StaticImageData
     }
 }
+export interface TabsSlider {
+    id:string,
+    item:string,
+    description:string
+}
