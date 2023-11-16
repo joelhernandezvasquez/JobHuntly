@@ -1,8 +1,15 @@
 'use client';
 
+// TODO:clean up the the component
+// TODO: Understand the logic of the component
+
 import { useState,useRef,useEffect} from 'react';
 import { TabsSlider } from '@/helper/interfaces/Tabs';
 import style from './style.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import useFeaturesIcon from '@/hooks/useFeaturesIcon';
+import { IoChevronForwardOutline } from 'react-icons/io5';
 
 interface Props{
  tabsItem: TabsSlider[]
@@ -12,6 +19,7 @@ const SliderTabs = ({tabsItem}:Props) => {
 
     const [selectedTab, setSelectedTab] = useState(0);
     const gridContainerRef = useRef<HTMLUListElement>(null);
+    const {featuresIcon} = useFeaturesIcon();
 
     const handleSeletedTab = (tabIndex: number) => {
       setSelectedTab(tabIndex);
@@ -27,7 +35,6 @@ const SliderTabs = ({tabsItem}:Props) => {
       let observer: IntersectionObserver | null = null;
 
        const handleSliderTabScroll = () =>{
-        console.log('scroll');
         clearTimeout(scrollTimeout);
 
         scrollTimeout  = window.setTimeout(()=>{
@@ -40,24 +47,19 @@ const SliderTabs = ({tabsItem}:Props) => {
               entries.forEach((entry) => {
               
                 if (entry.isIntersecting) {
-                 
                   const slideIndex = Array.from(gridContainerRef.current!.children).indexOf(entry.target);
-                  console.log(slideIndex);
                   setSelectedTab(slideIndex);
                 }
               });
             },
-            { threshold: 1 } // Adjust the threshold based on your needs
+            { threshold: 1 }
           );
           Array.from(gridContainerRef.current!.children).forEach((child) => {
-            console.log('enter')
             observer!.observe(child);
           });
-          
-          
-        },1000)
-
-        
+           
+        },500)
+ 
       }
 
        if(gridContainerRef.current){
@@ -76,18 +78,37 @@ const SliderTabs = ({tabsItem}:Props) => {
   return (
     <div className={style.slider_tabs_wrapper}>
 
-      <ul  className={style.slider_tabs_grid} ref={gridContainerRef}>
-        {tabsItem.map((tabItem,index)=>{
-            return <li key={tabItem.id}
-                    className={`${style.slider_tabs_item} ${index=== selectedTab&& style.active_slider_tab}`}
-                    onClick={() => handleSeletedTab(index)}
-                   >
-                    
-                     {tabItem.item}
-                     <p>{tabItem.description}</p>
-                    </li>
+      <ul className={style.slider_tabs_grid} ref={gridContainerRef}>
+        {tabsItem.map((tabItem, index) => {
+          return <li key={tabItem.id}
+            className={`${style.slider_tabs_item} ${index === selectedTab && style.active_slider_tab}`}
+            onClick={() => handleSeletedTab(index)}
+          >
+            <p className={style.features_icon}>{featuresIcon[index].icon}</p>
+            <div>
+            <h3 className={style.slider_tabs_headline}>{tabItem.item}</h3>
+            <p className={style.slider_tabs_description}>{tabItem.description}</p>
+            <Link className={style.slider_tabs_link}  href=''> Learn More <IoChevronForwardOutline size={16}/> </Link>
+            </div>
+            
+          </li>
         })}
-      </ul>  
+      </ul>
+
+      <div className={style.slider_tab_body}>
+        <Image
+        className={style.slider_tab_body_illustration}
+        src={tabsItem[selectedTab].illustration}
+        width={300}
+        height={300}
+        alt={`Illustration of ${tabsItem[selectedTab].item}`}
+        />
+        <div className={style.slider_tab_body_content_container}>
+          <h2 className={style.slider_tab_body_header}>{tabsItem[selectedTab].heading}</h2>
+          <p className={style.slider_tab_body_content}>{tabsItem[selectedTab].subHeading}</p>
+        </div>
+        
+      </div>
     </div>
   )
 }

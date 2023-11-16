@@ -12,5 +12,8 @@ export interface TabsItem{
 export interface TabsSlider {
     id:string,
     item:string,
-    description:string
+    description:string,
+    illustration:StaticImageData,
+    heading:string,
+    subHeading:string
 }
