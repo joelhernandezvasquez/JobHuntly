@@ -1,88 +1,88 @@
 'use client';
-
 // TODO:clean up the the component
 // TODO: Understand the logic of the component
-
-import { useState,useRef,useEffect} from 'react';
-import { TabsSlider } from '@/helper/interfaces/Tabs';
-import style from './style.module.css';
+import {useRef,useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import useTabs from '@/hooks/useTabs';
 import useFeaturesIcon from '@/hooks/useFeaturesIcon';
+import { TabsSlider } from '@/helper/interfaces/Tabs';
 import { IoChevronForwardOutline } from 'react-icons/io5';
+import style from './style.module.css';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface Props{
  tabsItem: TabsSlider[]
 }
 
 const SliderTabs = ({tabsItem}:Props) => {
-
-    const [selectedTab, setSelectedTab] = useState(0);
-    const gridContainerRef = useRef<HTMLUListElement>(null);
+    const {selectedTab,handleSeletedTab} = useTabs();
     const {featuresIcon} = useFeaturesIcon();
-
-    const handleSeletedTab = (tabIndex: number) => {
-      setSelectedTab(tabIndex);
-        if(gridContainerRef.current){
-          const slideWidth = gridContainerRef.current.children[0].clientWidth;
-          const newPos = tabIndex * slideWidth;
-          gridContainerRef.current.scrollLeft = newPos;
-        }  
+    const {observerRef} = useIntersectionObserver<HTMLUListElement>(handleSeletedTab);
+   // const gridContainerRef = useRef<HTMLUListElement>(null);
+    
+    const handleSlideTab = (tabIndex: number) => {
+        // handleSeletedTab(tabIndex);
+        // if(gridContainerRef.current){
+        //   const slideWidth = gridContainerRef.current.children[0].clientWidth;
+        //   const newPos = tabIndex * slideWidth;
+        //   gridContainerRef.current.scrollLeft = newPos;
+        // }  
     }
 
-    useEffect(()=>{
-      let scrollTimeout: number;
-      let observer: IntersectionObserver | null = null;
+    // useEffect(()=>{
+    //   let scrollTimeout: number;
+    //   let observer: IntersectionObserver | null = null;
 
-       const handleSliderTabScroll = () =>{
-        clearTimeout(scrollTimeout);
+    //    const handleSliderTabScroll = () =>{
+    //     clearTimeout(scrollTimeout);
 
-        scrollTimeout  = window.setTimeout(()=>{
-          if (observer) {
-            observer.disconnect();
-          }
+    //     scrollTimeout  = window.setTimeout(()=>{
+    //       if (observer) {
+    //         observer.disconnect();
+    //       }
 
-          observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
+    //       observer = new IntersectionObserver(
+    //         (entries) => {
+    //           entries.forEach((entry) => {
               
-                if (entry.isIntersecting) {
-                  const slideIndex = Array.from(gridContainerRef.current!.children).indexOf(entry.target);
-                  setSelectedTab(slideIndex);
-                }
-              });
-            },
-            { threshold: 1 }
-          );
-          Array.from(gridContainerRef.current!.children).forEach((child) => {
-            observer!.observe(child);
-          });
+    //             if (entry.isIntersecting) {
+    //               const slideIndex = Array.from(gridContainerRef.current!.children).indexOf(entry.target);
+    //               handleSeletedTab(slideIndex);
+    //             }
+    //           });
+    //         },
+    //         { threshold: 1 }
+    //       );
+    //       Array.from(gridContainerRef.current!.children).forEach((child) => {
+    //         observer!.observe(child);
+    //       });
            
-        },500)
+    //     },500)
  
-      }
+    //   }
 
-       if(gridContainerRef.current){
-         gridContainerRef.current.addEventListener('scroll',handleSliderTabScroll)
-       }
+    //    if(gridContainerRef.current){
+    //      gridContainerRef.current.addEventListener('scroll',handleSliderTabScroll)
+    //    }
 
-      return ()=>{
-        gridContainerRef.current?.removeEventListener('scroll',handleSliderTabScroll);
+    //   return ()=>{
+    //     gridContainerRef.current?.removeEventListener('scroll',handleSliderTabScroll);
       
-        if (observer) {
-          observer.disconnect();
-        }
-      }
-    },[])
+    //     if (observer) {
+    //       observer.disconnect();
+    //     }
+    //   }
+    // },[])
 
   return (
     <div className={style.slider_tabs_wrapper}>
 
-      <ul className={style.slider_tabs_grid} ref={gridContainerRef}>
+      <ul className={style.slider_tabs_grid} ref={observerRef}>
         {tabsItem.map((tabItem, index) => {
           return <li key={tabItem.id}
             className={`${style.slider_tabs_item} ${index === selectedTab && style.active_slider_tab}`}
-            onClick={() => handleSeletedTab(index)}
+            onClick={() => handleSlideTab(index)}
           >
             <p className={style.features_icon}>{featuresIcon[index].icon}</p>
             <div>

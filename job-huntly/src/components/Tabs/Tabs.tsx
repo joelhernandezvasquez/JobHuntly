@@ -1,9 +1,10 @@
 'use client';
 
-import { ReactNode, useState } from "react";
+import { ReactNode} from "react";
 import Image from "next/image";
-import { TabsItem } from "@/helper/interfaces/Tabs";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import useTabs from "@/hooks/useTabs";
+import { TabsItem } from "@/helper/interfaces/Tabs";
 import style from './style.module.css';
 
 interface Props {
@@ -12,11 +13,7 @@ interface Props {
 }
 
 const Tabs = ({ tabList, children }: Props) => {
-  const [selectedTab, setSelectedTab] = useState(0);
-
-  const handleSeletedTab = (tabIndex: number) => {
-    setSelectedTab(tabIndex);
-  }
+  const {selectedTab,handleSeletedTab} = useTabs();
 
   return (
     <>
