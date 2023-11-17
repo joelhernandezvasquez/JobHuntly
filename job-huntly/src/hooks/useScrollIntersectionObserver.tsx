@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const useIntersectionObserver = <T extends HTMLElement>(handleState:(index:number) => void) => {
+const useScrollIntersectionObserver = <T extends HTMLElement>(handleState:(index:number) => void) => {
   
   const observerRef = useRef<T | null >(null);
     
@@ -45,11 +45,11 @@ const useIntersectionObserver = <T extends HTMLElement>(handleState:(index:numbe
           }
       }
 
-  },[])
+  },[handleState])
   return {
    observerRef
   }
   
 }
 
-export default useIntersectionObserver
+export default useScrollIntersectionObserver;

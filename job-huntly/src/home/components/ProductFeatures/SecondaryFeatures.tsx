@@ -1,8 +1,7 @@
 
 import { secondaryFeatures } from '@/helper/data/featuresDescription';
-import style from './features.module.css';
 import SliderTabs from '@/components/SliderTabs/SliderTabs';
-
+import style from './features.module.css';
 
 const SecondaryFeatures = () => {
   return (

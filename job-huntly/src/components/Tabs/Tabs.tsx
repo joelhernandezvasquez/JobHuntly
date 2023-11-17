@@ -1,10 +1,11 @@
 'use client';
 
-import { ReactNode} from "react";
+import { ReactNode } from "react";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import useTabs from "@/hooks/useTabs";
 import { TabsItem } from "@/helper/interfaces/Tabs";
+import TabsContent from "../TabsContent/TabsContent";
 import style from './style.module.css';
 
 interface Props {
@@ -13,22 +14,26 @@ interface Props {
 }
 
 const Tabs = ({ tabList, children }: Props) => {
-  const {selectedTab,handleSeletedTab} = useTabs();
+  const { selectedTab, handleSeletedTab } = useTabs();
 
   return (
     <>
       <ul className={style.tabs_menu}>
         {tabList.map((tab, index) => {
           return (<li key={tab.id}
-                    className={`${style.tabItem} ${selectedTab === index && style.active_tab}`}
-                    onClick={() => handleSeletedTab(index)}>
-                    {tab.item}
-                </li>
+            className={`${style.tabItem} ${selectedTab === index && style.active_tab}`}
+            onClick={() => handleSeletedTab(index)}>
+            {tab.item}
+          </li>
           )
         })}
       </ul>
 
-      <div className={style.tab_content}>
+      <TabsContent
+        heading={tabList[selectedTab].content.title}
+        subHeading={tabList[selectedTab].content.description}
+        additionalElement={children}
+      >
         {tabList[selectedTab].content.illustration &&
           <Image
             className={style.tab_header_illustration}
@@ -39,10 +44,7 @@ const Tabs = ({ tabList, children }: Props) => {
           >
           </Image>
         }
-        <h2 className={style.tab_header}>{tabList[selectedTab].content.title}</h2>
-        <p className={style.tab_header_content}>{tabList[selectedTab].content.description}</p>
-        {children}
-      </div>
+      </TabsContent>
     </>
   )
 }

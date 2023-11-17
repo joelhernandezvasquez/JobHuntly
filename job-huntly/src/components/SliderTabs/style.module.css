@@ -34,14 +34,6 @@
     transform: scale(1);
 }
 
-.slider_tab_body{
-    margin-top:1.5rem;
-    padding:1rem 0;
-    background:var(--accent_light_purple_bg);
-    border:1px solid var(--neutral_20_clr);
-    border-radius: 10px;
-}
-
 .slider_tabs_headline{
     font-size: 1rem;
     color:var(--primary_brand_clr);
@@ -69,14 +61,3 @@
    margin-left: .5rem;
 }
 
-.slider_tab_body_header{
-    margin:1rem 0 .5rem 0;
-    color:var(--neutral_100_clr);
-}
-.slider_tab_body_content{
-    font-family: var(--epilogue_font);
-    color:var(--neutral_80_clr);
-}
-.slider_tab_body_content_container{
-    padding:.5rem;
-}
