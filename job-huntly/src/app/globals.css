@@ -99,3 +99,19 @@ a{
 .purple_text{
   color:var(--primary_brand_clr);
 }
+.blue_text{
+ color:var(--accent_blue_clr);
+}
+
+.redirect_button{
+  border:none;
+  cursor: pointer;
+  font-family: var(--epilogue_font);
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: var(--primary_brand_clr);
+  color:var(--neutral_0_clr);
+  padding: 12px 24px;
+  font-size: 1rem;
+}
