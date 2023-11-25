@@ -1,0 +1,1 @@
+export type ActiveButton = 1 | 2;

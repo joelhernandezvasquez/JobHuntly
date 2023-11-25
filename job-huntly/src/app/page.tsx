@@ -5,6 +5,7 @@ import JobListing from "@/home/components/JobListing/JobListing";
 import PrimaryFeatures from "@/home/components/ProductFeatures/PrimaryFeatures";
 import SecondaryFeatures from "@/home/components/ProductFeatures/SecondaryFeatures";
 import TeamLogos from "@/home/components/TeamLogos/TeamLogos";
+import Testimonials from "@/home/components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -16,10 +17,11 @@ export default function Home() {
      
      <section>
       <MaxWidthWrapper>
-        <TeamLogos/>
-        <PrimaryFeatures/>
-        <SecondaryFeatures/>
-        <JobListing/>
+          <TeamLogos/>
+          <PrimaryFeatures/>
+          <SecondaryFeatures/>
+          <JobListing/>
+          <Testimonials/>
       </MaxWidthWrapper>
      </section>
 

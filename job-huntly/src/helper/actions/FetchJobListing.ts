@@ -26,7 +26,7 @@ export const fetchJobList = async ():Promise<JobList []> =>{
          }
        })
 
-       return jobList.slice(0,8);
+       return jobList.slice(0,5);
   }
   catch(err){
     if(err instanceof Error){
