@@ -1,0 +1,37 @@
+
+.cta_bg{
+ background-image: url('../../../../public/Mobile.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 640px;
+ margin-left:-1rem;
+ margin-right: -1rem;
+}
+
+.cta_container{
+    margin:2rem 0;
+    padding:5rem 1rem 0 1rem;
+}
+
+.cta_illustration{
+    width:100%;
+    height:300px;
+    object-fit: contain;
+   object-position: center;
+}
+.cta_container h2{
+    font-size: 2rem;
+    color:var(--neutral_0_clr);
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+.button_container{
+    margin-top:1rem;
+}
+.button_container > *{
+    width: 100%;
+}

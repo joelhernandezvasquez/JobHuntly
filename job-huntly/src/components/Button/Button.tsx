@@ -2,7 +2,6 @@
 
 import { ReactNode } from 'react';
 import style from './button.module.css';
-
 interface Props{
     type: "primary" | "secondary" | "plain",
     size:"small" | "medium" | "large",

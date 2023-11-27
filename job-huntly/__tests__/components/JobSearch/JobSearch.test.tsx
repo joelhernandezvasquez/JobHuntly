@@ -19,7 +19,6 @@ it('it should have the company Name JobHuntly',()=>{
 it('it should show the Job Location Options for the dropdown',()=>{
     render(<JobSearch/>)
     const valueElement =  screen.getByText(jobLocation);
-
     expect(valueElement).toBeInTheDocument();
 
  })
