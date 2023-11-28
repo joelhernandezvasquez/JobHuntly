@@ -11,6 +11,7 @@
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap:1.5rem;
+    padding:0 1rem;
 }
 
 .footer_navigation_grid_first_col{

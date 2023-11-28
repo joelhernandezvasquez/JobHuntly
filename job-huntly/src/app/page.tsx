@@ -11,6 +11,7 @@ import Testimonials from "@/home/components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
+    <>
     <main>
       <header>
         <MobileHeader/>
@@ -25,11 +26,15 @@ export default function Home() {
           <JobListing/>
           <Testimonials/>
           <CTA/>
-          <Footer/>
       </MaxWidthWrapper>
      </section>
 
     </main>
+    
+    <footer>
+       <Footer/>
+    </footer>
+    </>
   )
 }
 
