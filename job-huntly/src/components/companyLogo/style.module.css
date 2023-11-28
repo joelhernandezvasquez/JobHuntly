@@ -9,7 +9,12 @@
     height: 2rem;
 }
 .company_name{
-   color:var(--neutral_100_clr);
    font-size: 1.5rem;
    font-weight: 700;
+}
+.dark{
+  color:var(--neutral_0_clr);
+}
+.light{
+  color:var(--neutral_100_clr)
 }

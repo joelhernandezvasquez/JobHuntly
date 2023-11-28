@@ -8,7 +8,7 @@ const MobileHeader = () => {
   return (
       <MaxWidthWrapper>
         <div className={style.mobile_header_wrapper}>
-            <CompanyLogo/>
+            <CompanyLogo theme='light'/>
              <OpenMobileNav/>
         </div>
       </MaxWidthWrapper>

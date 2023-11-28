@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper";
 import MobileHeader from "@/components/MobileNavHeader/MobileHeader";
 import CTA from "@/home/components/CTA/CTA";
@@ -24,6 +25,7 @@ export default function Home() {
           <JobListing/>
           <Testimonials/>
           <CTA/>
+          <Footer/>
       </MaxWidthWrapper>
      </section>
 
