@@ -16,7 +16,7 @@ const starsArray =
 const TestimonialCard = ({testimony}:Props) => {
   const {clientTestimony,testimonial,avatar} = testimony;
     return (
-    <div className={style.testimony_card}>
+    <div data-testid="testimony-card" className={style.testimony_card}>
        <Avatar imageSource={avatar} size={'medium'}/>
         <span className={style.client_testimony}>{clientTestimony}</span>
         <p className={style.testimonial}>{testimonial}</p>

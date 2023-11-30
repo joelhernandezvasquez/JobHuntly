@@ -37,11 +37,13 @@ const TestimonialsTab = ({testimonies}:Props) => {
   return (
     <section className={style.testimonials_tab_container}> 
       <div className={style.testimonials_tab_button_container}>
-      <button className={`${style.testimonials_tab_button} ${activeBtn === 2 && style.active_btn}`} onClick={decrementTabIndex}>
+      <button aria-label="Previous" 
+         className={`${style.testimonials_tab_button} ${activeBtn === 2 && style.active_btn}`} onClick={decrementTabIndex}>
          <IoChevronBackOutline size={15}/>
       </button>
 
         <button 
+          aria-label="Next"
          className={`${style.testimonials_tab_button} ${ activeBtn === 1 && style.active_btn}`} 
          onClick={incrementTabIndex}
          >
