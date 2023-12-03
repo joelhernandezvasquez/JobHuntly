@@ -33,7 +33,7 @@ const Dropdown = ({ options, variant, defaultValue, onSelectOptionCallback }: Pr
         </svg>
       </div>
 
-      <div className={`${style.dropdown_body} ${isToggle && style.show_dropdown}`}>
+      <div data-testid='dropdownBody' className={`${style.dropdown_body} ${isToggle && style.show_dropdown}`}>
         <ul>
           {options.map(({ id, option }) => {
             return currentOption !== option && 
