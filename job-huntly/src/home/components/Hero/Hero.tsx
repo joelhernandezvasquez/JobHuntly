@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper"
 import JobSearch from "@/components/JobSearch/JobSearch";
