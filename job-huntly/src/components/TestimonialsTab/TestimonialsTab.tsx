@@ -27,9 +27,9 @@ const TestimonialsTab = ({testimonies}:Props) => {
     }    
   }
   const decrementTabIndex = () =>{
-    if(selectedTab > 0){
-      handleSeletedTab(selectedTab - 1);
-    }
+   if(selectedTab === 0) return;
+     handleSeletedTab(selectedTab - 1);
+    
     if(activeBtn!==2){
       setActiveBtn(2);
     }

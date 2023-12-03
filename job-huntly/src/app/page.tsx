@@ -23,7 +23,7 @@ export default function Home() {
           <TeamLogos/>
           <PrimaryFeatures/>
           <SecondaryFeatures/>
-          <JobListing/>
+          {/* <JobListing/> */}
           <Testimonials/>
           <CTA/>
       </MaxWidthWrapper>
