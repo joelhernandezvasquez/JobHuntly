@@ -1,7 +1,7 @@
 
-import CompanyLogo from '../companyLogo/CompanyLogo';
+import CompanyLogo from '../../companyLogo/CompanyLogo';
 import Link from 'next/link';
-import Button from '../Button/Button';
+import Button from '../../Button/Button';
 import style from './style.module.css';
 
 const FooterNavigation = () => {

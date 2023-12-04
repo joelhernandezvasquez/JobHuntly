@@ -1,4 +1,4 @@
-import { Testimonies} from "../interfaces/testimonials";
+import { Testimonies} from "../../interfaces/testimonials";
 import Avatar1 from '../../../public/avatars/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg';
 import Avatar2 from '../../../public/avatars/michael-dam-mEZ3PoFGs_k-unsplash.jpg';
 import Avatar3 from '../../../public/avatars/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg';

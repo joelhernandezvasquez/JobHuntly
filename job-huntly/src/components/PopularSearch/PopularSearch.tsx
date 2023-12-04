@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { PopularSearch } from "@/helper/interfaces/popularSearch";
+import { PopularSearch } from "../../interfaces/popularSearch";
 import style from './style.module.css';
 
 interface Props{

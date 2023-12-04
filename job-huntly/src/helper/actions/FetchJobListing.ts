@@ -1,4 +1,4 @@
-import { JobList } from "../interfaces/JobList";
+import { JobList } from "../../interfaces/JobList";
 
 export const fetchJobList = async ():Promise<JobList []> =>{
   try{

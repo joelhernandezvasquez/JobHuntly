@@ -1,5 +1,5 @@
 
-import MobileMenu from '@/components/MenuNavigation/MobileMenu';
+import MobileMenu from '@/components/ui/MenuNavigation/MobileMenu';
 import {render,screen, within} from '@testing-library/react';
 import { mobileMenuLinks } from '@/helper/data/mobileMenuLinks';
 

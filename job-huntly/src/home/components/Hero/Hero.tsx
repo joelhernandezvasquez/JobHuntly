@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper"
+import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper/MaxWidthWrapper"
 import JobSearch from "@/components/JobSearch/JobSearch";
 import PopularSearch from "@/components/PopularSearch/PopularSearch";
 import { popularSearch } from "@/helper/data/popularSearchData";

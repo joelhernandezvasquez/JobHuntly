@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import useTabs from "@/hooks/useTabs";
-import { TabsItem } from "@/helper/interfaces/Tabs";
+import { TabsItem } from "../../interfaces/Tabs";
 import TabsContent from "../TabsContent/TabsContent";
 import style from './style.module.css';
 

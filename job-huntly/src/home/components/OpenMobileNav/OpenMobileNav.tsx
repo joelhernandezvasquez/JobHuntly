@@ -1,7 +1,7 @@
 'use client';
 
 import useToogle from "@/hooks/useToogle";
-import MobileNav from "@/components/MenuNavigation/MobileNav";
+import MobileNav from "@/components/ui/MenuNavigation/MobileNav";
 import style from './style.module.css';
 
 const OpenMobileNav = () => {

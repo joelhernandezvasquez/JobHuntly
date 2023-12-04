@@ -1,7 +1,7 @@
 
-import Button from '../Button/Button';
+import Button from '../../Button/Button';
 import MaxWidthWrapper from '../MaxWidthWrapper/MaxWidthWrapper';
-import CompanyLogo from '../companyLogo/CompanyLogo';
+import CompanyLogo from '../../companyLogo/CompanyLogo';
 import MobileMenu from './MobileMenu';
 import style from './style.module.css';
 

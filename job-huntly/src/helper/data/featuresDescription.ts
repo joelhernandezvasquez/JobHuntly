@@ -1,5 +1,5 @@
 
-import { TabsItem, TabsSlider } from '../interfaces/Tabs';
+import { TabsItem, TabsSlider } from '../../interfaces/Tabs';
 import { v4 as uuidv4 } from 'uuid';
 import trackingIllustration from '../../../public/2.1 Dashboard Applicant.jpg';
 import searchIllustration from '../../../public/2.5 Dashboard - Find Jobs (Grid).jpg';

@@ -1,4 +1,4 @@
-import { MobileMenuLinks } from "../interfaces/MobileMenuLink";
+import { MobileMenuLinks } from "../../interfaces/MobileMenuLink";
 
 export const mobileMenuLinks: MobileMenuLinks [] = 
 [ {

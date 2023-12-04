@@ -1,5 +1,5 @@
 
-import SubMenu from '@/components/MenuNavigation/SubMenu';
+import SubMenu from '@/components/ui/MenuNavigation/SubMenu';
 import {fireEvent, render,screen} from '@testing-library/react';
 
 

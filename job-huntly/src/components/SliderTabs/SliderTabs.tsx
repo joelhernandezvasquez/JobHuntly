@@ -5,7 +5,7 @@ import Link from 'next/link';
 import useScrollIntersectionObserver from '@/hooks/useScrollIntersectionObserver';
 import useTabs from '@/hooks/useTabs';
 import useFeaturesIcon from '@/hooks/useFeaturesIcon';
-import { TabsSlider } from '@/helper/interfaces/Tabs';
+import { TabsSlider } from '../../interfaces/Tabs';
 import TabsContent from '../TabsContent/TabsContent';
 import { IoChevronForwardOutline } from 'react-icons/io5';
 import style from './style.module.css';

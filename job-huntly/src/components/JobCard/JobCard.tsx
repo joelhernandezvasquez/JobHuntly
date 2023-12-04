@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { JobList } from '@/helper/interfaces/JobList';
+import { JobList } from '../../interfaces/JobList';
 import style from './style.module.css';
 
 interface Props{

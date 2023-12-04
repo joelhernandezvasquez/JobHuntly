@@ -1,4 +1,4 @@
-import { Testimonies } from "@/helper/interfaces/testimonials";
+import { Testimonies } from "../../interfaces/testimonials";
 import Avatar from "../Avatar/Avatar";
 import {IoStarSharp } from "react-icons/io5";
 import { v4 as uuidv4 } from 'uuid';

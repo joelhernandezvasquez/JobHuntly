@@ -1,5 +1,5 @@
 import useToogle from '@/hooks/useToogle';
-import {SubMenuContentKey } from '@/helper/interfaces/SubMenuContent';
+import {SubMenuContentKey } from '../../../interfaces/SubMenuContent';
 import SubMenuGroup from './SubMenuGroup';
 import style from './style.module.css';
 

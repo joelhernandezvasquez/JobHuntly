@@ -1,5 +1,5 @@
-import useSubMenuContent from "../../hooks/useSubMenuContent";
-import { SubMenuContentKey } from "@/helper/interfaces/SubMenuContent";
+import useSubMenuContent from "../../../hooks/useSubMenuContent";
+import { SubMenuContentKey } from "../../../interfaces/SubMenuContent";
 import style from './style.module.css';
 
  interface Props{

@@ -1,9 +1,9 @@
 
 import Link from 'next/link';
 import SubMenu from './SubMenu';
-import { MobileMenuLinks } from '@/helper/interfaces/MobileMenuLink';
+import { MobileMenuLinks } from '../../../interfaces/MobileMenuLink';
 import style from './style.module.css';
-import { SubMenuContentKey } from '@/helper/interfaces/SubMenuContent';
+import { SubMenuContentKey } from '../../../interfaces/SubMenuContent';
 
 interface Props{
     mobileLink:MobileMenuLinks

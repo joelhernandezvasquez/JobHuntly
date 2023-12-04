@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import useTabs from '@/hooks/useTabs';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
-import { Testimonies} from '@/helper/interfaces/testimonials';
+import { Testimonies} from '../../interfaces/testimonials';
 import { ActiveButton } from '@/helper/types/types';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 import style from './style.module.css';

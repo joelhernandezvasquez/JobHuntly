@@ -1,4 +1,4 @@
-import { PopularSearch } from "../interfaces/popularSearch";
+import { PopularSearch } from "../../interfaces/popularSearch";
 
 export const popularSearch: PopularSearch [] = [
 {

@@ -1,4 +1,4 @@
-import { TeamLogo } from "../interfaces/TeamLogo";
+import { TeamLogo } from "../../interfaces/TeamLogo";
 import waveLogo from '../../assets/Group.jpg';
 import DsignLogo from '../../assets/Group 170.jpg';
 import joboxLogo from '../../assets/Logo 28.jpg';

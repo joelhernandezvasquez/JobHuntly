@@ -1,4 +1,4 @@
-import { SubMenuContent } from "@/helper/interfaces/SubMenuContent";
+import { SubMenuContent } from "../interfaces/SubMenuContent";
 import 
 {IoCogOutline,IoServerOutline,IoExtensionPuzzleOutline,IoLaptopOutline,IoReaderOutline,IoTerminalOutline, IoAlarmOutline, 
  IoIdCardOutline,
