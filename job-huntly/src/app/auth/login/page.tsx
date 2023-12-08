@@ -1,8 +1,13 @@
-import React from 'react'
+
+import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
+import LoginForm from './ui/LoginForm';
 
 const LoginPage = () => {
   return (
-    <div>page</div>
+    <MaxWidthWrapper>
+      <LoginForm/>
+    </MaxWidthWrapper>
+   
   )
 }
 

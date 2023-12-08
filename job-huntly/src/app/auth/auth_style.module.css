@@ -1,0 +1,16 @@
+.auth_login_form{
+    padding-bottom: 2.5rem;
+}
+.auth_footer_form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_100_clr);
+    padding-top:1rem;
+}
+.link{
+    color:var(--primary_brand_clr);
+    font-weight: 700;
+}

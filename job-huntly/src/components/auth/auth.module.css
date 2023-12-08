@@ -1,0 +1,39 @@
+
+.auth_nav_wrapper{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:var(--wrapper_spacing);
+}
+
+.auth_header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:3rem;
+}
+
+.auth_header_title{
+ text-align: center;
+ font-size: 1.5rem;
+ color:var(--neutral_100_clr);
+ margin-bottom:1rem;
+}
+
+.legend_container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:1rem 0;
+}
+.legend_container p{
+    font-family: var(--epilogue_font);
+    color:var(--neutral_80_clr);
+    font-weight: 500;
+}
+
+.divider{
+    min-width: 90px;
+    height:1px;
+    background:var(--neutral_20_clr);
+}

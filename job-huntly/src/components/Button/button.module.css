@@ -6,7 +6,7 @@
     font-style: normal;
     font-weight: 700;
     border-radius: 5px;
-    margin:1rem 0;
+    margin:.8rem 0;
 }
 
 .primary{
@@ -33,4 +33,14 @@
 .large{
     padding: 14px 27px;
     font-size: 1.125rem;
+}
+
+.flex_center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:.7rem;
+}
+.full_width{
+    width: 100%;
 }

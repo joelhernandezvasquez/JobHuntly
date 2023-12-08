@@ -5,15 +5,16 @@ import style from './button.module.css';
 interface Props{
     type: "primary" | "secondary" | "plain",
     size:"small" | "medium" | "large",
+    fullWidth?:boolean,
     icon?:"none" | "left" | "only",
     handleClick?:() => void,
     children?:ReactNode
 }
-const Button = ({type,size,icon,handleClick,children}:Props) => {
+const Button = ({type,size,fullWidth,icon,handleClick,children}:Props) => {
   
   return (
    <button 
-    className={`${style.button} ${style[type]} ${style[size]}`}
+    className={`${style.button} ${style[type]} ${style[size]} ${icon==='left' && style.flex_center} ${fullWidth && style.full_width}`}
     onClick={handleClick}
    >
     {children}

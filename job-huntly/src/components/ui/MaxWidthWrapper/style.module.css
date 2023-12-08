@@ -1,5 +1,5 @@
 .max_wrapper{
     width:100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: var(--wrapper_spacing);
+    padding-right: var(--wrapper_spacing);
   }

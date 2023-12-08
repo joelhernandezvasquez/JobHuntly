@@ -6,9 +6,9 @@ interface Props{
 }
 const MaxWidthWrapper = ({children}:Props) => {
   return (
-    <div className={style.max_wrapper}>
+    <section className={style.max_wrapper}>
       {children}
-    </div>
+    </section>
   )
 }
 

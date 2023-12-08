@@ -25,6 +25,8 @@
   --neutral_0_clr:#FFFFFF;
 
   --epilogue_font:'Epilogue', sans-serif;
+
+  --wrapper_spacing:1rem;
 }
 
 /*
@@ -115,4 +117,17 @@ a{
   color:var(--neutral_0_clr);
   padding: 12px 24px;
   font-size: 1rem;
+}
+
+.form_field{
+  display: flex;
+  flex-direction: column;
+  gap:.5rem;
+  margin:1rem 0;
+}
+
+.label{
+  color:var(--neutral_80_clr);
+  font-family: var(--epilogue_font);
+  font-weight: 600;
 }
