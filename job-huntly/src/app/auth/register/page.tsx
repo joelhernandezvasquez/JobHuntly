@@ -1,8 +1,13 @@
-import React from 'react'
+
+import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
+import RegisterForm from './ui/RegisterForm';
 
 const RegisterPage = () => {
   return (
-    <div>RegisterPage</div>
+    <MaxWidthWrapper>
+      <RegisterForm/>
+    </MaxWidthWrapper>
+
   )
 }
 

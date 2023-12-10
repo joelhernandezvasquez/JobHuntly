@@ -8,7 +8,7 @@ import style from '../../auth_style.module.css'
 const LoginForm = () => {
   return (
     <>
-    <form className={style.auth_login_form}>
+    <form className={style.auth_form}>
         <div className={'form_field'}>
           <label className='label'>Email Address</label>
          <Input
