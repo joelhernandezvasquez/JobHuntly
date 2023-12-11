@@ -15,12 +15,12 @@ const AuthNavBar = () => {
     <CompanyLogo theme="light"/>
      
      {currentPath === 'login' ? (
-       <Button type="primary" size={!hasCurrentViewportMatch?'small' : 'large'}  handleClick={navigateToSignUp}>
+       <Button type="primary" size={!hasCurrentViewportMatch?'small' : 'medium'}  handleClick={navigateToSignUp}>
          Sign Up
       </Button>
      ):
      (
-      <Button type="primary"  size={!hasCurrentViewportMatch?'small' : 'large'} handleClick={navigateToLogin}>
+      <Button type="primary"  size={!hasCurrentViewportMatch?'small' : 'medium'} handleClick={navigateToLogin}>
         Login
      </Button>
      )

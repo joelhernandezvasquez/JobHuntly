@@ -10,7 +10,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    padding-top:3rem;
+    padding-top: 3rem;
     max-width: var(--max_width_auth_form);
     margin:0 auto;
 }
@@ -38,4 +38,13 @@
     min-width: 90px;
     height:1px;
     background:var(--neutral_20_clr);
+}
+
+@media(min-width:1000px){
+    .auth_header{
+       padding-top: 1rem;
+    }
+  .auth_header_title{
+   font-size: 2rem;
+   }
 }
