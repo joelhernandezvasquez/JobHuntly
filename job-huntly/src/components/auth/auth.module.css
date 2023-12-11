@@ -11,6 +11,8 @@
     flex-direction: column;
     justify-content: center;
     padding-top:3rem;
+    max-width: var(--max_width_auth_form);
+    margin:0 auto;
 }
 
 .auth_header_title{

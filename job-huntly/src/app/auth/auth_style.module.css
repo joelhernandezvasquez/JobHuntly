@@ -1,5 +1,7 @@
 .auth_form{
     padding-bottom: 2.5rem;
+    max-width:var(--max_width_auth_form);
+    margin:0 auto;
 }
 .auth_footer_form{
     display:flex;

@@ -27,6 +27,11 @@
   --epilogue_font:'Epilogue', sans-serif;
 
   --wrapper_spacing:1rem;
+  --max_width_auth_form:408px;
+
+  @media(min-width:768px){
+    --wrapper_spacing:2rem;
+  }
 }
 
 /*
@@ -131,3 +136,5 @@ a{
   font-family: var(--epilogue_font);
   font-weight: 600;
 }
+
+
