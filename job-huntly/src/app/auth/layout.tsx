@@ -1,17 +1,21 @@
 import AuthHeader from "@/components/auth/auth-header/AuthHeader";
 import AuthNavBar from "@/components/auth/auth-navigation/AuthNavBar";
+import AuthProvider from "./AuthProvider";
 
-export default function AuthLayout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
+interface Props{
+  children:React.ReactNode,
+  session:any
+}
+
+export default function AuthLayout({children,session}:Props) {
     return (
-     <main>
+    
+       <main>
        <AuthNavBar/>
        <AuthHeader/>
        {children}
      </main>
+     
     )
   }
   

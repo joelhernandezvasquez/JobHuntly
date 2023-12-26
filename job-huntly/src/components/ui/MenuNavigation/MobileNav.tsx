@@ -1,15 +1,18 @@
 
+import Link from 'next/link';
 import Button from '../../Button/Button';
 import MaxWidthWrapper from '../MaxWidthWrapper/MaxWidthWrapper';
 import CompanyLogo from '../../companyLogo/CompanyLogo';
 import MobileMenu from './MobileMenu';
 import style from './style.module.css';
 
+
 interface Prop{
  closeMenu:() => void
 }
 
 const MobileNav = ({closeMenu}:Prop) => {
+
   return (
     <nav data-testid="mobile-nav" className={style.mobile_nav_wrapper}>
       <MaxWidthWrapper>
@@ -26,8 +29,13 @@ const MobileNav = ({closeMenu}:Prop) => {
 
         <MobileMenu/>
           <div className={style.mobile_cta_btn_container}>
+           
             <Button type='primary' size="medium">Sign Up</Button>
+            
+            <Link href={'/auth/login'}>
             <Button type='secondary' size="medium">Login In</Button>
+            </Link>
+            
           </div>
         
       </MaxWidthWrapper>

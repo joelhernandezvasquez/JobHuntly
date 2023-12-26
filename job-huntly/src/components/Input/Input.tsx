@@ -1,10 +1,11 @@
 
 'use client';
 
-import { Dispatch, SetStateAction,useRef } from "react";
+import { ChangeEvent, Dispatch, SetStateAction,useRef } from "react";
 import ErrorMessage from "../Error/ErrorMessage";
 import style from './style.module.css';
 
+type OnValuedChange = Dispatch<SetStateAction<string>> | ((event: ChangeEvent<HTMLInputElement>) => void);
 interface Props {
   id: string,
   name: string,
@@ -12,7 +13,7 @@ interface Props {
   placeholder?: string,
   errorMessage?: string,
   isInvalid?: boolean,
-  onValuedChange: Dispatch<SetStateAction<string>>,
+  onValuedChange: OnValuedChange,
   iconSearch?: boolean,
 }
 const Input = ({ id, name, placeholder, defaultValue, errorMessage, isInvalid, onValuedChange, iconSearch }: Props) => {

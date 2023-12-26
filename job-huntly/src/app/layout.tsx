@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next';
 import { Epilogue } from 'next/font/google';
 import localFont from 'next/font/local';
+import AuthProvider from './auth/AuthProvider';
 
 const epilogue = Epilogue(
   {
@@ -27,8 +28,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <AuthProvider>
+      <html lang="en">
       <body className={`${clashFont.className} ${epilogue.className}`}>{children}</body>
     </html>
+    </AuthProvider>
+    
   )
 }
