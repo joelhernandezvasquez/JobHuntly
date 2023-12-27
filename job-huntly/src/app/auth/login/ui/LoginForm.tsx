@@ -6,9 +6,10 @@ import {ToastContainer } from 'react-toastify';
 import useForm from '@/hooks/useForm';
 import Button from '@/components/Button/Button';
 import Input from '@/components/Input/Input';
-import { authenticateUser,showLoginErrors, signInUser} from '@/actions/auth/login';
-import style from '../../auth_style.module.css';
+import { authenticateUser, signInUser} from '@/actions/auth/login';
 import "react-toastify/dist/ReactToastify.css";
+import { showValidationErrors } from '@/utils/displayValidationErrors';
+import style from '../../auth_style.module.css';
 
 const LoginForm = () => {
  const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({emailAddressLogin:'',passwordLogin:''});
@@ -23,7 +24,7 @@ const LoginForm = () => {
        const loginRequest = await authenticateUser(formValues.emailAddressLogin,formValues.passwordLogin);
        
        if(loginRequest.errors){
-         showLoginErrors(loginRequest);
+         showValidationErrors(loginRequest);
          return;
        }
         signInUser(formValues.emailAddressLogin,formValues.passwordLogin);
