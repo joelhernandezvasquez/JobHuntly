@@ -1,20 +1,18 @@
 'use client';
 import { FormEvent } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import useForm from '@/hooks/useForm';
 import Input from '@/components/Input/Input';
 import Button from '@/components/Button/Button';
+import { signInUser } from '@/actions/auth/login';
 import { registerUser } from '@/actions/auth/register';
 import {ToastContainer } from 'react-toastify';
 import { showValidationErrors } from '@/utils/displayValidationErrors';
 import style from '../../auth_style.module.css';
 import "react-toastify/dist/ReactToastify.css";
 
-
 const RegisterForm = () => {
   const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({fullNameRegister:'',emailAddressRegister:'',passwordRegister:''});
-  const router = useRouter();
 
   const OnSubmit = async(event:FormEvent<HTMLFormElement>) =>{
    event.preventDefault();
@@ -29,7 +27,7 @@ const RegisterForm = () => {
         showValidationErrors(registerRequest);
         return;
       }
-      router.push('/dashboard');
+      signInUser(formValues.emailAddressRegister,formValues.passwordRegister);
     }
    catch(error){
     if(error instanceof Error){
