@@ -9,7 +9,6 @@ interface Props{
 
 export default function AuthLayout({children,session}:Props) {
     return (
-    
        <main>
        <AuthNavBar/>
        <AuthHeader/>
