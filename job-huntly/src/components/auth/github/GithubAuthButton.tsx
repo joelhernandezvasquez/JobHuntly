@@ -9,9 +9,10 @@ interface Props{
 }
 
 const githubSignIn = () =>{
-    signIn('github',{
+  signIn('github',{
         callbackUrl:'/dashboard'
     });
+
 }
 const GithubAuthButton = ({buttonText}:Props) => {
   return (

@@ -5,7 +5,7 @@ import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
 import auth from '../auth.module.css';
 import GithubAuthButton from '../github/GithubAuthButton';
 import GoogleAuthButton from '../google/GoogleAuthButton';
-
+   
 const AuthHeader = () => {
    const {getPathMessage} = useAuthNav();
 

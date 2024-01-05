@@ -12,6 +12,16 @@
     color:var(--neutral_100_clr);
     padding-top:1rem;
 }
+
+.auth_password_field{
+   display:flex;
+   align-items: center;
+}
+.password_eye_icon{
+ position: relative;
+ right:40px;
+ cursor: pointer;
+}
 .link{
     color:var(--primary_brand_clr);
     font-weight: 700;

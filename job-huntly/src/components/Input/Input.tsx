@@ -1,14 +1,16 @@
 
 'use client';
 
-import { ChangeEvent, Dispatch, SetStateAction,useRef } from "react";
+import { ChangeEvent, Dispatch, SetStateAction,useEffect,useRef } from "react";
 import ErrorMessage from "../Error/ErrorMessage";
 import style from './style.module.css';
 
 type OnValuedChange = Dispatch<SetStateAction<string>> | ((event: ChangeEvent<HTMLInputElement>) => void);
+type InputType = "text" | "password";
 interface Props {
   id: string,
   name: string,
+  variant:InputType,
   defaultValue: string,
   placeholder?: string,
   errorMessage?: string,
@@ -16,7 +18,7 @@ interface Props {
   onValuedChange: OnValuedChange,
   iconSearch?: boolean,
 }
-const Input = ({ id, name, placeholder, defaultValue, errorMessage, isInvalid, onValuedChange, iconSearch }: Props) => {
+const Input = ({ id, name, variant, placeholder, defaultValue, errorMessage, isInvalid, onValuedChange, iconSearch }: Props) => {
   
   const inputContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -44,7 +46,7 @@ const Input = ({ id, name, placeholder, defaultValue, errorMessage, isInvalid, o
         }
         <input
           className={style.input_wrapper}
-          type="text"
+          type={variant}
           aria-labelledby="inputValue"
           id={id}
           name={name}
@@ -53,7 +55,7 @@ const Input = ({ id, name, placeholder, defaultValue, errorMessage, isInvalid, o
           onFocus={onFocusInputContainer}
           placeholder={placeholder}
         />
-
+        
       </div>
       {isInvalid && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
