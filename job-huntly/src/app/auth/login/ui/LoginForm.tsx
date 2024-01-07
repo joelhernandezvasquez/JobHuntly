@@ -3,24 +3,26 @@
 import {FormEvent} from 'react';
 import Link from 'next/link';
 import useToogle from '@/hooks/useToogle';
+import useLoader from '@/hooks/useLoader';
+import AuthBtn from '@/components/auth/auth-btn/AuthBtn';
 import {ToastContainer } from 'react-toastify';
 import useForm from '@/hooks/useForm';
-import Button from '@/components/Button/Button';
 import Input from '@/components/Input/Input';
+import PasswordHidden from '../../ui/PasswordHidden';
 import { authenticateUser, signInUser} from '@/actions/auth/login';
 import { showValidationErrors } from '@/utils/displayValidationErrors';
-import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import "react-toastify/dist/ReactToastify.css";
 import style from '../../auth_style.module.css';
-
 
 const LoginForm = () => {
  const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({emailAddressLogin:'',passwordLogin:''});
  const{isToggle,handleToggle} = useToogle();
+ const {isLoading,initLoader,stopLoader} = useLoader()
 
   const onSubmit = async(event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
     updateFormStatus(true);
+    initLoader();
     
     if(!areFormFieldsNotEmpty()) return;
    
@@ -29,17 +31,15 @@ const LoginForm = () => {
     
        if(loginRequest.errors){
          showValidationErrors(loginRequest);
+         stopLoader()
          return;
        }
         signInUser(formValues.emailAddressLogin,formValues.passwordLogin);
     }
     catch(error){
       console.log(error);
+     stopLoader();
     }
-  }
-
-  const onTogglePasswordVisible = () =>{
-    handleToggle();
   }
 
   return (
@@ -61,34 +61,27 @@ const LoginForm = () => {
 
         <div className={'form_field'}>
           <label className='label'>Password</label>
-
           <div className={style.auth_password_field}>
           <Input
           id='passwordAuth'
           name='passwordLogin'
-          variant={!isToggle ? 'text' : 'password'}
+          variant={isToggle ? 'text' : 'password'}
           defaultValue={formValues.passwordLogin}
           placeholder='Enter Password'
           isInvalid = { isFormSubmitted && formValues.passwordLogin === ''}
           errorMessage='Password cannot be empty'
           onValuedChange={()=>{handleFormValues(event)}}
          />
-           <span role='button' className={style.password_eye_icon} onClick={onTogglePasswordVisible}>
-              {!isToggle ?  <IoEyeOutline size={25}/> :   <IoEyeOffOutline size={25}/> }
-            </span>
+         <PasswordHidden isVisible={isToggle} handleClick={handleToggle}/>
         </div>
-        
-        </div>
-
-        <Button type='primary' size='large' fullWidth>
-          Login
-        </Button>
+       </div>
+        <AuthBtn defaultText='Login' loadingText='Authenticating' isProccesing={isLoading}/>
 
         <div className={style.auth_footer_form}>
         <p>Don’t have an account?</p>
         <Link className={style.link} href={'/auth/register'}>Sign Up</Link>
         </div>
-    </form>
+     </form>
     <ToastContainer role="alert"/>
     </>
   )

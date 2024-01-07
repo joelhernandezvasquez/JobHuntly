@@ -8,14 +8,16 @@ interface Props{
     fullWidth?:boolean,
     icon?:"none" | "left" | "only",
     handleClick?:() => void,
-    children?:ReactNode
+    isDisabled?:boolean
+    children?:ReactNode,
 }
-const Button = ({type,size,fullWidth,icon,handleClick,children}:Props) => {
+const Button = ({type,size,fullWidth,icon,handleClick,isDisabled,children}:Props) => {
   
   return (
    <button 
-    className={`${style.button} ${style[type]} ${style[size]} ${icon==='left' && style.flex_center} ${fullWidth && style.full_width}`}
+    className={`${style.button} ${style[type]} ${style[size]} ${icon==='left' && style.flex_center} ${fullWidth && style.full_width} ${isDisabled && style.disable_btn}`}
     onClick={handleClick}
+    disabled={isDisabled}
    >
     {children}
    </button>

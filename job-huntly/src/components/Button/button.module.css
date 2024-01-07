@@ -44,3 +44,6 @@
 .full_width{
     width: 100%;
 }
+.disable_btn{
+    background:rgba(70, 64, 222,0.8);
+}
