@@ -1,9 +1,8 @@
 'use client';
 
-import {FormEvent} from 'react';
+import {FormEvent, useTransition} from 'react';
 import Link from 'next/link';
 import useToogle from '@/hooks/useToogle';
-import useLoader from '@/hooks/useLoader';
 import AuthBtn from '@/components/auth/auth-btn/AuthBtn';
 import {ToastContainer } from 'react-toastify';
 import useForm from '@/hooks/useForm';
@@ -17,13 +16,14 @@ import style from '../../auth_style.module.css';
 const LoginForm = () => {
  const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({emailAddressLogin:'',passwordLogin:''});
  const{isToggle,handleToggle} = useToogle();
- const {isLoading,initLoader,stopLoader} = useLoader()
+ const [isPending,startTransition] = useTransition();
 
   const onSubmit = async(event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
-    updateFormStatus(true);
-    initLoader();
-    
+
+    startTransition(async()=>{
+     updateFormStatus(true);
+  
     if(!areFormFieldsNotEmpty()) return;
    
     try{
@@ -31,15 +31,15 @@ const LoginForm = () => {
     
        if(loginRequest.errors){
          showValidationErrors(loginRequest);
-         stopLoader()
+        
          return;
        }
         signInUser(formValues.emailAddressLogin,formValues.passwordLogin);
     }
     catch(error){
       console.log(error);
-     stopLoader();
     }
+  })
   }
 
   return (
@@ -75,7 +75,7 @@ const LoginForm = () => {
          <PasswordHidden isVisible={isToggle} handleClick={handleToggle}/>
         </div>
        </div>
-        <AuthBtn defaultText='Login' loadingText='Authenticating' isProccesing={isLoading}/>
+        <AuthBtn defaultText='Login' loadingText='Authenticating' isProccesing={isPending}/>
 
         <div className={style.auth_footer_form}>
         <p>Don’t have an account?</p>

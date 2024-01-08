@@ -1,9 +1,8 @@
 'use client';
-import { FormEvent } from 'react';
+import { FormEvent, useTransition } from 'react';
 import Link from 'next/link';
 import useForm from '@/hooks/useForm';
 import AuthBtn from '@/components/auth/auth-btn/AuthBtn';
-import useLoader from '@/hooks/useLoader';
 import useToogle from '@/hooks/useToogle';
 import PasswordHidden from '../../ui/PasswordHidden';
 import Input from '@/components/Input/Input';
@@ -14,16 +13,16 @@ import { showValidationErrors } from '@/utils/displayValidationErrors';
 import style from '../../auth_style.module.css';
 import "react-toastify/dist/ReactToastify.css";
 
-
 const RegisterForm = () => {
   const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({fullNameRegister:'',emailAddressRegister:'',passwordRegister:''});
   const{isToggle,handleToggle} = useToogle();
-  const {isLoading,initLoader,stopLoader} = useLoader()
+  const [isPending,startTransition] = useTransition();
   
   const OnSubmit = async(event:FormEvent<HTMLFormElement>) =>{
    event.preventDefault();
+   startTransition(async () =>{
+
    updateFormStatus(true);
-   initLoader();
   
    if(!areFormFieldsNotEmpty()) return;
    
@@ -32,7 +31,6 @@ const RegisterForm = () => {
 
       if(registerRequest.errors){
         showValidationErrors(registerRequest);
-        stopLoader();
         return;
       }
       signInUser(formValues.emailAddressRegister,formValues.passwordRegister);
@@ -40,10 +38,10 @@ const RegisterForm = () => {
    catch(error){
     if(error instanceof Error){
       console.log(error.message);
-      stopLoader();
       throw new Error(error.message);
     }
    }
+  })
 }
   return (
     <>
@@ -93,7 +91,7 @@ const RegisterForm = () => {
          </div>
        </div>
 
-       <AuthBtn defaultText='Continue' loadingText='Signing Up' isProccesing={isLoading}/>
+       <AuthBtn defaultText='Continue' loadingText='Signing Up' isProccesing={isPending}/>
         
         <div className={style.auth_footer_form}>
         <p>Already have an account?</p>

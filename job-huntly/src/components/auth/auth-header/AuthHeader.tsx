@@ -2,9 +2,9 @@
 
 import useAuthNav from '@/hooks/useAuthNav';
 import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
-import auth from '../auth.module.css';
 import GithubAuthButton from '../github/GithubAuthButton';
 import GoogleAuthButton from '../google/GoogleAuthButton';
+import auth from '../auth.module.css';
    
 const AuthHeader = () => {
    const {getPathMessage} = useAuthNav();
@@ -26,7 +26,6 @@ const AuthHeader = () => {
          <div className={auth.divider}></div>
      </div>
      </div>
-
      </MaxWidthWrapper> 
   )
 }
