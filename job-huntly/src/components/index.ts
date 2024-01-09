@@ -1,0 +1,1 @@
+export { default as MaxWidthWrapper } from './ui/MaxWidthWrapper/MaxWidthWrapper';

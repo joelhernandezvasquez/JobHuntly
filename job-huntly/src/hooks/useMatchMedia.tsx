@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {useState,useEffect} from 'react';
 
@@ -9,7 +9,6 @@ interface Props{
 const useMatchMedia = ({media}:Props) => {
  
  const [hasCurrentViewportMatch,setCurrentViewport] = useState<Boolean>(typeof window!==undefined ??  window.matchMedia(media).matches  );
-  
   useEffect(()=>{
   
     const handleResize = () =>{

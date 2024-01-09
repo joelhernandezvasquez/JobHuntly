@@ -5,7 +5,7 @@ import { ChangeEvent, Dispatch, SetStateAction,useEffect,useRef } from "react";
 import ErrorMessage from "../Error/ErrorMessage";
 import style from './style.module.css';
 
-type OnValuedChange = Dispatch<SetStateAction<string>> | ((event: ChangeEvent<HTMLInputElement>) => void);
+type OnValuedChange = Dispatch<SetStateAction<string>> | ((event: ChangeEvent<HTMLInputElement> | any) => void);
 type InputType = "text" | "password";
 interface Props {
   id: string,

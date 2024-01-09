@@ -37,6 +37,7 @@ const JobSearch = () => {
         <Input
          id = 'search-job'
          name = 'searchJob'
+         variant='text'
          defaultValue = {jobSearch}
          onValuedChange={setJobSearch}
          errorMessage='Job keyword is required'

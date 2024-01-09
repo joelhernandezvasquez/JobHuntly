@@ -1,7 +1,8 @@
 
 import type { Metadata } from 'next';
-import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
+
 import LoginForm from './ui/LoginForm';
+import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
 
 export const metadata: Metadata = {
   title: 'JobHuntly | Member Login',
@@ -9,9 +10,11 @@ export const metadata: Metadata = {
 }
 const LoginPage = () => {
   return (
-    <MaxWidthWrapper>
-      <LoginForm/>
-    </MaxWidthWrapper>
+   <MaxWidthWrapper>
+       <LoginForm/>
+   </MaxWidthWrapper>
+      
+   
    
   )
 }
