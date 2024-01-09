@@ -14,12 +14,12 @@
 }
 
 .auth_password_field{
-   display:flex;
-   align-items: center;
+    position:relative;
 }
 .password_eye_icon{
- position: relative;
- right:40px;
+ position: absolute;
+ top:15px;
+ right:10px;
  cursor: pointer;
 }
 .link{

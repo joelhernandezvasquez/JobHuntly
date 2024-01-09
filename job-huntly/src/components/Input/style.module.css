@@ -13,7 +13,6 @@
     align-items: center;
     border:1px solid var(--neutral_20_clr);
     min-height: 50px;
-    padding-left: .75rem;
     transition: all 200ms ease-in-out;
 }
 .input_container_field_error_state{
@@ -31,8 +30,12 @@
   outline:1px solid transparent;
   transition:all 300ms ease-in-out;
   border-radius: 5px;
+ 
 }
-
+.add_padding{
+  padding-left: .75rem;
+}
 .input_wrapper::placeholder{
     color:rgb(124, 132, 147,.5);
 }
+
