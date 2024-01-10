@@ -1,6 +1,5 @@
 
 import type { Metadata } from 'next';
-
 import LoginForm from './ui/LoginForm';
 import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper/MaxWidthWrapper';
 
@@ -13,9 +12,6 @@ const LoginPage = () => {
    <MaxWidthWrapper>
        <LoginForm/>
    </MaxWidthWrapper>
-      
-   
-   
   )
 }
 
