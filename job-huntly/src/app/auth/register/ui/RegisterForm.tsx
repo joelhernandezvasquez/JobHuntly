@@ -12,6 +12,7 @@ import {ToastContainer } from 'react-toastify';
 import { showValidationErrors } from '@/utils/displayValidationErrors';
 import style from '../../auth_style.module.css';
 import "react-toastify/dist/ReactToastify.css";
+import { sleep } from '@/utils/sleep';
 
 const RegisterForm = () => {
   const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({fullNameRegister:'',emailAddressRegister:'',passwordRegister:''});
@@ -20,7 +21,6 @@ const RegisterForm = () => {
   
   const OnSubmit = async(event:FormEvent<HTMLFormElement>) =>{
    event.preventDefault();
-   startTransition(async () =>{
 
    updateFormStatus(true);
   
@@ -33,7 +33,10 @@ const RegisterForm = () => {
         showValidationErrors(registerRequest);
         return;
       }
-      signInUser(formValues.emailAddressRegister,formValues.passwordRegister);
+      startTransition(async () =>{
+        sleep(300)
+         signInUser(formValues.emailAddressRegister,formValues.passwordRegister);
+      })
     }
    catch(error){
     if(error instanceof Error){
@@ -41,7 +44,6 @@ const RegisterForm = () => {
       throw new Error(error.message);
     }
    }
-  })
 }
   return (
     <>

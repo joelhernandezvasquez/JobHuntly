@@ -13,7 +13,7 @@ const AuthHeader = () => {
      <MaxWidthWrapper>
      <div className={auth.auth_header}>
      <h2 className={auth.auth_header_title}>
-      {getPathMessage('Welcome Back User',`Let's Go`)}
+      {getPathMessage('Welcome Back',`Let's Go`)}
      </h2>
      <GoogleAuthButton buttonText={getPathMessage('Login With Google','Sign Up With Google')}/>
      <GithubAuthButton buttonText={getPathMessage('Login With Github','Sign Up With Github')}/>

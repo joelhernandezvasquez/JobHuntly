@@ -12,17 +12,16 @@ import { authenticateUser, signInUser} from '@/actions/auth/login';
 import { showValidationErrors } from '@/utils/displayValidationErrors';
 import "react-toastify/dist/ReactToastify.css";
 import style from '../../auth_style.module.css';
+import { sleep } from '@/utils/sleep';
 
 const LoginForm = () => {
- const {formValues,handleFormValues,isFormSubmitted,updateFormStatus,areFormFieldsNotEmpty} = useForm({emailAddressLogin:'',passwordLogin:''});
+ const {formValues,isFormSubmitted,handleFormValues,updateFormStatus,areFormFieldsNotEmpty} = useForm({emailAddressLogin:'',passwordLogin:''});
  const {isToggle,handleToggle} = useToogle();
  const [isPending,startTransition] = useTransition();
 
   const onSubmit = async(event:FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
-
-    startTransition(async()=>{
-     updateFormStatus(true);
+    updateFormStatus(true);
   
     if(!areFormFieldsNotEmpty()) return;
    
@@ -32,13 +31,15 @@ const LoginForm = () => {
        if(loginRequest.errors){
          showValidationErrors(loginRequest);
          return;
-       }
-        signInUser(formValues.emailAddressLogin,formValues.passwordLogin);
+       }  
+        startTransition(async()=>{
+         sleep(300);
+        signInUser(formValues.emailAddressLogin,formValues.passwordLogin)
+      })
     }
     catch(error){
       console.log(error);
     }
-  })
   }
 
   return (
