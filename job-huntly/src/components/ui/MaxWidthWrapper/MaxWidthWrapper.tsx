@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { getClassNames } from '@/utils/getClassNames';
 import style from './style.module.css';
 
 interface Props{
@@ -8,10 +9,18 @@ interface Props{
     flexGapSm?:boolean
 }
 const MaxWidthWrapper = ({children,flex,flexCenter,flexGapSm}:Props) => {
+ 
+  const classNames= getClassNames(
+    style.max_wrapper,
+    flex ? style.flex:'',
+    flexCenter ? style.flexCenter:'',
+    flexGapSm ? style.flexGapSm:''
+  )
+ 
   return (
     <section 
-      className={`${style.max_wrapper} ${flex && style.flex} ${flexCenter && style.flexCenter} ${flexGapSm && style.flexGapSm}`}>
-      {children}
+    className={classNames}>
+    {children}
     </section>
   )
 }
