@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { auth } from '@/auth.config';
 import { registerUser } from '@/actions/auth/register';
 import { validateUser } from '@/actions/auth/validateUser';
+import TopHeader from '@/components/ui/TopHeader/TopHeader';
 
 interface Props{
   children:React.ReactNode
@@ -28,7 +29,8 @@ export default async function DashbardLayout({children}:Props) {
 
   return (
        <main>
-       {children}
+        <TopHeader/>
+        {children}
      </main>
      
     )

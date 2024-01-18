@@ -3,3 +3,13 @@
     padding-left: var(--wrapper_spacing);
     padding-right: var(--wrapper_spacing);
   }
+
+  .flex{
+    display:flex;
+  }
+  .flexCenter{
+    align-items: center;
+  }
+  .flexGapSm{
+    gap:1rem
+  }

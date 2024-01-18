@@ -1,0 +1,18 @@
+
+
+.top_header_wrapper{
+    padding:1rem 0;
+}
+
+.top_header_left_col, .top_header_right_col{
+    display:flex;
+    align-items: center;
+}
+.top_header_left_col{
+  gap:1rem;
+}
+.top_header_right_col{
+    margin-left: auto;
+    display:flex;
+    gap:1rem;
+}

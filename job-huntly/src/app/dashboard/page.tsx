@@ -8,8 +8,7 @@ const dashboard = async () => {
 
   return (
     <div>
-      {JSON.stringify(session)}
-      <h1>Dashboard</h1>
+      
     </div>
   )
 }
