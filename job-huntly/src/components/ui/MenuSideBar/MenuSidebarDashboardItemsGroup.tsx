@@ -3,9 +3,9 @@
 import { Fragment } from 'react';
 import { usePathname } from 'next/navigation';
 import useMenuSideBarDashboardItems from '@/hooks/useMenuSideBarDashboardItems';
-import style from './style.module.css';
 import MenuSideDashboardItem from './MenuSideDashboardItem';
 import DashboardDivider from './DashboardDivider';
+import style from './style.module.css';
 
 interface Props{
   dividerInterval?:number
