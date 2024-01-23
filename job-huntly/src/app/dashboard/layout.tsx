@@ -3,6 +3,7 @@ import { auth } from '@/auth.config';
 import { registerUser } from '@/actions/auth/register';
 import { validateUser } from '@/actions/auth/validateUser';
 import TopHeader from '@/components/ui/TopHeader/TopHeader';
+import MenuSideBar from '@/components/ui/MenuSideBar/MenuSideBar';
 
 interface Props{
   children:React.ReactNode
@@ -30,6 +31,8 @@ export default async function DashbardLayout({children}:Props) {
   return (
        <main>
         <TopHeader/>
+         {/* TODO: Menu Side bar has to be moved from here once is developed */}
+        <MenuSideBar/>
         {children}
      </main>
      

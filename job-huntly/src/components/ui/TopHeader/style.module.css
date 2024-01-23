@@ -2,6 +2,7 @@
 
 .top_header_wrapper{
     padding:1rem 0;
+    box-shadow: 0px -1px 0px 0px #D6DDEB inset;
 }
 
 .top_header_left_col, .top_header_right_col{
