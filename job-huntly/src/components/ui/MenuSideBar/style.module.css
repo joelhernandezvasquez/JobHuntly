@@ -1,9 +1,13 @@
 
 .menu_side_bar_wrapper{
-    height:600px;
     padding:1rem 0;
     background: var(--neutral_10_clr);
-   /* box-shadow: 1px 0px 0px 0px #D3D6DB; */
+    position:absolute;
+    width:90%;
+    transform: translateX(-100%);
+    transition:all 300ms ease-in-out;
+    box-shadow: 1px 0px 0px 0px #D3D6DB;
+    z-index: 2;
 }
 
 .dashboard_items_container{
@@ -60,4 +64,8 @@
     position:absolute;
     top:8px;
     left:-16px;
+}
+
+.menu_side_bar_wrapper.menu_side_bar_wrapper_open{
+    transform: translateX(0);
 }

@@ -1,4 +1,4 @@
-import OpenMenu from "../OpenMenu/OpenMenu";
+import ToggleDashboardMenu from "../ToggleDashboardMenu/ToggleDashboardMenu";
 import CurrentPageHeader from "../CurrentPageHeader/CurrentPageHeader";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import Notification from "../Notification/Notification";
@@ -11,7 +11,7 @@ const TopHeader = () => {
     <header className={style.top_header_wrapper}>
      <MaxWidthWrapper flex flexGapSm>
         <div className={style.top_header_left_col}>
-        <OpenMenu/>
+        <ToggleDashboardMenu/>
         <CurrentPageHeader/>
         </div>
        
