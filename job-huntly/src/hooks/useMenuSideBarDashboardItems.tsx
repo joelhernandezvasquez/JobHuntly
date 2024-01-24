@@ -7,7 +7,6 @@ import { FaRegFilePdf } from "react-icons/fa";
 import { FaRegAddressBook } from "react-icons/fa";
 import { FaTasks } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
-import { TbLogout } from "react-icons/tb";
 import { v4 as uuidv4 } from 'uuid';
 
 const useMenuSideBarDashboardItems = () => {
@@ -67,12 +66,12 @@ const useMenuSideBarDashboardItems = () => {
                 route:'/profile',
                 icon:<CiSettings size={24}/>
         },
-        {
-                id:uuidv4(),
-                item:'Logout',
-                route:'/auth/login',
-                icon:<TbLogout size={24} />
-        },
+        // {
+        //         id:uuidv4(),
+        //         item:'Logout',
+        //         route:'/auth/login',
+        //         icon:<TbLogout size={24} />
+        // },
         ]
         
  return{
