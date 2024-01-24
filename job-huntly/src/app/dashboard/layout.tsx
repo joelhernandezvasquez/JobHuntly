@@ -31,7 +31,6 @@ export default async function DashbardLayout({children}:Props) {
   return (
        <main>
         <TopHeader/>
-         {/* TODO: Menu Side bar has to be moved from here once is developed */}
         <MenuSideBar/>
         {children}
      </main>
