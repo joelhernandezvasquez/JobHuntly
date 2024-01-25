@@ -4,8 +4,8 @@ import { usePathname } from 'next/navigation';
 import useMenuSideBarDashboardItems from '@/hooks/useMenuSideBarDashboardItems';
 import MenuSideDashboardItem from './MenuSideDashboardItem';
 import DashboardDivider from './DashboardDivider';
+import Logout from '@/components/auth/logout-btn/Logout';
 import style from './style.module.css';
-
 interface Props{
   dividerInterval?:number
 }
@@ -24,7 +24,8 @@ const MenuSidebarDashboardItemsGroup = ({dividerInterval}:Props) => {
               { dividerInterval && ((index+1) % dividerInterval === 0 && <DashboardDivider/>)}
              </Fragment>
              )
-          })}  
+          })} 
+          <li> <Logout/> </li> 
         </ul>
     </nav>
   )

@@ -16,7 +16,7 @@ const TopHeader = () => {
         </div>
        
        <div className={style.top_header_right_col}>
-       <SwitchTheme/>
+        <SwitchTheme/>
         <Notification/>
         <ProfileAvatar/>
        </div>

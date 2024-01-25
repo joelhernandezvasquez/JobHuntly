@@ -1,14 +1,13 @@
 
 
 import { auth } from '@/auth.config';
-import React from 'react'
 
-const dashboard = async () => {
+export const dashboard = async () => {
   const session = await auth();
 
   return (
     <div>
-      
+     <h1></h1>
     </div>
   )
 }

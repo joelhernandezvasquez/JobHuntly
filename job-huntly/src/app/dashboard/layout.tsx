@@ -37,4 +37,3 @@ export default async function DashbardLayout({children}:Props) {
      
     )
   }
-  
