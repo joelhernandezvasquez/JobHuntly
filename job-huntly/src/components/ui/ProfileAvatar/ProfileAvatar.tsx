@@ -1,19 +1,28 @@
+
 import Image from 'next/image';
-import avatarSampleImage from '../../../../public/avatars/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg';
+import { auth } from '@/auth.config';
+import DefaultAvatar from '../DefaultAvatar/DefaultAvatar';
 import style from './style.module.css';
 
-const ProfileAvatar = () => {
-  return (
+const ProfileAvatar = async () => {
+  const session = await auth();
+  const user = session?.user;
+
+ return (
     <div className={style.avatar_container}>
-      
        <div className={style.avatar_image_container}>
-        <Image 
+        { user?.image ?
+         ( <Image 
         className={style.avatar_image}
         width={50}
         height={50}
-        src={avatarSampleImage}
+        src={user?.image}
         alt={''}
-        />
+        /> )
+       :
+       <DefaultAvatar userName={user?.user.name} backgroundColor='#7B61FF'/>
+      }
+      
        </div>
 
        <div className={style.avatar_information_container}>

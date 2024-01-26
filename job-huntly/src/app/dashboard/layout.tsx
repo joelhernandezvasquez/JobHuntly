@@ -12,6 +12,7 @@ interface Props{
 export default async function DashbardLayout({children}:Props) {
    
    const session = await auth();
+  
 
    if(session?.user){
     const isUserRegistered = await validateUser(session.user.email || '');
