@@ -26,7 +26,7 @@
 .dashboard_menu_item{
     display:flex;
     align-items: center;
-    gap:1rem;
+    gap:.5rem;
     min-height: 3rem;
     padding:0 1rem;
 }
@@ -41,8 +41,6 @@
 
 .dashboard_divider_items_menu{
     height:1px;
-    margin-top:1rem;
-    margin-bottom: 1rem;
     margin-left: -16px;
     margin-right: -16px;
     background:var(--secondary_brand_clr);

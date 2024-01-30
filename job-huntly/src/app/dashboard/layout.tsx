@@ -10,10 +10,9 @@ interface Props{
 }
 
 export default async function DashbardLayout({children}:Props) {
-   
+     //TODO:this code must be consume from auth Config Adapter
    const session = await auth();
   
-
    if(session?.user){
     const isUserRegistered = await validateUser(session.user.email || '');
     

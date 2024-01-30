@@ -50,12 +50,12 @@
     border:none;
     display:flex;
     align-items: center;
-    gap:1rem;
+    gap:.5rem;
     min-height: 3rem;
     padding:0 1rem;
 }
 .logout_btn > *{
-    color:var(--neutral_60_clr);
+    color: #d91d03;
     font-size: 1rem;
     font-weight: 500; 
 }

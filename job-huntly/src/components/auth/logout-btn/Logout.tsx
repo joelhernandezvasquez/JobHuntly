@@ -1,3 +1,4 @@
+'use client';
 import { logoutUser } from "@/actions/auth/logout";
 import { TbLogout } from "react-icons/tb";
 import style from '../auth.module.css';
