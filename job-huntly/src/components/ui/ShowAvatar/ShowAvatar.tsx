@@ -7,40 +7,33 @@ import style from './style.module.css';
 
 interface Props{
   user:{
-    id: string,
-    name: string,
-    email:string,
-    emailVerified: boolean,
-    role: string,
-    image: null | string
-  }
- children?:ReactNode
+   name: string,
+   image: null | string
+  },
+  children?:ReactNode
 }
 const ShowAvatar = ({user,children}:Props) => {
     
-  const {isToggle,handleToggle} = useToogle();
+const {isToggle,handleToggle} = useToogle();
     
   return (
     <>
     <div className={style.avatar_image_container} onClick={handleToggle}>
-        { user?.image ?
-         ( <Image 
-        className={style.avatar_image}
-        width={50}
-        height={50}
-        src={user?.image}
-        alt={''}
+      { user?.image ? ( 
+        <Image 
+          className={style.avatar_image}
+          width={50}
+          height={50}
+          src={user?.image}
+          alt={`${user.name} avatar image`}
         /> )
        :
        <DefaultAvatar userName={user.name} backgroundColor='#7B61FF'/>
-         }
-
-    </div>
+      }
+     </div>
    
     {isToggle && children}
-   
     </>
-  )
-         }
+  )}
 
 export default ShowAvatar

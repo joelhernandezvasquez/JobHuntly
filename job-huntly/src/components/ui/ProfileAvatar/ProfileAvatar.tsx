@@ -7,13 +7,12 @@ import style from './style.module.css';
 const ProfileAvatar = async () => {
   
   const user = await AuthAdapter.getUserSessionInfo();
-  console.log(user);
-
+  
  return (
     <div className={style.avatar_container}>
-    <ShowAvatar user={user}>
-        <AvatarDropdown/>        
-    </ShowAvatar>
+      <ShowAvatar user={user}>
+          <AvatarDropdown/>        
+      </ShowAvatar>
     </div>
   )
 }
