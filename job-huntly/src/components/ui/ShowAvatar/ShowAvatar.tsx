@@ -1,15 +1,28 @@
+'use client';
+import { ReactNode } from 'react';
 import Image from 'next/image';
-import { auth } from "@/auth.config";
 import DefaultAvatar from "../DefaultAvatar/DefaultAvatar";
+import useToogle from '@/hooks/useToogle';
 import style from './style.module.css';
 
-const ShowAvatar = async () => {
-      //TODO:this code must be consume from auth Config Adapter
-  const session = await auth();
-  const user = session?.user;
-  
+interface Props{
+  user:{
+    id: string,
+    name: string,
+    email:string,
+    emailVerified: boolean,
+    role: string,
+    image: null | string
+  }
+ children?:ReactNode
+}
+const ShowAvatar = ({user,children}:Props) => {
+    
+  const {isToggle,handleToggle} = useToogle();
+    
   return (
-    <div className={style.avatar_image_container}>
+    <>
+    <div className={style.avatar_image_container} onClick={handleToggle}>
         { user?.image ?
          ( <Image 
         className={style.avatar_image}
@@ -19,10 +32,15 @@ const ShowAvatar = async () => {
         alt={''}
         /> )
        :
-       <DefaultAvatar userName={user?.user.name} backgroundColor='#7B61FF'/>
-      }
+       <DefaultAvatar userName={user.name} backgroundColor='#7B61FF'/>
+         }
+
     </div>
+   
+    {isToggle && children}
+   
+    </>
   )
-}
+         }
 
 export default ShowAvatar
