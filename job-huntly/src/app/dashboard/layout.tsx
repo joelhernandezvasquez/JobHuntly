@@ -4,14 +4,16 @@ import { registerUser } from '@/actions/auth/register';
 import { validateUser } from '@/actions/auth/validateUser';
 import TopHeader from '@/components/ui/TopHeader/TopHeader';
 import MenuSideBar from '@/components/ui/MenuSideBar/MenuSideBar';
+import { AuthAdapter } from '@/config/authAdapter';
+import { Session } from 'next-auth';
 
 interface Props{
   children:React.ReactNode
 }
 
 export default async function DashbardLayout({children}:Props) {
-     //TODO:this code must be consume from auth Config Adapter
-   const session = await auth();
+     
+   const session = await AuthAdapter.getSession();
   
    if(session?.user){
     const isUserRegistered = await validateUser(session.user.email || '');
