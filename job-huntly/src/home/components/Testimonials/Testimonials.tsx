@@ -1,5 +1,5 @@
 
-import TestimonialsTab from '@/components/TestimonialsTab/TestimonialsTab';
+import TestimonialsTab from '@/components/ui/TestimonialsTab/TestimonialsTab';
 import { testimoniesArray } from '@/helper/data/testimonies';
 import style from './style.module.css';
 

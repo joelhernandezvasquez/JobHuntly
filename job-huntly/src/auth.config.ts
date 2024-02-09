@@ -48,8 +48,7 @@ export const authConfig:NextAuthConfig = {
           })
 
           const user = await res.json();
-          
-
+      
           if(user){
              return user;
           }
