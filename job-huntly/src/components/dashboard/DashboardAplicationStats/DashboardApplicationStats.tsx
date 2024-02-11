@@ -7,7 +7,7 @@ import style from './style.module.css';
 
 const DashboardApplicationStats = async () => {
     const userId = AuthAdapter.getUserId();
-    const dashboardStats = await getDashboardApplicationStats(userId);
+    const dashboardStats = await getDashboardApplicationStats(userId!);
   
     return (
     <>
