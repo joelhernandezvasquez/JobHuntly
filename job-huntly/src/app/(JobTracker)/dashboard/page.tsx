@@ -1,7 +1,8 @@
+import { Suspense } from "react";
 import DashboardApplicationStats from "@/components/dashboard/DashboardAplicationStats/DashboardApplicationStats";
 import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper/MaxWidthWrapper";
 import CardSkeleton from "@/components/ui/Skeletons/CardSkeleton";
-import { Suspense } from "react";
+import DashboardJobStatstictics from "@/components/dashboard/DashboardJobStatstictics/DashboardJobStatstictics";
 
 const dashboard = () => {
 
@@ -10,7 +11,10 @@ const dashboard = () => {
       <Suspense fallback={<CardSkeleton/>}>
         <DashboardApplicationStats/>
       </Suspense>
-        
+      
+      <DashboardJobStatstictics/>
+
+      
      </MaxWidthWrapper>
   )
 }

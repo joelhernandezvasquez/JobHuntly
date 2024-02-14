@@ -1,0 +1,17 @@
+
+.wrapper{
+ border: 1px solid var(--neutral_20_clr);
+ border-radius: 5px;
+ margin-top:1rem;
+ padding:1rem;
+}
+
+.headline{
+    font-size: 1.2rem;
+}
+.filter_frequency_text{
+    font-size: 1;
+    color:var(--neutral_60_clr);
+    font-family: var(--epilogue_font);
+    font-weight: 500;
+}
