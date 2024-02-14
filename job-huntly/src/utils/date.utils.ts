@@ -35,8 +35,9 @@ export const CalendarUtils = {
         date.setHours(0, 0, 0, 0);
         date.setDate(date.getDate() + 4 - (date.getDay() || 7));
         const startOfYear = new Date(date.getFullYear(), 0, 1);
+        
         // TODO:Fix type issue
-        const weekNumber = Math.ceil((((date - startOfYear) / 86400000) + 1) / 7);
+        const weekNumber = Math.ceil((((+date - +startOfYear) / 86400000) + 1) / 7);
         return weekNumber;
     },
     getFormattedMDYDate:()=>{

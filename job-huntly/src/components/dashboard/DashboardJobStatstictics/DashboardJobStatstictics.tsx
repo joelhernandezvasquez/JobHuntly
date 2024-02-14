@@ -10,7 +10,7 @@ const DashboardJobStatstictics = () => {
          <div>
              <h2 className={style.headline}>Job statistics</h2>
              {/* TODO:This part need to be dinamic */}
-             <p className={style.filter_frequency_text}>Showing statistics {getJobStatisticsFrequencyMessage('Monthly')}</p>
+             <p className={style.filter_frequency_text}>Showing statistics {getJobStatisticsFrequencyMessage('Weekly')}</p>
          </div>
 
          <div>
