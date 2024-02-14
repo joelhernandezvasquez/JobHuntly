@@ -38,5 +38,13 @@ export const CalendarUtils = {
         // TODO:Fix type issue
         const weekNumber = Math.ceil((((date - startOfYear) / 86400000) + 1) / 7);
         return weekNumber;
+    },
+    getFormattedMDYDate:()=>{
+        const today = new Date();
+        return today.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+    },
+    getCurrentMonthName:()=>{
+        const today = new Date();
+        return today.toLocaleString('en-US', { month: 'long' });
     }
 }
