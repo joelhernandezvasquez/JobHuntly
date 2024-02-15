@@ -1,4 +1,4 @@
-// TODO:Refactor Code
+
 export const CalendarUtils = {
 
        getDayInText: (day:number) =>{
@@ -8,8 +8,9 @@ export const CalendarUtils = {
     
     getMondayAndSundayOfWeek:(year:number, month:number, weekNumber:number) =>{
         const firstDayOfMonth = new Date(year, month, 1);
-    
-       const firstDayOfWeek = firstDayOfMonth.getDay();
+        const firstDayOfWeek = firstDayOfMonth.getDay();
+        
+        // Calculate the offset needed to get to the first Monday of the month
        const offsetToMonday = (8 - firstDayOfWeek) % 7;
         
         // Calculate the date of the first Monday of the month
