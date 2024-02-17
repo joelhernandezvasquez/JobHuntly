@@ -1,0 +1,20 @@
+.tabs_container{
+    width: fit-content;
+    background:var(--tertiary_secondary_brand_clr);
+    margin:1rem 0;
+    padding:4px 8px;
+}
+
+.tabs_menu{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+.tabs_tab_item{
+    color:var(--primary_brand_clr);
+    font-size: 1rem;
+    padding:.5rem 1rem;
+}
+.tabs_tab_item.active{
+    background:var(--neutral_0_clr);
+}

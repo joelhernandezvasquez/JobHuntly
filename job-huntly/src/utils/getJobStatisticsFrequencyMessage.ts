@@ -1,15 +1,15 @@
 import { TimeUnit} from "@/types";
 import { CalendarUtils } from "./date.utils";
 
-const DAILY = 'Daily';
-const WEEKLY = 'Weekly';
+const DAILY = 'Day';
+const WEEKLY = 'Week';
 
 export const getJobStatisticsFrequencyMessage = (timeUnit:TimeUnit):string =>{
     if(timeUnit === DAILY ){
-     getDailyFrequencyMessage();
+     return getDailyFrequencyMessage();
   }
   if(timeUnit === WEEKLY){
-   getWeeklyFrequencyMessage();
+   return getWeeklyFrequencyMessage();
   }
     return `for ${CalendarUtils.getCurrentMonthName()}`;
 }

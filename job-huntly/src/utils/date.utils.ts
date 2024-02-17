@@ -6,7 +6,7 @@ export const CalendarUtils = {
         return DaysOfTheWeek[day-1];
        },
     
-    getMondayAndSundayOfWeek:(year:number, month:number, weekNumber:number) =>{
+    getMondayAndSundayOfWeek:(year:number, month:number, weekNumber:number) =>{ 
         const firstDayOfMonth = new Date(year, month, 1);
         const firstDayOfWeek = firstDayOfMonth.getDay();
         
