@@ -5,6 +5,7 @@ import { TimeUnit } from '@/types';
 import { getJobStatisticsFrequencyMessage } from '@/utils/getJobStatisticsFrequencyMessage';
 import Tabs from '@/components/ui/Tabs/Tabs';
 import style from './style.module.css';
+import LegendLabel from '@/components/ui/LegendLabel/LegendLabel';
 
 const tabArray = [
     {
@@ -53,6 +54,21 @@ const DashboardJobStatsticticsBody = () => {
           </Tabs>  
          </div>
       </div>
+
+      <LegendLabel>
+        <LegendLabel.LegentLabelItem legendColor='#56CDAD'>
+            <p>Application Sent</p>
+        </LegendLabel.LegentLabelItem>
+
+        <LegendLabel.LegentLabelItem legendColor='#4640DE'>
+            <p>Interviews</p>
+        </LegendLabel.LegentLabelItem>
+
+        <LegendLabel.LegentLabelItem legendColor='#FF6550'>
+            <p>Rejected</p>
+        </LegendLabel.LegentLabelItem>
+
+     </LegendLabel>
 
         <div>
         {/* TODO:Char goes here */}
