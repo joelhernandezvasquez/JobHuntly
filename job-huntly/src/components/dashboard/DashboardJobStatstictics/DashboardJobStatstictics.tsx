@@ -17,7 +17,7 @@ const DashboardJobStatstictics = () => {
 
 /* Steps 
  1 - [x] will move from style.header to a client component
- 2 - make the state work on the client component
+ 2 - [x] make the state work on the client component
  3 - design the rest of the UI such as the dots
  4 - design the chart component
  5 - Prepare the parent component to send the fetch data to client components

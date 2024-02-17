@@ -10,11 +10,3 @@
     align-items: center;
     gap:1rem;
 }
-.tabs_tab_item{
-    color:var(--primary_brand_clr);
-    font-size: 1rem;
-    padding:.5rem 1rem;
-}
-.tabs_tab_item.active{
-    background:var(--neutral_0_clr);
-}
