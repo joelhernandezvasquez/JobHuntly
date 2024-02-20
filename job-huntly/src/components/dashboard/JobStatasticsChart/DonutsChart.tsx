@@ -1,4 +1,4 @@
-import { DonutChart, Legend } from '@tremor/react';
+import { DonutChart} from '@tremor/react';
 import style from './style.module.css';
 
 const sales:any = [

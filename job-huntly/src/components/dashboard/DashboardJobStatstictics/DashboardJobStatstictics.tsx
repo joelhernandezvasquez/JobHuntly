@@ -21,8 +21,8 @@ const DashboardJobStatstictics = () => {
  3 - [x] design the rest of the UI such as the dots
  4 - [x] design the chart component
  5 - Prepare the parent component to send the fetch data to client components
- 6- [] Create the service client fetch function data
- 7 - Create a fake endpoint to simulate this data sent
+ 6- [x] Create the service client fetch function data
+ 7 - [] Create a fake endpoint to simulate this data sent
  8 - client components to recieve the data and manipulate it
  9 - make the toggle tab event to work and make the changes everywhere
  10 compose the client components
