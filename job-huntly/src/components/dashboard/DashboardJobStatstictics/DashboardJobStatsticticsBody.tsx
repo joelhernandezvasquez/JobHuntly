@@ -6,6 +6,7 @@ import { getJobStatisticsFrequencyMessage } from '@/utils/getJobStatisticsFreque
 import Tabs from '@/components/ui/Tabs/Tabs';
 import style from './style.module.css';
 import LegendLabel from '@/components/ui/LegendLabel/LegendLabel';
+import { DonutsChart } from '../JobStatasticsChart/DonutsChart';
 
 const tabArray = [
     {
@@ -56,24 +57,23 @@ const DashboardJobStatsticticsBody = () => {
       </div>
 
       <LegendLabel>
-        <LegendLabel.LegentLabelItem legendColor='#56CDAD'>
+        <LegendLabel.LegentLabelItem legendColor='#3B81F6'>
             <p>Application Sent</p>
         </LegendLabel.LegentLabelItem>
 
-        <LegendLabel.LegentLabelItem legendColor='#4640DE'>
+        <LegendLabel.LegentLabelItem legendColor='#6366F1'>
             <p>Interviews</p>
         </LegendLabel.LegentLabelItem>
 
-        <LegendLabel.LegentLabelItem legendColor='#FF6550'>
+        <LegendLabel.LegentLabelItem legendColor='#05B6D3'>
             <p>Rejected</p>
         </LegendLabel.LegentLabelItem>
 
      </LegendLabel>
 
-        <div>
-        {/* TODO:Char goes here */}
-        </div>
-        </>
+      <DonutsChart/>
+      </>
+    
   )
 }
 
