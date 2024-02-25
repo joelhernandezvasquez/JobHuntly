@@ -1,28 +1,32 @@
 import { DonutChart} from '@tremor/react';
 import style from './style.module.css';
 
-const sales:any = [
+interface Props{
+  applications:any []
+}
+const data1 =  [
   {
-    name: 'Application Sent',
-    sales: 980,
+      "name": "Application Sent",
+      "total": 980
   },
   {
-    name: 'Interviews',
-    sales: 456,
+      "name": "Interviews",
+      "total": 456
   },
   {
-    name: 'Rejected',
-    sales: 390,
+      "name": "Rejected",
+      "total": 390
   }
-];
+]
 
-export function DonutsChart() {
+export function DonutsChart({applications}:Props) {
+  console.log(applications);
   return (
     <>
       <div className="flex items-center justify-center space-x-6">
         <DonutChart
-          data={sales}
-          category="sales"
+          data={applications}
+          category="total"
           index="name"
           colors={['blue','indigo','cyan']}
           className={style.container}

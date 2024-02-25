@@ -10,11 +10,8 @@
  .loader::after {
    content: '';
    width: calc(100%);
-   /* width: 100%; */
-   /* height: 140px; */
    height: 100%;
    top: 1rem;
-   /* left: 15px; */ 
    position: absolute;
    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 100%),
     linear-gradient(#DDD 100px, transparent 0),

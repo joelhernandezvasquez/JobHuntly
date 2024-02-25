@@ -4,10 +4,16 @@ import { useState } from 'react';
 import { TimeUnit } from '@/types';
 import { getJobStatisticsFrequencyMessage } from '@/utils/getJobStatisticsFrequencyMessage';
 import Tabs from '@/components/ui/Tabs/Tabs';
-import style from './style.module.css';
 import LegendLabel from '@/components/ui/LegendLabel/LegendLabel';
 import { DonutsChart } from '../JobStatasticsChart/DonutsChart';
+import style from './style.module.css';
+import {usePathname, useRouter, useSearchParams} from 'next/navigation';
 
+interface Props{
+  // TODO:need to type this prop
+  totalApplicationByFrequency:any []
+}
+// TODO:place this array info in a data constant file
 const tabArray = [
     {
       id:0,
@@ -23,12 +29,18 @@ const tabArray = [
     },
   
   ]
-
-const DashboardJobStatsticticsBody = () => {
- const [activeTab,setActiveTab] = useState<TimeUnit>('Week');
+// TODO: unnecesary Prop Drilling for totalApplicationByFrequency
+const DashboardJobStatsticticsBody = ({totalApplicationByFrequency}:Props) => {
+  // TODO:Refactor the useState usage probably not needed
+  const searchParams = useSearchParams();
+  const frequencyState = (searchParams.get('frequency') ?? 'Week') as TimeUnit
+ const [activeTab,setActiveTab] = useState<TimeUnit>(frequencyState);
+ const {replace} = useRouter();
+ const pathName= usePathname();
 
  const toggleTab = (tab:TimeUnit) =>{
     setActiveTab(tab);
+    replace(`${pathName}?frequency=${tab}`);
  }
 
   return (
@@ -46,7 +58,7 @@ const DashboardJobStatsticticsBody = () => {
            <Tabs>
             {tabArray.map((tab)=>{
              return (<li key={tab.id} 
-                      className={`${style.tabs_tab_item} ${tab.item === activeTab && style.active}`}
+                      className={`${style.tabs_tab_item} ${tab.item=== activeTab && style.active}`}
                       onClick={() => toggleTab(tab.item as TimeUnit)}
                       >
                       {tab.item}
@@ -71,7 +83,7 @@ const DashboardJobStatsticticsBody = () => {
 
      </LegendLabel>
 
-      <DonutsChart/>
+      <DonutsChart applications={totalApplicationByFrequency}/>
       </>
     
   )
