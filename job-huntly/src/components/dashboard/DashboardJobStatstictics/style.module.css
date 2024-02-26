@@ -6,16 +6,6 @@
  padding:1rem;
 }
 
-.headline{
-    font-size: 1.2rem;
-    color:var(--neutral_100_clr);
-}
-.filter_frequency_text{
-    font-size: 1;
-    color:var(--neutral_60_clr);
-    font-family: var(--epilogue_font);
-    font-weight: 500;
-}
 
 .tabs_tab_item{
     color:var(--primary_brand_clr);

@@ -17,8 +17,8 @@ export default function dashboard (
         <DashboardApplicationStats/>
       </Suspense>
       
-      <Suspense key={frequencyFilterSelection} fallback={<CardPlaceholderSkeleton/>}>
-        <DashboardJobStatstictics frequency={frequencyFilterSelection}/>
+      <Suspense fallback={<CardPlaceholderSkeleton/>}>
+        <DashboardJobStatstictics filteredfrequency={frequencyFilterSelection}/>
       </Suspense>
      
      </MaxWidthWrapper>
