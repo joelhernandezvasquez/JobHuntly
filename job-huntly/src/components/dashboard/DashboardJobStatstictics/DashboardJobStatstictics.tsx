@@ -13,16 +13,20 @@ const DashboardJobStatstictics = async ({filteredfrequency}:Props) => {
  const totalApplicationByFrequency = await getTotalApplicationByFrequency(AuthAdapter.getUserId() as string,filteredfrequency);
 
 /* Steps 
-1 - [x] make different change on the back-end and simulate filtering from the endpoint based on frequency
- 2-  [x] compose the client components and refactoring
- 3 - [x] data needs to be reformatted for the data chart that only accepts array
- 4 - suspense the donut chart component and fix how data will be presented
+ 1 - [] the chart component and fix how data will be presented
+ 2 - suspense the component cause it takes long time to load
+ 3 - to fix the refetching of the rest of components
+ 4 - types
+ 5 - last check to all components
 */
 
   return (
     <section className={style.wrapper}>
         <DashboardJobStatsticticsBody>
-          <DonutsChart applications={totalApplicationByFrequency}/>
+          <DonutsChart 
+           frequencyFilterSelection = {filteredfrequency}
+           applications={totalApplicationByFrequency}
+           />
         </DashboardJobStatsticticsBody>
     </section>
   )

@@ -42,7 +42,7 @@ const DashboardJobStatsticticsBody = ({children}:Props) => {
          </div>
       </div>
       
-       <LegendLabelList/>
+      {frequencyState === 'Day' && <LegendLabelList/>}
       
       {children}
       </>
