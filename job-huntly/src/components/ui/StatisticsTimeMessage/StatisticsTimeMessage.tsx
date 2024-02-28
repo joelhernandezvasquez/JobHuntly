@@ -12,7 +12,7 @@ const StatisticsTimeMessage = ({frequencyState}:Props) => {
     <div>
         <h2 className={style.headline}>Job statistics</h2>
              <p className={style.filter_frequency_text}>
-               Showing statistics {getJobStatisticsFrequencyMessage(frequencyState)}
+               Statistics {getJobStatisticsFrequencyMessage(frequencyState)}
             </p>
     </div>
   )

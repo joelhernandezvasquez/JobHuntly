@@ -8,32 +8,21 @@ interface Props{
   applications:any []
 }
 
-/*TODO:
- 1 -  [x] Simulate how component will look like based on the frequency selected
- 2 -  [x] need to show the donut and area chart conditional
- 3 -  [] need to transform the data to align with area and donut charts.
-        [x] a. Weekly
-         [x] b. Monthly
- 4 -  [] need to show the legend only for donut chart
- 5 -  fix the styling of the charts(font size,color,padding, etc..)
-*/
-
 export function DonutsChart({frequencyFilterSelection,applications}:Props) {
  
     return (
     <>
-      {/* <div className="flex items-center justify-center space-x-6"> */}
       { frequencyFilterSelection!=='Day' ?  
        
        <AreaChart
-        className="mt-4 h-72"
+        className={style.area_chart_container}
         data={applications}
         index="date"
         yAxisWidth={65}
         categories={['Application Sent',
         'Interview',
         'Rejected']}
-        colors={['indigo', 'cyan','blue']}
+        colors={['blue','indigo','cyan']}
        />
        :
        <DonutChart

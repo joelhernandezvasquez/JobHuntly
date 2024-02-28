@@ -13,10 +13,10 @@ const DashboardJobStatstictics = async ({filteredfrequency}:Props) => {
  const totalApplicationByFrequency = await getTotalApplicationByFrequency(AuthAdapter.getUserId() as string,filteredfrequency);
 
 /* Steps 
- 1 - [] the chart component and fix how data will be presented
+ 1 - [x] the chart component and fix how data will be presented
  2 - suspense the component cause it takes long time to load
  3 - to fix the refetching of the rest of components
- 4 - types
+ 4 - [] types
  5 - last check to all components
 */
 
