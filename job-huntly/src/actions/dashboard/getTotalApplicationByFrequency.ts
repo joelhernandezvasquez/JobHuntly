@@ -1,7 +1,9 @@
-import { TimeUnit } from "@/types";
+
+import { Frequency, TimeUnit } from "@/types";
+
 
 //TODO:Need to type the promise return type.
-export const getTotalApplicationByFrequency = async (userId:string,timeFrequency:TimeUnit) =>{
+export const getTotalApplicationByFrequency = async (userId:string,timeFrequency:TimeUnit):Promise<Frequency> =>{
 
     try{
   //       await new Promise((resolve) => {
@@ -23,14 +25,14 @@ export const getTotalApplicationByFrequency = async (userId:string,timeFrequency
       if(!request.ok){
         throw new Error(`Error happens while getting the total application`);
       }
-        
-      return await request.json();
-   
+        const response:Frequency  =  await request.json();
+      return response;
     }
     catch(err){
-        if(err instanceof Error){
-            throw Error(`${err.message}`);
-         }
-         console.log(err);
+      if (err instanceof Error) {
+        throw Error(`${err.message}`);
+    }
+    console.log(err);
+    return [];
     }
 }

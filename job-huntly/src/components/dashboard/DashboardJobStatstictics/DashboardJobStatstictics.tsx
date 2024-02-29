@@ -16,7 +16,7 @@ const DashboardJobStatstictics = async ({filteredfrequency}:Props) => {
  1 - [x] the chart component and fix how data will be presented
  2 - suspense the component cause it takes long time to load
  3 - to fix the refetching of the rest of components
- 4 - [] types
+ 4 - [] types fixes to go to production
  5 - last check to all components
 */
 
