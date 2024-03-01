@@ -1,7 +1,6 @@
 import { DonutChart, AreaChart} from '@tremor/react';
 import { Frequency, TimeUnit } from "@/types";
 import style from './style.module.css';
-
 interface Props{
   frequencyFilterSelection:TimeUnit,
   applications:Frequency
@@ -32,7 +31,6 @@ export function DonutsChart({frequencyFilterSelection,applications}:Props) {
        className={style.container}
      />
   }
-
     </>
   );
 }
