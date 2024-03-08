@@ -3,7 +3,7 @@ import { getTotalApplicationByFrequency } from '@/actions/dashboard/getTotalAppl
 import { TimeUnit } from '@/types';
 import DashboardJobStatsticticsBody from './DashboardJobStatsticticsBody';
 import { DonutsChart } from '../JobStatasticsChart/DonutsChart';
-import style from './style.module.css';
+
 
 interface Props{
  filteredfrequency:TimeUnit
@@ -13,7 +13,7 @@ const DashboardJobStatstictics = async ({filteredfrequency}:Props) => {
  const totalApplicationByFrequency = await getTotalApplicationByFrequency(AuthAdapter.getUserId() as string,filteredfrequency);
 
   return (
-    <section className={style.wrapper}>
+    <section className={'widget_box'}>
         <DashboardJobStatsticticsBody>
           <DonutsChart 
            frequencyFilterSelection = {filteredfrequency}

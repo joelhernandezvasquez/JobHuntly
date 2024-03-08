@@ -1,8 +1,6 @@
 
 import { Frequency, TimeUnit } from "@/types";
 
-
-//TODO:Need to type the promise return type.
 export const getTotalApplicationByFrequency = async (userId:string,timeFrequency:TimeUnit):Promise<Frequency> =>{
 
     try{

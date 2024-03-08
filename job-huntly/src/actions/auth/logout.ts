@@ -5,3 +5,4 @@ export const logoutUser = () =>{
         callbackUrl:'/auth/login'
     });
 }
+

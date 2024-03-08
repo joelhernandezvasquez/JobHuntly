@@ -5,6 +5,7 @@ import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper/MaxWidthWrapper";
 import CardSkeleton from "@/components/ui/Skeletons/CardSkeleton";
 import DashboardJobStatstictics from "@/components/dashboard/DashboardJobStatstictics/DashboardJobStatstictics";
 import CardPlaceholderSkeleton from "@/components/ui/Skeletons/CardPlaceholderSkeleton/CardPlaceholderSkeleton";
+import DashboardInterviews from "@/components/dashboard/DashboardInterviews/DashboardInterviews";
 
 export default function dashboard (
 {searchParams}:{searchParams: { [key: string]:string | string[] | undefined }})
@@ -20,6 +21,8 @@ export default function dashboard (
       <Suspense fallback={<CardPlaceholderSkeleton/>}>
         <DashboardJobStatstictics filteredfrequency={frequencyFilterSelection}/>
       </Suspense>
+
+      <DashboardInterviews/>
      
      </MaxWidthWrapper>
   )

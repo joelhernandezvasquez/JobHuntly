@@ -149,4 +149,14 @@ a{
   cursor: pointer;
 }
 
+.widget_box{
+    border: 1px solid var(--neutral_20_clr);
+    border-radius: 5px;
+    margin-top:1rem;
+    padding:1rem;
+}
+.widget_headline{
+  font-size: 1.2rem;
+  color:var(--neutral_110_clr);
+}
 

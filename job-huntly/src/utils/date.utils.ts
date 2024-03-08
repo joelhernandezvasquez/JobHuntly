@@ -44,5 +44,23 @@ export const CalendarUtils = {
     getCurrentMonthName:()=>{
         const today = new Date();
         return today.toLocaleString('en-US', { month: 'long' });
+    },
+    getFormattedYMDDate:(date:Date):string =>{
+        let year = date.getFullYear();
+        let month = ('0' + (date.getMonth() + 1)).slice(-2); // Adding 1 because months are zero-indexed
+        let day = ('0' + date.getDate()).slice(-2);
+        
+        return `${year}-${month}-${day}`;
+    },
+    getDayAndMonth:(date:string)=>{
+        const month = parseInt(date.split('-')[1]);
+        const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+        return{
+           day: date.slice(-2),
+           month:MONTHS[month-1]
+        }
+     
+    
     }
 }
