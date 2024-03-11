@@ -1,0 +1,33 @@
+
+.tab_content_wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+    margin-top:1.5rem;
+    padding:1rem;
+    border-radius: 10px;
+    background:var(--accent_light_purple_bg);
+}
+.slider_tab_body_content_container{
+    display:flex;
+    flex-direction: column;
+    gap:.5rem;
+    padding:.5rem 0;
+}
+
+.tab_content_heading{
+    color:var(--neutral_100_clr);
+    line-height: 1.2;
+}
+.tab_content_subheading{
+    font-size:1rem;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_80_clr);
+}
+.children_element{
+    display:flex;
+   margin-top:.5rem;
+}
+.children_element > *{
+    width:100%;
+}

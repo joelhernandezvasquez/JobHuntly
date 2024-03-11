@@ -1,0 +1,32 @@
+
+
+.avatar_container{
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 100%;
+ border:1px solid var(--neutral_20_clr);
+ padding:1px;
+}
+
+.small{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.medium{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.large{
+    width: 5rem;
+    height: 5rem;
+}
+
+.avatar_image{
+    display:block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}

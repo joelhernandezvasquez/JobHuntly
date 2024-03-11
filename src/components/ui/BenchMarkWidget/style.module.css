@@ -1,0 +1,10 @@
+
+.bench_mark_wrapper{
+    /* min-height: 126px; */
+    padding:var(--wrapper_spacing);
+    border:1px solid var(--neutral_20_clr);
+    margin-top:1rem;
+    border-radius: 5px;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_100_clr);
+}

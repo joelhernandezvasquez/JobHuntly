@@ -1,0 +1,35 @@
+.wrapper{
+    padding-top:1.5rem;
+    padding-bottom: 2rem;
+    background:var(--neutral_10_clr);
+}
+
+.headline{
+    display:flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: 900;
+    color:var(--neutral_100_clr);
+    line-height: 1.2;
+}
+
+.subheadline{
+ color:var(--accent_blue_clr);
+}
+.graph{
+    margin-top: .5rem;
+}
+.hero_lead_text{
+    margin-top:1.5rem;
+    margin-bottom: 1.5rem;
+    color:var(--neutral_80_clr);
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family:var(--epilogue_font);
+}
+.hero_image{
+    width:100%;
+    height:300px;
+    /* padding:1rem; */
+    margin-top:1.5rem;
+}

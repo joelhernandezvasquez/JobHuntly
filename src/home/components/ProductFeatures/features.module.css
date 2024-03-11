@@ -1,0 +1,15 @@
+.primary_features_wrapper{
+    padding-top:1.5rem;
+    padding-bottom:2.5rem;
+}
+
+.secondary_features_wrapper{
+   
+}
+
+.secondary_features_subheading{
+    margin:.5rem 0;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_80_clr);
+    font-weight: 500;
+}

@@ -1,0 +1,30 @@
+
+.jobSearch_wrapper{
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+    background-color: var(--neutral_0_clr);
+    box-shadow: 0px 2.71357px 4.39666px 0px rgba(192, 192, 192, 0.03), 0px 6.86281px 11.11949px 0px rgba(192, 192, 192, 0.04), 0px 13.99949px 22.68272px 0px rgba(192, 192, 192, 0.05), 0px 28.8363px 46.72211px 0px rgba(192, 192, 192, 0.06), 0px 79px 128px 0px rgba(192, 192, 192, 0.09);
+}
+
+.jobSearch_form_field{
+    display:flex;
+    flex-direction: column;
+}
+
+.job_search_dropdown{
+     display:grid;
+    grid-template-columns: 1.5rem 1fr; 
+    align-items: center; 
+    gap:1rem;
+    padding-left: .5rem;
+    padding-right: 1.5rem;
+    min-height: 47px;
+   
+}
+.icon_location{
+    align-self: start;
+}
+
+
+

@@ -1,0 +1,28 @@
+.auth_form{
+    padding-bottom: 2.5rem;
+    max-width:var(--max_width_auth_form);
+    margin:0 auto;
+}
+.auth_footer_form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_100_clr);
+    padding-top:1rem;
+}
+
+.auth_password_field{
+    position:relative;
+}
+.password_eye_icon{
+ position: absolute;
+ top:15px;
+ right:10px;
+ cursor: pointer;
+}
+.link{
+    color:var(--primary_brand_clr);
+    font-weight: 700;
+}

@@ -1,0 +1,80 @@
+
+.interview_card{
+ padding:1rem;
+ border-radius:10px;
+ border:1px solid var(--neutral_20_clr);
+}
+
+.interview_card_header{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+.interview_card_header, .interview_card_body{
+    padding-bottom: .5rem;
+    border-bottom:1px solid var(--neutral_20_clr);
+    
+}
+
+.interview_card_header_date{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 1rem;
+    border-right:1px solid var(--neutral_20_clr);
+}
+
+.header_day{
+    font-size: 1.1rem;
+    color:#323338;
+    letter-spacing: 2px;
+}
+.header_month{
+    font-size: .875rem;
+    color:var(--neutral_60_clr); 
+}
+
+.interview_type, .interviewers_item_info_name{
+    font-family: var(--epilogue_font);
+    font-weight: 500;
+    font-size: 1rem;
+    color:#2D1D16;
+}
+.interview_interval_time, .interviewers_item_job_title, .interview_card_footer_info_container p{
+    font-size: 0.875rem;
+    color:var(--neutral_60_clr);
+    font-family: var(--epilogue_font); 
+    font-weight: 400;
+}
+
+.interview_card_body{
+    padding-top:.5rem;
+    color:var(--neutral_100_clr);
+}
+
+.interviewers_item{
+    display:flex;
+   align-items: center;
+   gap:1rem;
+   padding-top:.5rem;
+}
+
+.interview_card_footer{
+    padding-top: .5rem;
+}
+
+.interview_card_footer_info_container{
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    padding-top:.5rem;
+}
+.interview_card_footer_company_avatar{
+    width: 2.5rem;
+    height:2.5rem;
+    border-radius: 50%;
+    background:#F5F6FF;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,36 @@
+
+.team_logo_wrapper{
+ padding-top: 2.5rem;
+ padding-bottom: 2.5rem;
+}
+
+.team_logo_headline{
+    text-align: center;
+    font-family: var(--epilogue_font);
+    font-weight: 500;
+    font-size: 1.125rem;
+    color:var(--neutral_90_clr);
+}
+
+.team_logo_menu{
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 140px) ) ;
+    justify-content: center;
+    gap:40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.team_logo_menu_item{
+    display:flex;
+    align-items: center;
+    gap:.7rem;
+}
+.team_logo_icon path{
+    fill:var(--neutral_90_clr);
+}
+.team_logo_menu_item_headline{
+    color:var(--neutral_90_clr);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
