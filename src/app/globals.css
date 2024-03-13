@@ -1,76 +1,163 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
- 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
- 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
- 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
- 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+:root {
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
- 
-    --radius: 0.5rem;
-  }
- 
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
- 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
- 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
- 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
- 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
- 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
- 
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
- 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+  /* Brand Colors  */
+  --primary_brand_clr:#4640DE;
+  --secondary_brand_clr:#ccccf5;
+  --tertiary_brand_clr:#E7F6FD;
+  --tertiary_secondary_brand_clr:#E9EBFD;
+
+  /* Accents Colors  */
+  --accents_yellow_clr:#FFB836;
+  --accent_green_clr:#56CDAD;
+  --accent_red_clr:#FF6550;
+  --accent_blue_clr:#26A4FF;
+  --accent_purple_clr:#7B61FF;
+  --accent_light_purple_bg:rgb(248,247,253);
+
+
+  /* Neutral Colors  */
+  --neutral_110_clr:#202430;
+  --neutral_100_clr:#25324B;
+  --neutral_90_clr:#8E9197;
+  --neutral_80_clr:#515b6f;
+  --neutral_60_clr:#7c8493;
+  --neutral_40_clr:#A8ADB7;
+  --neutral_20_clr:#D6DDEB;
+  --neutral_10_clr:#F8F8FD;
+  --neutral_0_clr:#FFFFFF;
+
+  --epilogue_font:'Epilogue', sans-serif;
+
+  --wrapper_spacing:1rem;
+  --max_width_auth_form:408px;
+
+  @media(min-width:768px){
+    --wrapper_spacing:2rem;
   }
 }
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding:0
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.purple_text{
+  color:var(--primary_brand_clr);
+}
+.blue_text{
+ color:var(--accent_blue_clr);
+}
+
+.redirect_button{
+  border:none;
+  cursor: pointer;
+  font-family: var(--epilogue_font);
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: var(--primary_brand_clr);
+  color:var(--neutral_0_clr);
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.form_field{
+  display: flex;
+  flex-direction: column;
+  gap:.5rem;
+  margin:1rem 0;
+}
+
+.label{
+  color:var(--neutral_80_clr);
+  font-family: var(--epilogue_font);
+  font-weight: 600;
+}
+.reset_btn{
+  background:none;
+  border:none;
+  cursor: pointer;
+}
+
+.widget_box{
+    border: 1px solid var(--neutral_20_clr);
+    border-radius: 5px;
+    margin-top:1rem;
+    padding:1rem;
+}
+.widget_headline{
+  font-size: 1.2rem;
+  color:var(--neutral_110_clr);
+  margin-bottom:.5rem;
+}
+
