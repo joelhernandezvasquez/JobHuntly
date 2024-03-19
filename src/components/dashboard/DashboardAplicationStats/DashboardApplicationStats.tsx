@@ -5,7 +5,7 @@ import JobInterviewIcon from "../ui/JobInterviewIcon";
 import JobAppliedIcon from "../ui/JobAppliedIcon";
 import style from './style.module.css';
 
-const DashboardApplicationStats = async () => {
+export const DashboardApplicationStats = async () => {
     const userId = AuthAdapter.getUserId();
     const dashboardStats = await getDashboardApplicationStats(userId!);
   

@@ -8,7 +8,7 @@ interface Props{
     flexCenter?:boolean
     flexGapSm?:boolean
 }
-const MaxWidthWrapper = ({children,flex,flexCenter,flexGapSm}:Props) => {
+export const MaxWidthWrapper = ({children,flex,flexCenter,flexGapSm}:Props) => {
  
   const classNames= getClassNames(
     style.max_wrapper,

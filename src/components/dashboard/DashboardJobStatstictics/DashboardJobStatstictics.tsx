@@ -9,9 +9,8 @@ interface Props{
  filteredfrequency:TimeUnit
 }
 
-const DashboardJobStatstictics = async ({filteredfrequency}:Props) => {
+export const DashboardJobStatstictics = async ({filteredfrequency}:Props) => {
  const totalApplicationByFrequency = await getTotalApplicationByFrequency(AuthAdapter.getUserId() as string,filteredfrequency);
-
   return (
     <section className={'widget_box'}>
         <DashboardJobStatsticticsBody>

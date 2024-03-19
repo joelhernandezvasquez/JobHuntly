@@ -1,31 +1,28 @@
-import { getInterviewsByDate } from "@/actions/interview/getInterviewByDate";
-import InterviewCard from "@/components/InterviewCard/InterviewCard";
-import style from './style.module.css';
-import { DatePicker } from "@/components";
+'use client';
 
-const DashboardInterviews = async () => {
- 
-  // TODO: Need to do the component colocation and pass the date to this component
-  // TODO: make sure the date is being passed over the back-end
-  // TODO: make sure the date picker gets close when finish selecting the date
-  
- const today = new Date('2024/03/04');
- const interviews = await getInterviewsByDate(today);
- 
+import { useState } from "react";
+import { DatePicker } from "@/components";
+import { DashboardInterviewsWrapper, GetDashboardInterviews } from "@/components/dashboard";
+import style from './style.module.css';
+
+ // TODO: Start unit testing
+ export const DashboardInterviews = () => {
+  const [date,setDate] = useState<Date>(new Date);
+
+  const onHandleDateSelected = (selectedDate:Date) =>{
+    setDate(selectedDate);
+  }
+
  return (
     <section className={`widget_box ${style.interviews_widget_container}`}>
        <h2 className="widget_headline">Upcoming Interviews</h2>
 
-       <DatePicker/>
+       <DatePicker emitSelectedDate={onHandleDateSelected}/>
 
-      <ul className={style.interview_list}>
-        {interviews.map((interview)=>{
-            return <InterviewCard key={interview.interviewID} interview={interview}/>
-        })}
-      </ul>
-
+          <DashboardInterviewsWrapper>
+            <GetDashboardInterviews dateSelected={date}/>
+          </DashboardInterviewsWrapper>     
     </section>
-  
   )
 }
 

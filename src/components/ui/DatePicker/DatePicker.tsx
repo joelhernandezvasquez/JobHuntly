@@ -1,6 +1,5 @@
 'use client';
-
-import {useState}from 'react';
+import {memo, useEffect, useState}from 'react';
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -8,11 +7,22 @@ import {Button} from "@/components/ui/ButtonShacdn/button";
 import { Calendar } from "@/components/ui/Calendar/calendar";
 import {Popover, PopoverContent,PopoverTrigger} from "@/components/ui/Popover/popover"
 
-export const DatePicker = () => {
+interface Props{
+ emitSelectedDate:(date:Date) => void
+}
+
+export const DatePicker = memo(({emitSelectedDate}:Props) => {
  const [date, setDate] = useState<Date>();
+ 
+ useEffect(()=>{
+    if(date){
+     emitSelectedDate(date)
+    }
+ },[date,emitSelectedDate])
+
 
   return (
-   <Popover>
+   <Popover >
       <PopoverTrigger asChild>
         <Button
           variant={"outline"}
@@ -35,4 +45,7 @@ export const DatePicker = () => {
       </PopoverContent>
     </Popover>
   )
-}
+})
+DatePicker.displayName = 'DatePicker';
+
+ 

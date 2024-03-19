@@ -1,6 +1,6 @@
 import style from './style.module.css';
 
-const CardSkeleton = () => {
+export const CardSkeleton = () => {
   return (
     <div className={style.loader}>
     </div>

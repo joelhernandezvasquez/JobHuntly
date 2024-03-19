@@ -1,11 +1,7 @@
 import { Suspense } from "react";
 import { TimeUnit } from "@/types";
-import DashboardApplicationStats from "@/components/dashboard/DashboardAplicationStats/DashboardApplicationStats";
-import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper/MaxWidthWrapper";
-import CardSkeleton from "@/components/ui/Skeletons/CardSkeleton";
-import DashboardJobStatstictics from "@/components/dashboard/DashboardJobStatstictics/DashboardJobStatstictics";
-import CardPlaceholderSkeleton from "@/components/ui/Skeletons/CardPlaceholderSkeleton/CardPlaceholderSkeleton";
-import DashboardInterviews from "@/components/dashboard/DashboardInterviews/DashboardInterviews";
+import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews  } from "@/components/dashboard";
+import { MaxWidthWrapper,CardPlaceholderSkeleton,CardSkeleton } from "@/components";
 
 export default function dashboard (
 {searchParams}:{searchParams: { [key: string]:string | string[] | undefined }})
@@ -22,9 +18,9 @@ export default function dashboard (
         <DashboardJobStatstictics filteredfrequency={frequencyFilterSelection}/>
       </Suspense>
    
-      <DashboardInterviews/>
-      
-     
+        <Suspense fallback={<CardPlaceholderSkeleton/>}>
+          <DashboardInterviews/>
+        </Suspense>
      </MaxWidthWrapper>
   )
 }
