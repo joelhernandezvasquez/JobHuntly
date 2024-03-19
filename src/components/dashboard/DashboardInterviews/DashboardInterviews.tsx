@@ -5,7 +5,6 @@ import { DatePicker } from "@/components";
 import { DashboardInterviewsWrapper, GetDashboardInterviews } from "@/components/dashboard";
 import style from './style.module.css';
 
- // TODO: Start unit testing
  export const DashboardInterviews = () => {
   const [date,setDate] = useState<Date>(new Date);
 
