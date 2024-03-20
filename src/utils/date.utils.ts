@@ -60,7 +60,5 @@ export const CalendarUtils = {
            day: date.slice(-2),
            month:MONTHS[month-1]
         }
-     
-    
     }
 }
