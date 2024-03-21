@@ -6,6 +6,9 @@ export type TimeUnit = 'Day' | 'Week' | 'Month';
 
 export type Frequency = ApplicationFrequency [] | ApplicationFrequencySimple [];
 
+export type Priority = 'Low'|'Medium'| 'High';
+
+export type Status = 'To Do'| 'In Progress'| 'Done';
 
 
 
