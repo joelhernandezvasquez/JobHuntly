@@ -1,0 +1,36 @@
+
+
+.task_card{
+    margin:1rem 0;
+    padding:1rem;
+    border-radius: 5px;
+    background: var(--neutral_0_clr);
+    box-shadow: 1px 1px 1px  1px var(--secondary_brand_clr);
+    font-size: 0.875rem;
+    color:var(-neutral_100_clr);
+    cursor: pointer;
+}
+.task_heading{
+    font-size: 1rem;
+}
+.task_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task_info{
+    margin-top:.5rem;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.due_date{
+ margin-left:.5rem;
+ background:var(--neutral_40_clr);
+ color:var(--neutral_0_clr);
+ padding:5px;
+ font-size: .875rem;
+ border-radius: 5px;
+}

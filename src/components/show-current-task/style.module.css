@@ -1,0 +1,17 @@
+.task_header{
+ display:flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.view_task_btn{
+ background:var(--primary_brand_clr);
+ color:var(--neutral_0_clr);
+ padding:.5rem 1rem;
+ border-radius: 5px;
+ font-size: .875rem;
+}
+
+.task_list{
+    margin:2rem 0;
+}

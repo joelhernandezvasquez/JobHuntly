@@ -22,7 +22,10 @@ export default function dashboard (
           <DashboardInterviews/>
         </Suspense>
        
-       <TaskWidget/>
+       <Suspense fallback={<CardPlaceholderSkeleton/>}>
+          <TaskWidget/>
+       </Suspense>
+  
 
      </MaxWidthWrapper>
   )

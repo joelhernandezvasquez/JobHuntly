@@ -1,0 +1,8 @@
+
+.task_status{
+    color:var(--neutral_0_clr);
+    font-size: .875rem;
+    border-radius: 5px;
+    padding:5px;
+    width: fit-content;
+}
