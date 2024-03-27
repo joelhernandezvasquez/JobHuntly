@@ -1,7 +1,7 @@
 import { Priority, Status } from "@/types";
 
 export interface Task {
-    task_id:number,
+    task_id:string,
     task_name: string,
     description:string,
     due_date: Date,

@@ -4,6 +4,10 @@ import { AuthAdapter } from "@/config/authAdapter";;
 import style from './style.module.css';
 import { TaskCard } from '@/components/tasks';
 
+// TODO: Filter task by pass due date and today only
+// TODO: MAKE IT PRETTY
+// TODO: Refactoring 
+
 export const TaskWidget = async () => {
   const tasks = await getTasks(AuthAdapter.getUserId()!);
   
