@@ -60,5 +60,11 @@ export const CalendarUtils = {
            day: date.slice(-2),
            month:MONTHS[month-1]
         }
-    }
+    },
+     isDueDate:(dateA:Date,dateB:Date):boolean =>{ 
+        return dateA.getFullYear() === dateB.getFullYear() && dateA.getMonth() === dateB.getMonth() && dateB.getDate()+1<= dateA.getDate() 
+      }
+      
+
+    
 }

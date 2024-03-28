@@ -1,18 +1,18 @@
+
 import { Task } from "@/interfaces/Tasks";
+import { CalendarUtils } from "./date.utils";
+
 
 export const filterTasksByDueDate = (tasks:Task[]) =>{
  const today = new Date();
- const todayDate = new Date(today.getFullYear(),today.getMonth(),today.getDate());
-
- const filterTasks = tasks.filter((task)=>{
-    console.log(typeof task.due_date);
-    
-    const taskDueDate = new Date(task.due_date.getFullYear(),task.due_date.getMonth(),task.due_date.getDate());
  
-    return taskDueDate.getTime() === todayDate.getTime();
+  const filterTasks = tasks.filter((task)=>{
+    const taskDueDate = new Date(task.due_date);
 
+    if(CalendarUtils.isDueDate(today, taskDueDate) && task.status!=='Done'){
+      return task;
+    }
  })
 
- console.log(filterTasks);
-
+  return filterTasks;
 }

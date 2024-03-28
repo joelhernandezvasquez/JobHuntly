@@ -10,9 +10,8 @@ export const getTasks = async (userId:string):Promise<Task[]>=>{
         console.log(request)
         throw new Error('Error happens while getting the tasks information');
     } 
-    return await request.json();
-    // console.log(filterTasksByDueDate(tasks));
-    // return tasks
+    const tasks = await request.json();
+    return filterTasksByDueDate(tasks);
  }
  catch(err){
     if(err instanceof Error){
