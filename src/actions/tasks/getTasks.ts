@@ -7,7 +7,7 @@ export const getTasks = async (userId:string):Promise<Task[]>=>{
     const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tasks/:${userId}`,{cache:'no-cache'});
 
     if(!request.ok){
-        console.log(request)
+        console.error(request)
         throw new Error('Error happens while getting the tasks information');
     } 
     const tasks = await request.json();

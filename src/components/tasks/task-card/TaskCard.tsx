@@ -1,9 +1,8 @@
 
 import Link from 'next/link';
 import {Task} from '../../../interfaces/Tasks';
-import style from './style.module.css';
 import { TaskStatus } from '@/components';
-
+import style from './style.module.css';
 interface Props{
  task:Task
 }
@@ -23,8 +22,6 @@ export const TaskCard = ({task}:Props) => {
        <p>Due Date: <span className={style.due_date}>{task.due_date.toString()}</span></p>
       </div>
       </Link>
-     
-    
     </li>
   )
 }

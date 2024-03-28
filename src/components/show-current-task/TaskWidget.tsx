@@ -1,12 +1,11 @@
 import Link from 'next/link';
+import { TaskCard } from '@/components/tasks';
 import { getTasks } from "@/actions/tasks/getTasks";
 import { AuthAdapter } from "@/config/authAdapter";;
 import style from './style.module.css';
-import { TaskCard } from '@/components/tasks';
 
 // TODO: MAKE IT PRETTY
 // TODO: Refactoring 
-
 export const TaskWidget = async () => {
   const tasks = await getTasks(AuthAdapter.getUserId()!);
   
@@ -14,7 +13,7 @@ export const TaskWidget = async () => {
    <section className="widget_box">
      <div className={style.task_header}>
        <h2 className="widget_headline">My Tasks</h2>
-        <Link className={style.view_task_btn} href="/tasks">View All</Link>
+        <Link className={style.view_task_btn} href={`/tasks`}>View All</Link>
      </div>
 
      <ul className={style.task_list}>
