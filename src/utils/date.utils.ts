@@ -1,3 +1,4 @@
+import { get } from "http";
 
 export const CalendarUtils = {
 
@@ -61,8 +62,10 @@ export const CalendarUtils = {
            month:MONTHS[month-1]
         }
     },
-     isDueDate:(dateA:Date,dateB:Date):boolean =>{ 
-        return dateA.getFullYear() === dateB.getFullYear() && dateA.getMonth() === dateB.getMonth() && dateB.getDate()+1<= dateA.getDate() 
+     isDueDate:(taskDate:Date):boolean =>{ 
+       const today =  new Date();
+       return taskDate <= today;
+        
       }
       
 
