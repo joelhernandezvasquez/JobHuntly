@@ -1,17 +1,25 @@
 
-
 .task_card{
-    margin:1rem 0;
+    margin:1.5rem 0;
     padding:1rem;
     border-radius: 5px;
     background: var(--neutral_0_clr);
-    box-shadow: 1px 1px 1px  1px var(--secondary_brand_clr);
+    box-shadow: 1px 1px 1px  1px var(--neutral_20_clr);
     font-size: 0.875rem;
     color:var(-neutral_100_clr);
     cursor: pointer;
+    position: relative;
 }
+
+.task_grid_wrapper{
+  display:grid;
+  grid-template-columns:30px 1fr auto;
+ align-items: center;
+ gap:1rem;
+}
+
 .task_heading{
-    font-size: 1rem;
+    font-size: .875rem;
 }
 .task_header{
     display: flex;
@@ -27,10 +35,82 @@
 }
 
 .due_date{
- margin-left:.5rem;
- background:var(--neutral_40_clr);
- color:var(--neutral_0_clr);
- padding:5px;
  font-size: .875rem;
- border-radius: 5px;
+ color:var(--neutral_60_clr);
+ font-family: var(--epilogue_font);
 }
+
+.status_border{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:10px;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.ToDo{
+ background:var(--primary_brand_clr);
+}
+
+.InProgress{
+    background:var(--accent_blue_clr);
+}
+.Done{
+    background:var(--accent_green_clr);
+}
+
+.task_checkbox input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.15em solid currentColor;
+    border: 1px solid var(--neutral_20_clr);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  .task_checkbox input[type="checkbox"]::before {
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    background-color: transparent;
+  } 
+
+  .task_checkbox input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    background:white;
+  }
+
+  .task_checkbox input[type="checkbox"]:checked.ToDo {
+    background-color: var(--primary_brand_clr);
+  }
+
+  .task_checkbox input[type="checkbox"]:checked.InProgress {
+    background-color: var(--accent_blue_clr);
+  }
+
+  .task_checkbox input[type="checkbox"]:checked.Done {
+    background-color: var(--accent_green_clr);
+  }
+
+  .task_checkbox input[type="checkbox"]:focus.ToDo {
+    outline: max(2px, 0.15em) solid var(--primary_brand_clr);
+  } 
+  .task_checkbox input[type="checkbox"]:focus.InProgress {
+    outline: max(2px, 0.15em) solid var(--accent_blue_clr);
+  } 
+
+  .task_checkbox input[type="checkbox"]:focus.Done {
+    outline: max(2px, 0.15em) solid var(--accent_green_clr);
+  } 

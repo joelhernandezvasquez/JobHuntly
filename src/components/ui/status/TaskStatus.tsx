@@ -9,8 +9,7 @@ export const TaskStatus = ({status}:Props) => {
   const getStatusColor = (status:Status) => {
     if(status ==='To Do'){
       return{
-        color:'#25324B',
-       backgroundColor:'#FFC107',
+       backgroundColor:'#4640DE',
       } 
     }
 

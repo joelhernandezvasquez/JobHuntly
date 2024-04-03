@@ -4,11 +4,9 @@ import { getTasks } from "@/actions/tasks/getTasks";
 import { AuthAdapter } from "@/config/authAdapter";;
 import style from './style.module.css';
 
-// TODO: MAKE IT PRETTY
 
 export const TaskWidget = async () => {
   const tasks = await getTasks(AuthAdapter.getUserId()!);
-  console.log(tasks);
   
   return (
    <section className="widget_box">

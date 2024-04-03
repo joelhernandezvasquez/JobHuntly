@@ -25,7 +25,6 @@ export default function dashboard (
        <Suspense fallback={<CardPlaceholderSkeleton/>}>
           <TaskWidget/>
        </Suspense>
-  
 
      </MaxWidthWrapper>
   )

@@ -56,10 +56,12 @@ export const CalendarUtils = {
     getDayAndMonth:(date:string)=>{
         const month = parseInt(date.split('-')[1]);
         const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
+        const year = parseInt(date.split('-')[0]);
         return{
            day: date.slice(-2),
-           month:MONTHS[month-1]
+           month:MONTHS[month-1],
+           year
+           
         }
     },
      isDueDate:(taskDate:Date):boolean =>{ 

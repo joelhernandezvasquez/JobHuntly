@@ -3,6 +3,6 @@
     color:var(--neutral_0_clr);
     font-size: .875rem;
     border-radius: 5px;
-    padding:5px;
+    padding:5px 10px;
     width: fit-content;
 }
