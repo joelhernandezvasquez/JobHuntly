@@ -1,0 +1,17 @@
+.notification_container{
+ position:relative;
+}
+.notification_count{
+    position:absolute;
+    top:-12px;
+    right:-10px;
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background:var(--primary_brand_clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size: .875rem;
+}
