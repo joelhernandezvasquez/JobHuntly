@@ -1,0 +1,34 @@
+
+.notification_card{
+ display:flex;
+ align-items: center;
+ gap:1rem;
+ margin-top:.5rem;
+ padding-bottom: .5rem;
+ border-bottom: 1px solid var(--neutral_20_clr);
+ font-size: .8125rem;
+}
+
+.notification_avatar_type{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:43px;
+  height: 43px;
+  border-radius: 10px;
+  background-color:#e1faed;
+  flex-shrink: 0;
+}
+
+.notification_info{
+    color:var(--neutral_100_clr);
+}
+.date_created{
+  color:var(--neutral_60_clr);
+  font-family: var(--epilogue_font);
+}
+
+.notification_card:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+}

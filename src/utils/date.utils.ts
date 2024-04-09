@@ -1,4 +1,5 @@
-import { get } from "http";
+
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
 export const CalendarUtils = {
 
@@ -55,7 +56,6 @@ export const CalendarUtils = {
     },
     getDayAndMonth:(date:string)=>{
         const month = parseInt(date.split('-')[1]);
-        const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
         const year = parseInt(date.split('-')[0]);
         return{
            day: date.slice(-2),
@@ -67,7 +67,15 @@ export const CalendarUtils = {
      isDueDate:(taskDate:Date):boolean =>{ 
        const today =  new Date();
        return taskDate <= today;
-        
+      },
+      getDayMonthYear:(date:string) =>{
+        const updatedDate = new Date(date);
+        const day = (updatedDate.getDate())
+        const month = (MONTHS[updatedDate.getMonth()])
+        const year = updatedDate.getFullYear();
+        const time = updatedDate.toLocaleTimeString();
+
+        return `${day} ${month } ${year} - ${time}`;
       }
       
 
