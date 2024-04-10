@@ -7,7 +7,6 @@ import style from './style.module.css';
 
 const MenuSideBar = () => {
  const isDashboardMenuOpen = useUIStore(state => state.isDashboardMenuOpen);
-  
   return (
     <aside className={`${style.menu_side_bar_wrapper} ${ isDashboardMenuOpen && style.menu_side_bar_wrapper_open  }`}>
       <MaxWidthWrapper>

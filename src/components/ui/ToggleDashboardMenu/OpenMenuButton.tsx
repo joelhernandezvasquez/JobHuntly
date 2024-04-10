@@ -2,7 +2,7 @@ import { useUIStore } from "@/store";
 
 const OpenMenuButton = () => {
  const openDashboardMenu  = useUIStore(state => state.openDashboardMenu);
-  
+
  return (
     <button aria-labelledby="openMenu" className={'reset_btn'}
     onClick={openDashboardMenu}
