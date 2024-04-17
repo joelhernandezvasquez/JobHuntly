@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import { fetchJobList } from "@/helper/actions/FetchJobListing";
-import JobCard from "@/components/JobCard/JobCard";
+import JobCard from "@/components/ui/JobCard/JobCard";
 import style from './style.module.css';
 
 const JobListing = async () => {

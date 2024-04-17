@@ -1,6 +1,6 @@
 'use client'
 import { useUIStore } from '@/store';
-import CompanyLogo from '@/components/companyLogo/CompanyLogo';
+import CompanyLogo from '@/components/ui/companyLogo/CompanyLogo';
 import MaxWidthWrapper from '../MaxWidthWrapper/MaxWidthWrapper';
 import MenuSidebarDashboardItemsGroup from './MenuSidebarDashboardItemsGroup';
 import style from './style.module.css';

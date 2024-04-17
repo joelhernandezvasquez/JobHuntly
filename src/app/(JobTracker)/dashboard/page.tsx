@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { TimeUnit } from "@/types";
-import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews  } from "@/components/dashboard";
+import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews, JobHistoryWidget  } from "@/components/dashboard";
 import { MaxWidthWrapper,CardPlaceholderSkeleton,CardSkeleton, TaskWidget } from "@/components";
 
 export default function dashboard (
@@ -27,7 +27,7 @@ export default function dashboard (
        </Suspense>
 
        <Suspense fallback={'loading job history...'}>
-        
+        <JobHistoryWidget/>
        </Suspense>
 
      </MaxWidthWrapper>

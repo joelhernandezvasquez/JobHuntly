@@ -2,8 +2,8 @@
 
 import useAuthNav from "@/hooks/useAuthNav";
 import useMatchMedia from "@/hooks/useMatchMedia";
-import Button from "@/components/Button/Button";
-import CompanyLogo from "@/components/companyLogo/CompanyLogo";
+import Button from "@/components/ui/Button/Button";
+import CompanyLogo from "@/components/ui/companyLogo/CompanyLogo";
 import auth from '../auth.module.css';
 
 const AuthNavBar = () => {

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import useForm from '@/hooks/useForm';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
-import Dropdown from '../Dropdown/Dropdown';
+import Dropdown from '../../Dropdown/Dropdown';
 import { dropdownOptions } from '@/helper/data/jobLocationsData';
 import style from './style.module.css';
 

@@ -1,6 +1,6 @@
 
 import Tabs from '@/components/Tabs/Tabs';
-import Button from '@/components/Button/Button';
+import Button from '@/components/ui/Button/Button';
 import { primaryFeatures } from '@/helper/data/featuresDescription';
 import style from './features.module.css';
 

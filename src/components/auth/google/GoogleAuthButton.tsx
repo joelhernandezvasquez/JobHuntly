@@ -1,6 +1,6 @@
 'use client';
 import { signIn } from 'next-auth/react';
-import Button from '@/components/Button/Button';
+import Button from '@/components/ui/Button/Button';
 
 interface Props{
     buttonText:string

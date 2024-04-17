@@ -1,7 +1,7 @@
 
 'use client';
 import { signIn } from "next-auth/react";
-import Button from '@/components/Button/Button';
+import Button from '@/components/ui/Button/Button';
 import { IoLogoGithub } from 'react-icons/io5';
 
 interface Props{

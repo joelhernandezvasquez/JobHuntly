@@ -1,6 +1,6 @@
 
 import { secondaryFeatures } from '@/helper/data/featuresDescription';
-import SliderTabs from '@/components/SliderTabs/SliderTabs';
+import SliderTabs from '@/components/ui/SliderTabs/SliderTabs';
 import style from './features.module.css';
 
 const SecondaryFeatures = () => {

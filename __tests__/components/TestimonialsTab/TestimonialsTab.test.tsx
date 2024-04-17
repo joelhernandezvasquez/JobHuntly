@@ -3,7 +3,7 @@ import {act, fireEvent, render,renderHook,screen} from '@testing-library/react';
 import TestimonialsTab from '@/components/ui/TestimonialsTab/TestimonialsTab';
 import { testimoniesArray } from '@/helper/data/testimonies';
 import useTabs from '@/hooks/useTabs';
-import TestimonialCard from '@/components/TestimonialCard/TestimonialCard';
+import TestimonialCard from '@/components/ui/TestimonialCard/TestimonialCard';
 
 describe('', ()=>{
 

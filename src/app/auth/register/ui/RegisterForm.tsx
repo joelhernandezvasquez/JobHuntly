@@ -5,7 +5,7 @@ import useForm from '@/hooks/useForm';
 import AuthBtn from '@/components/auth/auth-btn/AuthBtn';
 import useToogle from '@/hooks/useToogle';
 import PasswordHidden from '../../ui/PasswordHidden';
-import Input from '@/components/Input/Input';
+import Input from '@/components/ui/Input/Input';
 import { signInUser } from '@/actions/auth/login';
 import { registerUser } from '@/actions/auth/register';
 import {ToastContainer } from 'react-toastify';

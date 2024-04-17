@@ -1,8 +1,8 @@
 
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper/MaxWidthWrapper"
-import JobSearch from "@/components/JobSearch/JobSearch";
-import PopularSearch from "@/components/PopularSearch/PopularSearch";
+import JobSearch from "@/components/ui/JobSearch/JobSearch";
+import PopularSearch from "@/components/ui/PopularSearch/PopularSearch";
 import { popularSearch } from "@/helper/data/popularSearchData";
 import HeroImage from '../../../assets/TrelloUICollage_4x.webp';
 import hero from './hero.module.css';

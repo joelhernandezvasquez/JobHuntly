@@ -1,5 +1,5 @@
 import {render,screen, waitFor} from '@testing-library/react';
-import PopularSearch from '@/components/PopularSearch/PopularSearch';
+import PopularSearch from '@/components/ui/PopularSearch/PopularSearch';
 import { popularSearch } from '@/helper/data/popularSearchData';
 
 

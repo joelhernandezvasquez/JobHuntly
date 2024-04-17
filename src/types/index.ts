@@ -10,6 +10,8 @@ export type Priority = 'Low'|'Medium'| 'High';
 
 export type Status = 'To Do'| 'In Progress'| 'Done';
 
+export type ApplicationStatus = 'Applied' | 'Bookmarked' | 'Interviewing' | 'Negotiating' |'Accepted' | 'Offered' | 'Declined' | 'Rejected' | 'Archived'
+
 
 
 

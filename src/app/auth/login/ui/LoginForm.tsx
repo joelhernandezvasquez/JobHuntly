@@ -6,7 +6,7 @@ import useToogle from '@/hooks/useToogle';
 import AuthBtn from '@/components/auth/auth-btn/AuthBtn';
 import {ToastContainer } from 'react-toastify';
 import useForm from '@/hooks/useForm';
-import Input from '@/components/Input/Input';
+import Input from '@/components/ui/Input/Input';
 import PasswordHidden from '../../ui/PasswordHidden';
 import { authenticateUser, signInUser} from '@/actions/auth/login';
 import { showValidationErrors } from '@/utils/displayValidationErrors';

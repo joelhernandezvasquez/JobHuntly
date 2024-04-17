@@ -1,5 +1,5 @@
 import {render,screen} from '@testing-library/react';
-import TabsContent from '@/components/TabsContent/TabsContent';
+import TabsContent from '@/components/ui/TabsContent/TabsContent';
 import { secondaryFeatures } from '@/helper/data/featuresDescription';
 
 describe('Test suite on Tabs Content',()=>{

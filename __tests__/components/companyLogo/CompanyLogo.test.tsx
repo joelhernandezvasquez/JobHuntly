@@ -1,5 +1,5 @@
 import {render,screen} from '@testing-library/react';
-import CompanyLogo from '@/components/companyLogo/CompanyLogo';
+import CompanyLogo from '@/components/ui/companyLogo/CompanyLogo';
 
 it('it should have the company Name JobHuntly',()=>{
     render(<CompanyLogo theme='light'/>) // Arrange

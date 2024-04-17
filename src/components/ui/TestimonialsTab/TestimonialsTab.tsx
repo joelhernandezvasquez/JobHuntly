@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import useTabs from '@/hooks/useTabs';
-import TestimonialCard from '../../TestimonialCard/TestimonialCard';
+import TestimonialCard from '../TestimonialCard/TestimonialCard';
 import { Testimonies} from '../../../interfaces/testimonials';
 import { ActiveButton } from '@/helper/types/types';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';

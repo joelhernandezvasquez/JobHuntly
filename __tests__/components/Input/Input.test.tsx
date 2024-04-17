@@ -1,5 +1,5 @@
 import {fireEvent, render,screen} from '@testing-library/react';
-import Input from '@/components/Input/Input';
+import Input from '@/components/ui/Input/Input';
 
 describe('Test suites on Input component',()=>{
 
