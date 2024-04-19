@@ -1,7 +1,7 @@
 
 .application_history_card{
-display:grid;
-grid-template-columns: auto 1fr;
+ display:grid;
+ grid-template-columns: auto 1fr;
  margin-bottom: 2rem;
 }
 .company_name{
@@ -9,7 +9,6 @@ grid-template-columns: auto 1fr;
     display:flex;
     flex-direction:column;
     gap:.5rem;
-
 }
 .company_logo{
     display:flex;
@@ -47,23 +46,7 @@ grid-template-columns: auto 1fr;
 .date_applied p{
    font-size: 1.125rem;
 }
-.application_actions{
-    grid-column: 2/3;
-    grid-row:1/2;
-    justify-self: end;
-    height: fit-content;
-}
-.actions_btn{
-    display:flex;
-    gap:5px;
-    padding:.5rem 0;
-}
-.actions_btn span{
-    width: 4px;
-    height: 4px;
-    background:var(--neutral_100_clr);
-    border-radius: 50%;
-}
+
 .application_status_container{
     align-self: center;
     justify-self: end;

@@ -1,6 +1,7 @@
 import { Application } from "@/interfaces/Application";
 import { FaWpforms } from "react-icons/fa6";
 import { CalendarUtils } from "@/utils/date.utils";
+import { ApplicationHistoryCardBtn } from "..";
 import style from './style.module.css';
 
 interface Props{
@@ -8,8 +9,7 @@ interface Props{
 }
 
 export const ApplicationHistoryCard = ({application}:Props) => {
-    console.log(application)
-    const {company,role,date_applied,status} = application;
+    const {applicationId,company,role,date_applied,status} = application;
     const dateAppliedFormatted = Object.values(CalendarUtils.getDayAndMonth(date_applied.toString())).join(' ').split('');
 
     return (
@@ -29,14 +29,8 @@ export const ApplicationHistoryCard = ({application}:Props) => {
         <span className={style.date_applied_label}>Date Applied</span>
         <p>{dateAppliedFormatted}</p>
        </div>
-
-       <div className={style.application_actions}>
-        <button className={style.actions_btn}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-       </div>
+       
+       <ApplicationHistoryCardBtn applicationId={applicationId}/>
 
        <div className={style.application_status_container}>
         <p className={`${style.application_status} ${style[status]}`}>{status}</p>
