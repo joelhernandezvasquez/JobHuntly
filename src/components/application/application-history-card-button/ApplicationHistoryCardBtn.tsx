@@ -3,6 +3,7 @@ import useToogle from '@/hooks/useToogle';
 import { ActionModalMenu } from '@/components';
 import {useRouter } from 'next/navigation';
 import style from './style.module.css';
+import { useOutSideClick } from '@/hooks/useOutSideClick';
 
 interface Props{
   applicationId:string
@@ -12,6 +13,7 @@ export const ApplicationHistoryCardBtn = ({applicationId}:Props) => {
 
     const {isToggle,handleToggle} = useToogle();
     const router = useRouter();
+    const ref = useOutSideClick(handleToggle);
 
     const onViewApplication = () =>{
      router.push(`application/${applicationId}`);
@@ -32,12 +34,14 @@ export const ApplicationHistoryCardBtn = ({applicationId}:Props) => {
       <span></span>
     </button>
 
-    {isToggle && 
+    {isToggle &&
+    <div ref={ref}>
     <ActionModalMenu>
      <ActionModalMenu.Action action={onViewApplication}>View application</ActionModalMenu.Action>
      <ActionModalMenu.Action action={onEditApplication}>Edit application</ActionModalMenu.Action>
      <ActionModalMenu.Action action = {onDeleteApplication}>Delete application</ActionModalMenu.Action>
     </ActionModalMenu>
+    </div> 
     }
    </div>
   )

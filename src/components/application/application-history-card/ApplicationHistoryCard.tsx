@@ -16,7 +16,7 @@ export const ApplicationHistoryCard = ({application}:Props) => {
     <li className={style.application_history_card}>
        <div className={style.company_name}>
          <div className={style.company_logo}>
-         <FaWpforms size={32} color={'white'} />
+         <FaWpforms size={32} color={'#FFFFFF'} />
          </div>
          <p>{company}</p>
        </div>
