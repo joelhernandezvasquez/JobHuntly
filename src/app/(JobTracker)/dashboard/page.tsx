@@ -26,7 +26,7 @@ export default function dashboard (
           <TaskWidget/>
        </Suspense>
 
-       <Suspense fallback={'loading job history...'}>
+       <Suspense fallback={<CardPlaceholderSkeleton/>}>
         <JobHistoryWidget/>
        </Suspense>
 

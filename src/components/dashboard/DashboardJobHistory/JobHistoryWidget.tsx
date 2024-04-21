@@ -1,10 +1,9 @@
+import { ApplicationHistoryCard } from "@/components/application";
 import { getApplications } from "@/actions/applications/getApplications";
 import { AuthAdapter } from "@/config/authAdapter";
-import { ApplicationHistoryCard } from "@/components/application";
 import style from './style.module.css';
 
 export const JobHistoryWidget = async () => {
-
   const jobHistory = await getApplications(AuthAdapter.getUserId()!);
 
   return (
@@ -18,8 +17,5 @@ export const JobHistoryWidget = async () => {
         </ul>
 
     </section>
-
-   
-    
   )
 }

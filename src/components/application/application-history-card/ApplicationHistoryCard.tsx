@@ -1,16 +1,18 @@
+import { ApplicationHistoryCardBtn } from "..";
+import { CalendarUtils } from "@/utils/date.utils";
 import { Application } from "@/interfaces/Application";
 import { FaWpforms } from "react-icons/fa6";
-import { CalendarUtils } from "@/utils/date.utils";
-import { ApplicationHistoryCardBtn } from "..";
 import style from './style.module.css';
-
+import { transformObjectToArray } from "@/utils/utils";
 interface Props{
     application:Application
 }
 
 export const ApplicationHistoryCard = ({application}:Props) => {
     const {applicationId,company,role,date_applied,status} = application;
-    const dateAppliedFormatted = Object.values(CalendarUtils.getDayAndMonth(date_applied.toString())).join(' ').split('');
+    
+    const dateApplied = CalendarUtils.getDayAndMonth(date_applied.toString());
+    const dateAppliedFormatted = transformObjectToArray(dateApplied) ;
 
     return (
     <li className={style.application_history_card}>

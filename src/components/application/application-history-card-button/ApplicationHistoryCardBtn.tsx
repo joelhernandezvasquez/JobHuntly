@@ -1,18 +1,16 @@
 'use client';
-import useToogle from '@/hooks/useToogle';
-import { ActionModalMenu } from '@/components';
 import {useRouter } from 'next/navigation';
-import style from './style.module.css';
+import useToogle from '@/hooks/useToogle';
 import { useOutSideClick } from '@/hooks/useOutSideClick';
-
+import { ActionModalMenu } from '@/components';
+import style from './style.module.css';
 interface Props{
   applicationId:string
 }
 
 export const ApplicationHistoryCardBtn = ({applicationId}:Props) => {
-
-    const {isToggle,handleToggle} = useToogle();
     const router = useRouter();
+    const {isToggle,handleToggle} = useToogle();
     const ref = useOutSideClick(handleToggle);
 
     const onViewApplication = () =>{
