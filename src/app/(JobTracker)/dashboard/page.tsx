@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { TimeUnit } from "@/types";
 import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews, JobHistoryWidget  } from "@/components/dashboard";
 import { MaxWidthWrapper,CardPlaceholderSkeleton,CardSkeleton, TaskWidget } from "@/components";
+import { ContactWidget } from "@/components/contact";
 
 export default function dashboard (
 {searchParams}:{searchParams: { [key: string]:string | string[] | undefined }})
@@ -29,6 +30,10 @@ export default function dashboard (
        <Suspense fallback={<CardPlaceholderSkeleton/>}>
         <JobHistoryWidget/>
        </Suspense>
+      
+      <Suspense fallback={<CardPlaceholderSkeleton/>}>
+        <ContactWidget/>
+      </Suspense>
 
      </MaxWidthWrapper>
   )

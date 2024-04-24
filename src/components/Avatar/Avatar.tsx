@@ -14,7 +14,7 @@ const Avatar = ({imageSource,size,children}:Props) => {
     <div className={`${style.avatar_container} ${style[size]}`}>
         {!children && (
          <Image
-        className={style.avatar_image}
+         className={style.avatar_image}
          width={100}
          height={100}
          src={imageSource!}

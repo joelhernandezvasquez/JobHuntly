@@ -1,0 +1,37 @@
+
+.contact_container{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.contact_container_header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add_contact_container_btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height: 25px;
+    background:var(--primary_brand_clr);
+    border-radius: 50%;
+}
+
+.contact_link_btn{
+    display:block;
+    width: 90%;
+    align-self: center;
+    margin-top:2rem;
+    border:1px solid var(--primary_brand_clr);
+    padding:.5rem 3rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    /* background:var(--primary_brand_clr); */
+    color:var(--primary_brand_clr);
+    border:1px solid var(--primary_brand_clr);
+    text-align: center;
+}
