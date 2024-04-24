@@ -1,15 +1,13 @@
 import { Contact } from "@/interfaces/Contact";
-import style from './style.module.css';
 import Avatar from "@/components/Avatar/Avatar";
-import { FaUser } from "react-icons/fa6";
 import { ContactCardActionBtn } from "../ContactCardActionBtn/ContactCardActionBtn";
-
+import { FaUser } from "react-icons/fa6";
+import style from './style.module.css';
 interface Props{
  contact:Contact
 }
 
 export const ContactCard = ({contact}:Props) => {
-  console.log(contact);
   return (
     <li className={style.contact_card}>
      { 
