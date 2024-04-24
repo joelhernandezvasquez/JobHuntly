@@ -1,0 +1,7 @@
+
+.actions_btn span{
+    width: 4px;
+    height: 4px;
+    background:var(--neutral_100_clr);
+    border-radius: 50%;
+}

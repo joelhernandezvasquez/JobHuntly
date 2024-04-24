@@ -4,6 +4,7 @@ import useToogle from "@/hooks/useToogle";
 import { useOutSideClick } from "@/hooks/useOutSideClick";
 import { ActionModalMenu } from "@/components/ui/ActionModalMenu/ActionModalMenu";
 import style from './style.module.css';
+import { ActionButton } from "@/components/ui/ActionButton/ActionButton";
 interface Prop{
   contactId:string
 }
@@ -26,13 +27,8 @@ export const ContactCardActionBtn = ({contactId}:Prop) => {
 
   return (
     <div className={style.contact_actions}>
-    
-    <button className={style.actions_btn} onClick={handleToggle}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
+    <ActionButton className={style.actions_btn} callback={handleToggle}/>
+   
     { isToggle &&
       <div ref={modalRef}>
 

@@ -11,3 +11,4 @@ export * from './notification/notification-panel/NotificationPanel';
 export * from './notification/notification-card/NotificationCard';
 export * from './ui/blur-background/BlurBackground';
 export * from './ui/ActionModalMenu/ActionModalMenu';
+export * from './ui/ActionButton/ActionButton';

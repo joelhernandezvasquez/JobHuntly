@@ -2,7 +2,7 @@
 import {useRouter } from 'next/navigation';
 import useToogle from '@/hooks/useToogle';
 import { useOutSideClick } from '@/hooks/useOutSideClick';
-import { ActionModalMenu } from '@/components';
+import { ActionButton, ActionModalMenu } from '@/components';
 import style from './style.module.css';
 interface Props{
   applicationId:string
@@ -26,11 +26,7 @@ export const ApplicationHistoryCardBtn = ({applicationId}:Props) => {
   return (
     <div className={style.application_actions}>
 
-    <button className={style.actions_btn} onClick={handleToggle}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <ActionButton className={style.actions_btn} callback={handleToggle}/>
 
     {isToggle &&
     <div ref={ref}>
