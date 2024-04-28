@@ -3,8 +3,8 @@ import { useRouter } from "next/navigation";
 import useToogle from "@/hooks/useToogle";
 import { useOutSideClick } from "@/hooks/useOutSideClick";
 import { ActionModalMenu } from "@/components/ui/ActionModalMenu/ActionModalMenu";
-import style from './style.module.css';
 import { ActionButton } from "@/components/ui/ActionButton/ActionButton";
+import style from './style.module.css';
 
 interface Prop{
   ResumeId:string
