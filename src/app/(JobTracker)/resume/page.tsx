@@ -1,8 +1,8 @@
 
-const ResumePage = () => {
+const ResumesPage = () => {
   return (
     <div>ResumePage</div>
   )
 }
 
-export default ResumePage
+export default ResumesPage

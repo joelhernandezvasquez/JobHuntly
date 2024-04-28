@@ -1,0 +1,17 @@
+
+.resume_actions{
+    position:relative;
+}
+
+.actions_btn{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    padding:.5rem 0;
+}
+.actions_btn span{
+    width: 4px;
+    height: 4px;
+    background:var(--neutral_100_clr);
+    border-radius: 50%;
+}

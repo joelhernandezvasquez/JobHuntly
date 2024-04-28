@@ -3,6 +3,7 @@ import { TimeUnit } from "@/types";
 import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews, JobHistoryWidget  } from "@/components/dashboard";
 import { MaxWidthWrapper,CardPlaceholderSkeleton,CardSkeleton, TaskWidget } from "@/components";
 import { ContactWidget } from "@/components/contact";
+import { ResumeWidget } from "@/components/resume/ResumeWidget/ResumeWidget";
 
 export default function dashboard (
 {searchParams}:{searchParams: { [key: string]:string | string[] | undefined }})
@@ -31,9 +32,13 @@ export default function dashboard (
         <JobHistoryWidget/>
        </Suspense>
       
-      <Suspense fallback={<CardPlaceholderSkeleton/>}>
+       <Suspense fallback={<CardPlaceholderSkeleton/>}>
         <ContactWidget/>
-      </Suspense>
+       </Suspense>
+
+       <Suspense fallback={<CardPlaceholderSkeleton/>}>
+        <ResumeWidget/>
+       </Suspense>
 
      </MaxWidthWrapper>
   )
