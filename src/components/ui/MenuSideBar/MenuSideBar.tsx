@@ -12,7 +12,7 @@ const MenuSideBar = () => {
 
  return (
   <>
-    <aside className={`${style.menu_side_bar_wrapper} ${ isDashboardMenuOpen && style.menu_side_bar_wrapper_open  }`} >
+    <aside className={`${style.menu_side_bar_wrapper} ${ isDashboardMenuOpen && style.menu_side_bar_wrapper_open  }`} tabIndex={-1} >
       <MaxWidthWrapper>
          <CompanyLogo theme='light'/>
          <MenuSidebarDashboardItemsGroup dividerInterval={4}/> 
