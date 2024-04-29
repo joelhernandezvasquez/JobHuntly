@@ -11,3 +11,8 @@
   object-fit: cover;
   object-position: center;
 }
+.container_children{
+  position:absolute;
+  top:0;
+  right:0;
+}

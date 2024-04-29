@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import Image from 'next/image';
 import DefaultAvatar from "../DefaultAvatar/DefaultAvatar";
 import useToogle from '@/hooks/useToogle';
+import { useOutSideClick } from '@/hooks/useOutSideClick';
 import style from './style.module.css';
 
 interface Props{
@@ -15,6 +16,7 @@ interface Props{
 const ShowAvatar = ({user,children}:Props) => {
     
 const {isToggle,handleToggle} = useToogle();
+const modalRef = useOutSideClick(handleToggle);
     
   return (
     <>
@@ -32,7 +34,12 @@ const {isToggle,handleToggle} = useToogle();
       }
      </div>
    
-    {isToggle && children}
+    {isToggle && 
+    <div className = {style.container_children} ref={modalRef}>
+        {children}
+    </div>
+   
+    }
     </>
   )}
 

@@ -7,7 +7,7 @@
     transform: translateX(-100%);
     transition:all 300ms ease-in-out;
     box-shadow: 1px 0px 0px 0px #D3D6DB;
-    z-index: 2;
+    z-index: 6;
 }
 
 .dashboard_items_container{
