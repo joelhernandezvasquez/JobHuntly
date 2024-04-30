@@ -3,7 +3,7 @@
     padding:1rem 0;
     background: var(--neutral_10_clr);
     position:fixed;
-    width:95%;
+    width:100%;
     height:100%;
     transform: translateX(-100%);
     transition:all 300ms ease-in-out;
