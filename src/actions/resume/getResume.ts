@@ -1,12 +1,13 @@
 import { Resume } from "@/interfaces/Resume";
 
-export const getResume = async(userId:string,resumeId:string):Promise<Resume> =>{
+export const getResume = async(userId:string,resumeId:string):Promise<Resume | null> =>{
   
   try{
     const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/resume/${userId}/${resumeId}`)
    
     if(!request.ok){
-        throw new Error('Error while getting the list of resume');
+       console.error(request);
+       return null;
     }
 
     return await request.json();

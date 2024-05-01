@@ -1,4 +1,5 @@
 import { getTask } from "@/actions/tasks/getTask";
+import { notFound } from "next/navigation";
 
 interface Props{
     params:{
@@ -9,6 +10,10 @@ interface Props{
  const Task = async ({params}:Props) => {
     const {id} = params;
     const task = await getTask(id);
+
+   if (!task) {
+     notFound();
+   }
 
     return (
     <div>

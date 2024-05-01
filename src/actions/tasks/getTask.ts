@@ -1,12 +1,12 @@
 import { Task } from "@/interfaces/Tasks";
 
-export const getTask = async (taskId:string):Promise<Task> =>{
+export const getTask = async (taskId:string):Promise<Task | null> =>{
     try{
       const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tasks/task/${taskId}`);
     
       if(!request.ok){
-          console.log(request)
-          throw new Error('Error happens while getting the task information');
+          console.log(request);
+          return null;
       }
 
       return await request.json()

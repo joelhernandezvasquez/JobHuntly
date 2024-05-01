@@ -1,12 +1,13 @@
 import {Contact} from '../../interfaces/Contact';
 
-export const getContact = async(userId:string,contactId:string):Promise<Contact>=>{
+export const getContact = async(userId:string,contactId:string):Promise<Contact | null>=>{
  
  try{
     const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/contacts/${userId}/${contactId}`);
 
     if(!request.ok){
-        throw new Error('Error happens while getting contacts');
+        console.error(request);
+        return null;
     }
 
     return await request.json();
