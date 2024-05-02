@@ -3,6 +3,7 @@ import { Interviews } from "@/interfaces/Interviews";
 import InterviewCardList from "./InterviewCardList";
 import { IoBusinessOutline } from "react-icons/io5";
 import { CalendarUtils } from "@/utils/date.utils";
+import { InterviewCardButton } from "./interviewCardButton/interviewCardButton";
 import style from './style.module.css';
 
 interface Props{
@@ -25,7 +26,8 @@ const InterviewCard = ({interview}:Props) => {
             <p className={style.interview_type}>{description}</p>
             <span className={style.interview_interval_time}>{InterviewDuration}</span>
          </div>
-      
+        
+        <InterviewCardButton interviewId={interview.interviewID}/>
       </div>
 
       <div className={style.interview_card_body}>

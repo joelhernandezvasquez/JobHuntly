@@ -14,10 +14,9 @@ import style from './style.module.css';
 
  return (
     <section className={`widget_box ${style.interviews_widget_container}`}>
-       <h2 className="widget_headline">Upcoming Interviews</h2>
+         <h2 className="widget_headline">Upcoming Interviews</h2>
 
-       <DatePicker emitSelectedDate={onHandleDateSelected}/>
-
+          <DatePicker emitSelectedDate={onHandleDateSelected}/>
           <DashboardInterviewsWrapper>
             <GetDashboardInterviews dateSelected={date}/>
           </DashboardInterviewsWrapper>     

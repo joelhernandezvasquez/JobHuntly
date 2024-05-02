@@ -12,8 +12,7 @@
 }
 .interview_card_header, .interview_card_body{
     padding-bottom: .5rem;
-    border-bottom:1px solid var(--neutral_20_clr);
-    
+    border-bottom:1px solid var(--neutral_20_clr);  
 }
 
 .interview_card_header_date{
@@ -23,7 +22,9 @@
     padding-right: 1rem;
     border-right:1px solid var(--neutral_20_clr);
 }
-
+.interview_card_header_time{
+    margin-right: auto;
+}
 .header_day{
     font-size: 1.1rem;
     color:#323338;
