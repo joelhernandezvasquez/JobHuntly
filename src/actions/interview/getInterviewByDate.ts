@@ -2,7 +2,7 @@ import { Interviews } from "@/interfaces/Interviews";
 import { CalendarUtils } from "@/utils/date.utils";
 
 
-export const getInterviewsByDate = async (date:Date):Promise<Interviews []> =>{
+export const getInterviewsByDate = async (date:Date):Promise<Interviews[]> =>{
     const formattedDate = CalendarUtils.getFormattedYMDDate(date);
     
     try{
