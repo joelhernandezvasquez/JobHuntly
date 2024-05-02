@@ -8,7 +8,7 @@ interface Props{
 export const BlurBackground = ({callback}:Props) => {
 
     const handleClick = () =>{
-        callback()
+        callback();
     }
   return (
     <div className={style.blur_background} onClick={handleClick}></div>

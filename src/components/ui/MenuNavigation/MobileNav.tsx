@@ -6,7 +6,6 @@ import CompanyLogo from '../companyLogo/CompanyLogo';
 import MobileMenu from './MobileMenu';
 import style from './style.module.css';
 
-
 interface Prop{
  closeMenu:() => void
 }

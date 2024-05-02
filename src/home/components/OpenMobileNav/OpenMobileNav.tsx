@@ -4,7 +4,6 @@ import useToogle from "@/hooks/useToogle";
 import MobileNav from "@/components/ui/MenuNavigation/MobileNav";
 import style from './style.module.css';
 
-
 const OpenMobileNav = () => {
   const {isToggle,handleToggle} = useToogle();
   return (
