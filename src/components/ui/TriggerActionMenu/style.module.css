@@ -1,12 +1,10 @@
-.application_actions{
-    grid-column: 2/3;
-    grid-row:1/2;
-    justify-self: end;
-    height: fit-content;
+.actions_container{
     position:relative;
 }
+
 .actions_btn{
     display:flex;
+    flex-direction: column;
     gap:5px;
     padding:.5rem 0;
 }
@@ -15,4 +13,8 @@
     height: 4px;
     background:var(--neutral_100_clr);
     border-radius: 50%;
+}
+.actions_btn.flex_row{
+    flex-direction: column;
+    border: 1px solid red;
 }

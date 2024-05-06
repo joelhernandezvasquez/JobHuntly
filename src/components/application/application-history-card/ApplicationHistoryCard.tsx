@@ -1,9 +1,10 @@
-import { ApplicationHistoryCardBtn } from "..";
+
 import { CalendarUtils } from "@/utils/date.utils";
 import { Application } from "@/interfaces/Application";
 import { FaWpforms } from "react-icons/fa6";
 import style from './style.module.css';
 import { transformObjectToArray } from "@/utils/utils";
+import { TriggerActionMenu } from "@/components/ui/TriggerActionMenu/TriggerActionMenu";
 interface Props{
     application:Application
 }
@@ -32,8 +33,14 @@ export const ApplicationHistoryCard = ({application}:Props) => {
         <p>{dateAppliedFormatted}</p>
        </div>
        
-       <ApplicationHistoryCardBtn applicationId={applicationId}/>
-
+      
+       <TriggerActionMenu
+        actionEntity="application"
+        actionId={applicationId}
+        actionRoutingUrl={'application/'}
+        className={style.application_actions}
+        dotsDirrection={'row'}
+       />
        <div className={style.application_status_container}>
         <p className={`${style.application_status} ${style[status]}`}>{status}</p>
        </div>

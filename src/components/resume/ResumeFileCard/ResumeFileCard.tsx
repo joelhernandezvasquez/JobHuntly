@@ -1,10 +1,10 @@
-import { ResumeActionBtn } from '../ResumeActionButton/ResumeActionBtn';
+
 import { Resume } from '@/interfaces/Resume';
 import { BiSolidFilePdf } from "react-icons/bi";
 import { BsFiletypeDocx } from "react-icons/bs";
 import { CalendarUtils } from '@/utils/date.utils';
+import { TriggerActionMenu } from '@/components/ui/TriggerActionMenu/TriggerActionMenu';
 import style from './style.module.css';
-
 interface Props{
     resume:Resume
 }
@@ -30,7 +30,12 @@ export const ResumeFileCard = ({resume}:Props) => {
                <span>{month} {day}, {year}</span>
             </p>
          </div>
-         <ResumeActionBtn ResumeId={resume_id}/> 
+         <TriggerActionMenu
+          actionEntity={'resume'}
+          actionId={resume_id}
+          actionRoutingUrl={'/resume/'}
+         />
+        
     </li>
   )
 }

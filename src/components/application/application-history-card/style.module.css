@@ -1,98 +1,105 @@
 
 .application_history_card{
- display:grid;
- grid-template-columns: auto 1fr;
- margin-bottom: 2rem; 
- padding:1rem;
- box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-}
-.company_name{
-    grid-column: span 1/2;
-    display:flex;
-    flex-direction:column;
-    gap:.5rem;
-}
-.company_logo{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    background:var(--accent_intense_blue_clr);
-}
-.company_name p{
-    font-weight: bold;
-    font-size: 1rem;
-    color:var(--neutral_100_clr);
-}
-
-.job_position{
-    grid-column:1/2;
-    font-size: 1.125rem;
-    color:var(--neutral_100_clr);
-    font-weight: 500;
-    font-family: var(--epilogue_font);
-}
-
-.date_applied{
-    grid-column:1/2;
-    margin-top:.5rem;
-    font-family: var(--epilogue_font);
-}
-.date_applied_label{
-    
-    color:var(--neutral_60_clr);
-    font-size: 1rem;
-}
-.date_applied p{
-   font-size: 1.125rem;
-}
-
-.application_status_container{
-    align-self: center;
+    display:grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 2rem; 
+    padding:1rem;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+   }
+   .company_name{
+       grid-column: span 1/2;
+       display:flex;
+       flex-direction:column;
+       gap:.5rem;
+   }
+   .company_logo{
+       display:flex;
+       align-items: center;
+       justify-content: center;
+       width: 64px;
+       height: 64px;
+       border-radius: 100%;
+       background:var(--accent_intense_blue_clr);
+   }
+   .company_name p{
+       font-weight: bold;
+       font-size: 1rem;
+       color:var(--neutral_100_clr);
+   }
+   
+   .job_position{
+       grid-column:1/2;
+       font-size: 1.125rem;
+       color:var(--neutral_100_clr);
+       font-weight: 500;
+       font-family: var(--epilogue_font);
+   }
+   
+   .date_applied{
+       grid-column:1/2;
+       margin-top:.5rem;
+       font-family: var(--epilogue_font);
+   }
+   .date_applied_label{
+       
+       color:var(--neutral_60_clr);
+       font-size: 1rem;
+   }
+   .date_applied p{
+      font-size: 1.125rem;
+   }
+   
+   .application_status_container{
+       align-self: center;
+       justify-self: end;
+   }
+   .application_status{
+       width: fit-content;
+       border-radius:6px;
+       border:1px solid black;
+       padding:.5rem;
+       font-size: 1rem;
+   }
+   .Rejected{
+       border:1px solid #7E1F16;
+       color:#7E1F16;
+   }
+   .Applied{
+       border:1px solid var(--accent_intense_blue_clr);
+       color:var(--accent_intense_blue_clr);
+   }
+   .Interviewing{
+       border:1px solid #28724b;
+       color:#287271;
+   }
+   .Bookmarked{
+       border:1px solid #C64B09;
+       color:#C64B09;
+   }
+   .Negotiating{
+       border:1px solid #1e6091;
+       color:#1e6091;
+   }
+   .Accepted{
+       border:1px solid var(--primary_brand_clr);
+       color:var(--primary_brand_clr);
+   }
+   .Offered{
+       border: 1px solid #0077b6;
+       color:#0077b6;
+   }
+   .Declined{
+       border: 1px solid #0b132b;
+       color:#0b132b
+   }
+   .Archived{
+       border: 1px solid #046865;
+       color:#046865;
+   }
+   .application_actions{
+    grid-column: 2/3;
+    grid-row:1/2;
     justify-self: end;
-}
-.application_status{
-    width: fit-content;
-    border-radius:6px;
-    border:1px solid black;
-    padding:.5rem;
-    font-size: 1rem;
-}
-.Rejected{
-    border:1px solid #7E1F16;
-    color:#7E1F16;
-}
-.Applied{
-    border:1px solid var(--accent_intense_blue_clr);
-    color:var(--accent_intense_blue_clr);
-}
-.Interviewing{
-    border:1px solid #28724b;
-    color:#287271;
-}
-.Bookmarked{
-    border:1px solid #C64B09;
-    color:#C64B09;
-}
-.Negotiating{
-    border:1px solid #1e6091;
-    color:#1e6091;
-}
-.Accepted{
-    border:1px solid var(--primary_brand_clr);
-    color:var(--primary_brand_clr);
-}
-.Offered{
-    border: 1px solid #0077b6;
-    color:#0077b6;
-}
-.Declined{
-    border: 1px solid #0b132b;
-    color:#0b132b
-}
-.Archived{
-    border: 1px solid #046865;
-    color:#046865;
+    height: fit-content;
+    position:relative;
 }

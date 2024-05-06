@@ -1,7 +1,7 @@
 import { Contact } from "@/interfaces/Contact";
 import Avatar from "@/components/Avatar/Avatar";
-import { ContactCardActionBtn } from "../ContactCardActionBtn/ContactCardActionBtn";
 import { FaUser } from "react-icons/fa6";
+import { TriggerActionMenu } from "@/components/ui/TriggerActionMenu/TriggerActionMenu";
 import style from './style.module.css';
 interface Props{
  contact:Contact
@@ -19,8 +19,11 @@ export const ContactCard = ({contact}:Props) => {
        <p className={style.contact_name}>{`${contact.firstName} ${contact.lastName}`}</p>
        <p className={style.contact_role}>{contact.role}</p>
       </div>
-
-      <ContactCardActionBtn contactId={contact.contactId}/>
+      <TriggerActionMenu
+       actionEntity="contact"
+       actionId={contact.contactId}
+       actionRoutingUrl={'/contact/'}
+      />
     </li>
   )
 }

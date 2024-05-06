@@ -13,3 +13,4 @@ export * from './ui/blur-background/BlurBackground';
 export * from './ui/ActionModalMenu/ActionModalMenu';
 export * from './ui/ActionButton/ActionButton';
 export * from './ui/NotFound/PageNotFound';
+export * from './ui/TriggerActionMenu/TriggerActionMenu';
