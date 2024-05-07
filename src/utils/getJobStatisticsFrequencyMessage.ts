@@ -24,7 +24,6 @@ const getWeeklyFrequencyMessage = () =>{
   const month = CalendarUtils.getCurrentMonthName();
   const currentWeekNumber = CalendarUtils.getCurrentWeekNumber(today.getFullYear(),today.getMonth(),today.getDay());
   const dates = CalendarUtils.getMondayAndSundayOfWeek(today.getFullYear(),today.getMonth(),currentWeekNumber +1);
-  
   return `From ${month} ${dates.monday.getDate()}-${dates.sunday.getDate()}`;
 }
 

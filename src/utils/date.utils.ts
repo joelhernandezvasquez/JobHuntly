@@ -11,22 +11,24 @@ export const CalendarUtils = {
     getMondayAndSundayOfWeek:(year:number, month:number, weekNumber:number) =>{ 
         const firstDayOfMonth = new Date(year, month, 1);
         const firstDayOfWeek = firstDayOfMonth.getDay();
+       
         
         // Calculate the offset needed to get to the first Monday of the month
        const offsetToMonday = (8 - firstDayOfWeek) % 7;
-        
+       
         // Calculate the date of the first Monday of the month
         const firstMondayDate = 1 + offsetToMonday;
         
         // Calculate the date of the Monday of the target week
-        const targetMondayDate = firstMondayDate + (weekNumber - 1) * 7 +1;
-        
+        // const targetMondayDate = firstMondayDate + (weekNumber - 1) * 7 +1;
+           
         // Calculate the date of the Sunday of the target week
-        const targetSundayDate = targetMondayDate + 6;
+        const targetSundayDate = firstMondayDate + 6;
+       
         
         // Return an object containing the Monday and Sunday dates
         return {
-            monday: new Date(year, month, targetMondayDate),
+            monday: new Date(year, month, firstMondayDate),
             sunday: new Date(year, month, targetSundayDate)
         };
     },
