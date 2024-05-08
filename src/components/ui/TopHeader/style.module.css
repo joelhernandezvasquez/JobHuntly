@@ -17,3 +17,9 @@
     display:flex;
     gap:1rem;
 }
+
+@media(min-width:1200px){
+    .top_header_wrapper{
+        grid-column:2/3;
+    }
+}

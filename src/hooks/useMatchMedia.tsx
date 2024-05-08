@@ -9,11 +9,10 @@ interface Props{
 const useMatchMedia = ({media}:Props) => {
  
  const [hasCurrentViewportMatch,setCurrentViewport] = useState<Boolean>(typeof window!==undefined ??  window.matchMedia(media).matches  );
-  useEffect(()=>{
   
+ useEffect(()=>{
     const handleResize = () =>{
       const mediaQuery = window.matchMedia(media);
-
         if(mediaQuery.matches){
            setCurrentViewport(true);
         }

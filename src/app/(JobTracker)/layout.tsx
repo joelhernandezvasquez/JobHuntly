@@ -4,7 +4,7 @@ import { validateUser } from '@/actions/auth/validateUser';
 import TopHeader from '@/components/ui/TopHeader/TopHeader';
 import MenuSideBar from '@/components/ui/MenuSideBar/MenuSideBar';
 import { AuthAdapter } from '@/config/authAdapter';
-
+import style from './main-layout.module.css';
 interface Props{
   children:React.ReactNode
 }
@@ -29,10 +29,13 @@ export default async function JobTrackerLayout({children}:Props) {
    }
 
   return (
-       <main>
+       <main className={style.main}>
         <TopHeader/>
         <MenuSideBar/>
+        <section className={style.main_body}>
         {children}
+        </section>
+        
      </main>
      
     )

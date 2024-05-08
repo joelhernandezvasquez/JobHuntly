@@ -4,12 +4,15 @@ import CompanyLogo from '@/components/ui/companyLogo/CompanyLogo';
 import MaxWidthWrapper from '../MaxWidthWrapper/MaxWidthWrapper';
 import MenuSidebarDashboardItemsGroup from './MenuSidebarDashboardItemsGroup';
 import { BlurBackground } from '../blur-background/BlurBackground';
+import useMatchMedia from '@/hooks/useMatchMedia';
 import style from './style.module.css';
 
 const MenuSideBar = () => {
  const isDashboardMenuOpen = useUIStore(state => state.isDashboardMenuOpen);
  const closeDashboardMenu = useUIStore(state => state.closeDashboardMenu);
+ const {hasCurrentViewportMatch} = useMatchMedia({ media: '(min-width: 1200px)' });
 
+ 
  return (
   <>
     <aside className={`${style.menu_side_bar_wrapper} ${ isDashboardMenuOpen && style.menu_side_bar_wrapper_open  }`} tabIndex={-1} >
@@ -18,7 +21,7 @@ const MenuSideBar = () => {
          <MenuSidebarDashboardItemsGroup dividerInterval={4}/> 
       </MaxWidthWrapper>
     </aside>
-    {isDashboardMenuOpen && <BlurBackground callback={closeDashboardMenu}/>} 
+    {(isDashboardMenuOpen && !hasCurrentViewportMatch) &&  <BlurBackground callback={closeDashboardMenu}/>} 
     </>
   )
 }

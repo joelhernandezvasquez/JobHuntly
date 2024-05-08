@@ -15,7 +15,6 @@
     display:flex;
     flex-direction: column;
     margin:1rem 0;
-    height:500px;
 }
 .dashboard_item{
     margin-bottom: .5rem;
@@ -31,7 +30,10 @@
     gap:.5rem;
     min-height: 3rem;
     padding:0 1rem;
+    cursor: pointer;;
 }
+
+
 .dashboard_icons{
     color:var(--neutral_60_clr);
 }
@@ -68,4 +70,30 @@
 
 .menu_side_bar_wrapper.menu_side_bar_wrapper_open{
     transform: translateX(0);
+}
+
+.dashboard_menu_item:hover{
+
+    .dashboard_item_text {
+        color:var(--primary_brand_clr);
+    }
+    .dashboard_icons{
+        color:var( --primary_brand_clr);
+    } 
+}
+
+@media(min-width:1200px){
+    .menu_side_bar_wrapper{
+       grid-column:1/2;
+       width: 270px;
+       overflow: hidden;
+       position: fixed;
+    }
+    .menu_side_bar_wrapper > section{
+        padding-left:.5rem;
+        padding-right: .5rem;
+    }
+    .dashboard_current_path_active_indicator{
+        left:-7px;
+    }
 }
