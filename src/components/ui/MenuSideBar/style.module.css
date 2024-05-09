@@ -33,7 +33,6 @@
     cursor: pointer;;
 }
 
-
 .dashboard_icons{
     color:var(--neutral_60_clr);
 }
@@ -81,19 +80,18 @@
         color:var( --primary_brand_clr);
     } 
 }
+.mobile_menu{
+    display:block;
+}
+.desktop_menu{
+    display:none; 
+}
 
 @media(min-width:1200px){
-    .menu_side_bar_wrapper{
-       grid-column:1/2;
-       width: 270px;
-       overflow: hidden;
-       position: fixed;
+    .mobile_menu{
+        display:none;
     }
-    .menu_side_bar_wrapper > section{
-        padding-left:.5rem;
-        padding-right: .5rem;
-    }
-    .dashboard_current_path_active_indicator{
-        left:-7px;
+    .desktop_menu{
+        display:block;
     }
 }

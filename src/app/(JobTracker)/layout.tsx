@@ -2,8 +2,9 @@ import { redirect } from 'next/navigation';
 import { registerUser } from '@/actions/auth/register';
 import { validateUser } from '@/actions/auth/validateUser';
 import TopHeader from '@/components/ui/TopHeader/TopHeader';
-import MenuSideBar from '@/components/ui/MenuSideBar/MenuSideBar';
 import { AuthAdapter } from '@/config/authAdapter';
+import DesktopMenu from '@/components/ui/MenuSideBar/desktopMenu/DesktopMenu';
+import MobileMenuSidebar from '@/components/ui/MenuSideBar/mobileMenuSidebar/MobileMenu';
 import style from './main-layout.module.css';
 interface Props{
   children:React.ReactNode
@@ -31,11 +32,11 @@ export default async function JobTrackerLayout({children}:Props) {
   return (
        <main className={style.main}>
         <TopHeader/>
-        <MenuSideBar/>
+        <MobileMenuSidebar/>
+        <DesktopMenu/> 
         <section className={style.main_body}>
         {children}
         </section>
-        
      </main>
      
     )
