@@ -3,3 +3,20 @@
     border:none;
     cursor: pointer;
 }
+.toogle_on_mobile_container{
+    display:block;
+}
+
+.toogle_on_desktop_container{
+    display:none;
+}
+
+@media(min-width:1200px){
+    .toogle_on_mobile_container{
+        display:none;
+    }
+    
+    .toogle_on_desktop_container{
+        display:block;
+    }
+}

@@ -1,15 +1,13 @@
 'use client';
 
-import { useUIStore } from "@/store";
-import OpenMenuButton from "./OpenMenuButton";
-import CloseMenuButton from "./CloseMenuButton";
+import { ToogleOnMobile } from "./ToogleOnMobile";
+import { ToogleOnDesktop } from "./ToogleOnDesktop";
 
 const ToggleDashboardMenu = () => {
-  const isDashboardMenuOpen = useUIStore(state => state.isDashboardMenuOpen);
-
   return (
     <>
-     { !isDashboardMenuOpen ? <OpenMenuButton/> : <CloseMenuButton/> }
+     <ToogleOnMobile/>
+     <ToogleOnDesktop/>
     </>
   )
 }

@@ -7,18 +7,18 @@ import { BlurBackground } from '../../blur-background/BlurBackground';
 import style from '../style.module.css';
 
 const MobileMenuSidebar = () => {
- const isDashboardMenuOpen = useUIStore(state => state.isDashboardMenuOpen);
- const closeDashboardMenu = useUIStore(state => state.closeDashboardMenu);
+ const isDashboardMobileMenuOpen = useUIStore(state => state.isDashboardMobileMenuOpen);
+ const closeDashboardMobileMenu = useUIStore(state => state.closeDashboardMobileMenu);
 
  return (
   <>
-    <aside className={`${style.menu_side_bar_wrapper} ${style.mobile_menu} ${ isDashboardMenuOpen && style.menu_side_bar_wrapper_open  }`} tabIndex={-1} >
+    <aside className={`${style.menu_side_bar_wrapper} ${style.mobile_menu} ${ isDashboardMobileMenuOpen && style.menu_side_bar_wrapper_open  }`} tabIndex={-1} >
       <MaxWidthWrapper>
          <CompanyLogo theme='light'/>
          <MenuSidebarDashboardItemsGroup dividerInterval={4}/> 
       </MaxWidthWrapper>
     </aside>
-    {isDashboardMenuOpen &&  <BlurBackground callback={closeDashboardMenu}/>} 
+    {isDashboardMobileMenuOpen  &&  <BlurBackground callback={closeDashboardMobileMenu}/>} 
     </>
   )
 }
