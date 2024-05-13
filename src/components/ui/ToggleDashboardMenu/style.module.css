@@ -4,19 +4,19 @@
     cursor: pointer;
 }
 .toogle_on_mobile_container{
-    display:block;
+    display:flex;
 }
 
 .toogle_on_desktop_container{
     display:none;
 }
 
-@media(min-width:1200px){
+@media(min-width:1000px){
     .toogle_on_mobile_container{
         display:none;
     }
     
     .toogle_on_desktop_container{
-        display:block;
+        display:flex;
     }
 }

@@ -6,7 +6,6 @@
  padding:1rem;
 }
 
-
 .tabs_tab_item{
     color:var(--primary_brand_clr);
     font-size: 1rem;
@@ -14,6 +13,12 @@
 }
 .tabs_tab_item.active{
     background:var(--neutral_0_clr);
+}
+
+@media(min-width:1100px){
+.dashboard_job_statstictics{
+  grid-column:1/3;
+}
 }
 
    

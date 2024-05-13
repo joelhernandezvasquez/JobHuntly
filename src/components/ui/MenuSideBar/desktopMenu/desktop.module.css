@@ -1,22 +1,25 @@
 .menu_side_desktop_bar_wrapper{
     padding:1rem 0;
     background: var(--neutral_10_clr);
-    position:absolute;
+    position: fixed;
      height:100%;
     box-shadow: 1px 0px 0px 0px #D3D6DB;
     z-index: 10;
-}
-
-.menu_side_desktop_bar_wrapper{
     grid-column:1/2;
     width: 270px;
     overflow: hidden;
-    position: fixed;
- }
+    /* overflow-y:auto ;
+    overflow-x: hidden; */
+}
+
  .menu_side_desktop_bar_wrapper > section{
      padding-left:.5rem;
      padding-right: .5rem;
  }
  .dashboard_current_path_active_indicator{
      left:-7px;
+ }
+
+ .menu_side_desktop_bar_wrapper.collapse_menu{
+    border:1px solid red;
  }

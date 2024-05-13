@@ -1,0 +1,17 @@
+
+@media(min-width:1100px){
+   .main_dashboard{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: start;
+    gap:1rem;
+   }
+}
+
+/* @media(min-width:1400px){
+   .main_dashboard{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+   }
+} */

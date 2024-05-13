@@ -8,11 +8,11 @@ import style from '../style.module.css';
 import desktop from './desktop.module.css';
 
 const DesktopMenu = () => {
- const isDashboardMenuOpen = useUIStore(state => state.isDashboardMenuOpen);
+ const isDashboardDesktopMenuOpen = useUIStore(state => state.isDashboardDesktopMenuOpen);
 
  return (
   <>
-    <aside className={`${desktop.menu_side_desktop_bar_wrapper} ${style.desktop_menu}`} tabIndex={-1} >
+    <aside className={`${desktop.menu_side_desktop_bar_wrapper} ${style.desktop_menu} ${!isDashboardDesktopMenuOpen && desktop.collapse_menu}`} tabIndex={-1} >
       <MaxWidthWrapper>
          <CompanyLogo theme='light'/>
          <MenuSidebarDashboardItemsGroup dividerInterval={4}/> 

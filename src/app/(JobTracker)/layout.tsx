@@ -34,6 +34,7 @@ export default async function JobTrackerLayout({children}:Props) {
         <TopHeader/>
         <MobileMenuSidebar/>
         <DesktopMenu/> 
+       
         <section className={style.main_body}>
         {children}
         </section>

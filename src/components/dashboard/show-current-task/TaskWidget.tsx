@@ -9,7 +9,7 @@ export const TaskWidget = async () => {
   const tasks = await getTasks(AuthAdapter.getUserId()!);
   
   return (
-   <section className="widget_box">
+   <section className={`widget_box ${style.task_container}`}>
      <div className={style.task_header}>
        <h2 className="widget_headline">My Tasks</h2>
         <Link className={style.view_task_btn} href={`/tasks`}>View All</Link>

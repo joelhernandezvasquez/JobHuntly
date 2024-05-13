@@ -24,11 +24,11 @@ export function DonutsChart({frequencyFilterSelection,applications}:Props) {
        />
        :
        <DonutChart
-       data={applications}
-       category="total"
-       index="name"
-       colors={['blue','indigo','cyan']}
-       className={style.container}
+        data={applications}
+        category="total"
+        index="name"
+        colors={['blue','indigo','cyan']}
+        className={style.container}
      />
   }
     </>

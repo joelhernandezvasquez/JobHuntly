@@ -20,7 +20,7 @@ export const authenticateUser = async (email:string,password:string):Promise<Aut
   }
   catch(error){
    if(error instanceof Error){
-    console.log(error)
+  
    }
    return {} as Auth ;
   }

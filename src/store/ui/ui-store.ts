@@ -17,7 +17,7 @@ closeDashboardDesktopMenu :() => void,
 export const useUIStore = create<State>()((set) => ({
  isDashboardMobileMenuOpen:false,
  isNotificationPanelOpen:false,
- isDashboardDesktopMenuOpen:false,
+ isDashboardDesktopMenuOpen:true,
 
  openDashboardMobileMenu:() => set({isDashboardMobileMenuOpen:true}),
  closeDashboardMobileMenu:() => set({isDashboardMobileMenuOpen:false}),

@@ -4,6 +4,7 @@ import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews,
 import { MaxWidthWrapper,CardPlaceholderSkeleton,CardSkeleton, TaskWidget } from "@/components";
 import { ContactWidget } from "@/components/contact";
 import { ResumeWidget } from "@/components/resume/ResumeWidget/ResumeWidget";
+import style from './style.module.css';
 
 export default function dashboard (
 {searchParams}:{searchParams: { [key: string]:string | string[] | undefined }})
@@ -12,6 +13,7 @@ export default function dashboard (
 
   return (
     <MaxWidthWrapper>
+      <div className={style.main_dashboard}>
       <Suspense fallback={<CardSkeleton/>}>
         <DashboardApplicationStats/>
       </Suspense>
@@ -39,6 +41,8 @@ export default function dashboard (
        <Suspense fallback={<CardPlaceholderSkeleton/>}>
         <ResumeWidget/>
        </Suspense>
+      </div>
+      
 
      </MaxWidthWrapper>
   )

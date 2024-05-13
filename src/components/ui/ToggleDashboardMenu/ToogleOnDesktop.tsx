@@ -11,9 +11,9 @@ export const ToogleOnDesktop = () => {
   
   return (
     <div className={style.toogle_on_desktop_container}>
-        { !isDashboardDesktopMenuOpen
-         ? <OpenMenuButton openMenu={openDashboardDesktopMenu}/>
-         : <CloseMenuButton closeMenu={closeDashboardDesktopMenu}/>
+        { isDashboardDesktopMenuOpen
+         ? <OpenMenuButton openMenu={closeDashboardDesktopMenu}/>  
+         : <CloseMenuButton closeMenu={openDashboardDesktopMenu}/>
         }
        </div>
   )

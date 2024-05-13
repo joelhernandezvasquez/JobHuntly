@@ -10,7 +10,7 @@ interface Props{
 const StatisticsTimeMessage = ({frequencyState}:Props) => {
   return (
     <div>
-        <h2 className={style.headline}>Job statistics</h2>
+        <h2 className={style.headline}>Job Statistics</h2>
              <p className={style.filter_frequency_text}>
                Statistics {getJobStatisticsFrequencyMessage(frequencyState)}
             </p>

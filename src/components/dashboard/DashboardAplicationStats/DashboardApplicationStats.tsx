@@ -10,7 +10,7 @@ export const DashboardApplicationStats = async () => {
     const dashboardStats = await getDashboardApplicationStats(userId!);
   
     return (
-    <>
+    <div className={style.application_stats_container}>
     <BenchMarkWidget>
     <BenchMarkWidget.Header>
       <h2 className={style.bench_mark_heading}>Total Jobs Applied</h2>
@@ -38,7 +38,7 @@ export const DashboardApplicationStats = async () => {
     </BenchMarkWidget.Body>
 
   </BenchMarkWidget>
-  </>
+  </div>
   )}
 
 export default DashboardApplicationStats
