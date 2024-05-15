@@ -1,8 +1,7 @@
 
 .contact_container{
- display:flex;
- flex-direction: column;
- justify-content: center;
+ max-height:400px;
+ overflow:auto;
 }
 
 .contact_container_header{
@@ -24,13 +23,11 @@
 .contact_link_btn{
     display:block;
     width: 90%;
-    align-self: center;
-    margin-top:2rem;
+    margin:2rem auto 0 auto;
     border:1px solid var(--primary_brand_clr);
     padding:.5rem 3rem;
     border-radius: 6px;
     font-size: 1rem;
-    /* background:var(--primary_brand_clr); */
     color:var(--primary_brand_clr);
     border:1px solid var(--primary_brand_clr);
     text-align: center;

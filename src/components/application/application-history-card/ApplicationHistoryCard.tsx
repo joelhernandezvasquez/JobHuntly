@@ -34,7 +34,6 @@ export const ApplicationHistoryCard = ({application}:Props) => {
         <p>{dateAppliedFormatted}</p>
        </div>
        
-      
        <TriggerActionMenu
         actionEntity="application"
         actionId={applicationId}

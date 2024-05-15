@@ -1,2 +1,5 @@
 
-.resume_container{}
+.resume_container{
+    max-height:400px;
+    overflow: auto;
+}
