@@ -10,3 +10,12 @@
     }
 }
 
+@media(min-width:1400px){
+  .main{
+      grid-template-columns: 270px repeat(2,1fr); 
+  }
+  .main_body{
+    grid-column:2/-1;
+  }
+}
+

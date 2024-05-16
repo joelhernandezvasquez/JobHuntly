@@ -5,8 +5,8 @@
     overflow: auto;
 }
 
-@media(min-width:1100px){
+@media(min-width:1440px){
     .interviews_widget_container{
-     
+     height: 100%;
     }
 }

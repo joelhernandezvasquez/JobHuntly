@@ -8,3 +8,9 @@
      grid-column: 1/-1;
     }
 }
+
+@media(min-width:1440px){
+    .job_history_container{
+     grid-row:3/4;
+    }
+}

@@ -8,10 +8,8 @@
    }
 }
 
-/* @media(min-width:1400px){
+@media(min-width:1400px){
    .main_dashboard{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:1rem;
+    grid-template-rows: auto 480px auto 400px auto;
    }
-} */
+}

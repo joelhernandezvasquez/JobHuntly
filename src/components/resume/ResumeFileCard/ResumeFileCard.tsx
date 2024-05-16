@@ -16,7 +16,7 @@ export const ResumeFileCard = ({resume}:Props) => {
     
     return (
     <li className={style.resume_file_card}>
-         <div>
+         <div className={style.file_type}>
             {file_type === 'PDF'
                   ?  <BiSolidFilePdf size={25} color={'F23E3E'}/>
                   :  <BsFiletypeDocx size={25} color={'54A0FF'} /> 
