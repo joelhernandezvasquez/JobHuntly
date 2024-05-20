@@ -32,3 +32,9 @@
   margin-bottom: 0;
   border-bottom: 0;
 }
+
+@media(min-width:1000px){
+ .notification_card{
+  margin-top:0;
+ }
+}

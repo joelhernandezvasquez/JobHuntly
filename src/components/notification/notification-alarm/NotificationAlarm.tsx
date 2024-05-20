@@ -21,7 +21,7 @@ export const NotificationAlarm = ({notifications}:Props) => {
 
  return (
     <>
-    <IoNotificationsOutline size={20} onClick ={onClickNotificationIcon}/>
+    <IoNotificationsOutline className={style.alarm_icon} size={20} onClick ={onClickNotificationIcon}/>
 
     {notifications.length > 0 &&(
         <div className={style.notification_count}>

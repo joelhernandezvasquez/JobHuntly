@@ -1,7 +1,7 @@
 import { getNotifications } from "@/actions/notifications/getNotifications";
 import { AuthAdapter } from "@/config/authAdapter";
-import style from './style.module.css';
 import { NotificationAlarm } from "./notification-alarm/NotificationAlarm";
+import style from './style.module.css';
 
 const Notification = async () => {
 

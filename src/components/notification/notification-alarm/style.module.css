@@ -12,3 +12,6 @@
     color:white;
     font-size: .875rem;
 }
+.alarm_icon{
+    cursor: pointer;
+}

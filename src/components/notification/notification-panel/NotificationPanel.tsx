@@ -12,7 +12,7 @@ export const NotificationPanel = ({notifications}:Props) => {
   return (
     <aside className={style.notification_wrapper}>
       <div className={style.notification_body}>
-      <ul>
+      <ul className={style.notification_list_container}>
         {notifications.map((notification)=>{
           return <NotificationCard key={notification.id} notification={notification}/>
         })}
