@@ -10,3 +10,10 @@
     max-height:100%;
    }
 }
+
+@media(min-width:1800px) {
+    .resume_container{
+        grid-column: 3/4;
+        grid-row:3/4;
+    }
+ }

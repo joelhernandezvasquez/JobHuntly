@@ -10,3 +10,9 @@
      height: 100%;
     }
 }
+@media(min-width:1800px){
+    .interviews_widget_container{
+     grid-column: 2/3;
+      grid-row:1/2;
+    }
+}

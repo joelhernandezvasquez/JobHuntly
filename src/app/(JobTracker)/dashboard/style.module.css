@@ -13,3 +13,10 @@
     grid-template-rows: auto 480px auto 400px auto;
    }
 }
+
+@media(min-width:1800px){
+   .main_dashboard{
+      grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 400px 480px auto; 
+   }
+}

@@ -54,3 +54,16 @@ font-size: .875rem;
        flex-direction: row;
     }
 }
+@media(min-width:1800px){
+    .file_type svg{
+        width:1.5rem;
+        height: 1.5rem;
+    }
+    .resume_file_card{
+        padding-right: 1rem;
+        gap:1rem;
+    }
+    .resume_file_name_size_col{
+        flex-direction: column;
+     }
+}

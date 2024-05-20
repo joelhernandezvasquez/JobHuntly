@@ -32,3 +32,9 @@
     border:1px solid var(--primary_brand_clr);
     text-align: center;
 }
+@media(min-width:1800px){
+    .contact_container{
+        max-height:100%;
+        
+       }
+}

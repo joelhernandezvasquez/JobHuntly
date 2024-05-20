@@ -27,4 +27,10 @@
   }
 }
 
+@media(min-width:1800px){
+  .dashboard_job_statstictics{
+    grid-column:1/3;
+  }
+}
+
    

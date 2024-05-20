@@ -14,3 +14,9 @@
      grid-row:3/4;
     }
 }
+
+@media(min-width:1800px){
+    .job_history_container{
+        grid-column:1/3;
+    }
+}
