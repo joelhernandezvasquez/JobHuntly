@@ -11,7 +11,7 @@ export default function dashboard (
 {
    const frequencyFilterSelection = (searchParams?.frequency ?? 'Week') as TimeUnit;
 
-  return (
+  return ( 
     <MaxWidthWrapper>
       <div className={style.main_dashboard}>
       <Suspense fallback={<CardSkeleton/>}>
@@ -24,8 +24,8 @@ export default function dashboard (
    
         <Suspense fallback={<CardPlaceholderSkeleton/>}>
           <DashboardInterviews/>
-        </Suspense>
-       
+        </Suspense> 
+        
        <Suspense fallback={<CardPlaceholderSkeleton/>}>
           <TaskWidget/>
        </Suspense>

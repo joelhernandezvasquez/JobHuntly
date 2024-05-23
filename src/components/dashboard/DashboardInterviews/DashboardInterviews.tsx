@@ -8,14 +8,13 @@ import style from './style.module.css';
  export const DashboardInterviews = () => {
   const [date,setDate] = useState<Date>(new Date);
 
-  const onHandleDateSelected = (selectedDate:Date) =>{
+  const onHandleDateSelected = (selectedDate:Date) =>{ 
     setDate(selectedDate);
   }
 
  return (
     <section className={`widget_box ${style.interviews_widget_container}`}>
          <h2 className="widget_headline">Upcoming Interviews</h2>
-
           <DatePicker emitSelectedDate={onHandleDateSelected}/>
           <DashboardInterviewsWrapper>
             <GetDashboardInterviews dateSelected={date}/>

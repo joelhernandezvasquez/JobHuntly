@@ -6,8 +6,7 @@ export const getInterviewsByDate = async (date:Date):Promise<Interviews[]> =>{
     const formattedDate = CalendarUtils.getFormattedYMDDate(date);
    
     try{
-     const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/interviews/get-interviews/${formattedDate}`,{ next: { revalidate: 3600 } });
-     
+     const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/interviews/interviews/${formattedDate}`);
      
      if(!request.ok){
         throw new Error('Error happens while getting the interviews information');
@@ -17,8 +16,8 @@ export const getInterviewsByDate = async (date:Date):Promise<Interviews[]> =>{
     }
     catch(err){
         if(err instanceof Error){
-            throw Error(err.message)
             console.log(err);
+            throw Error(err.message)
         }
         console.log(err);
         return [];
