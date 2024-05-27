@@ -1,16 +1,40 @@
+
+
+import { useEffect, useState } from "react";
+import {Frequency, TimeUnit} from "@/types";
+import { getTotalApplicationByFrequency } from '@/actions/dashboard/getTotalApplicationByFrequency';
+import { AuthAdapter } from '@/config/authAdapter';
 import { DonutChart, AreaChart} from '@tremor/react';
-import { Frequency, TimeUnit } from "@/types";
 import style from './style.module.css';
+import {CardSkeleton } from "@/components";
+
 interface Props{
-  frequencyFilterSelection:TimeUnit,
-  applications:Frequency
+  frequencyState:TimeUnit
 }
 
-export function DonutsChart({frequencyFilterSelection,applications}:Props) {
- 
+export function DonutsChart({frequencyState}:Props) {
+   const [applications,setApplications] = useState<Frequency>([]);
+
+   useEffect(()=>{
+     const getApplication = async() =>{
+       try{
+         const request = await getTotalApplicationByFrequency(AuthAdapter.getUserId() as string,frequencyState)
+          setApplications(request)
+         }
+
+       catch(err){
+        console.log(err);
+       }
+     }
+     getApplication();
+   },[frequencyState])
+
+   if(applications.length === 0){
+    return <CardSkeleton/>
+   }
     return (
     <>
-      { frequencyFilterSelection!=='Day' ?  
+      { frequencyState!=='Day' ?  
        
        <AreaChart
         className={style.area_chart_container}

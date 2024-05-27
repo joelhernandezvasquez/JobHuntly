@@ -4,9 +4,7 @@ import { Frequency, TimeUnit } from "@/types";
 export const getTotalApplicationByFrequency = async (userId:string,timeFrequency:TimeUnit):Promise<Frequency> =>{
 
     try{
-  //       await new Promise((resolve) => {
-  //     setTimeout(resolve, 2000); // Delay the execution of resolve() by 2 seconds
-  // });
+ 
       const request = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard/application/total-by-frequency`,{
         cache:'no-store',
         method:"POST",

@@ -1,15 +1,12 @@
 import { Suspense } from "react";
-import { TimeUnit } from "@/types";
 import { DashboardApplicationStats,DashboardJobStatstictics,DashboardInterviews, JobHistoryWidget  } from "@/components/dashboard";
 import { MaxWidthWrapper,CardPlaceholderSkeleton,CardSkeleton, TaskWidget } from "@/components";
 import { ContactWidget } from "@/components/contact";
 import { ResumeWidget } from "@/components/resume/ResumeWidget/ResumeWidget";
 import style from './style.module.css';
 
-export default function dashboard (
-{searchParams}:{searchParams: { [key: string]:string | string[] | undefined }})
+export default function dashboard ()
 {
-   const frequencyFilterSelection = (searchParams?.frequency ?? 'Week') as TimeUnit;
 
   return ( 
     <MaxWidthWrapper>
@@ -19,7 +16,7 @@ export default function dashboard (
       </Suspense>
       
       <Suspense fallback={<CardPlaceholderSkeleton/>}>
-        <DashboardJobStatstictics filteredfrequency={frequencyFilterSelection}/>
+        <DashboardJobStatstictics/>
       </Suspense>
    
         <Suspense fallback={<CardPlaceholderSkeleton/>}>
