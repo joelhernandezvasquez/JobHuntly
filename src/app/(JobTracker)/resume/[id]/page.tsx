@@ -10,17 +10,17 @@ interface Props{
 }
 
 const ResumePage = async({params}:Props) => {
-   const {id} = params;
-   const resume = await getResume(AuthAdapter.getUserId()!,id); 
+  //  const {id} = params;
+  //  const resume = await getResume(AuthAdapter.getUserId()!,id); 
 
-   if(!resume){
-    return notFound();
-   }
+  //  if(!resume){
+  //   return notFound();
+  //  }
    
-  return (
-    <div>
-    {JSON.stringify(resume)}
-    </div>
-  )
+  // return (
+  //   <div>
+  //   {JSON.stringify(resume)}
+  //   </div>
+  // )
 }
 export default ResumePage;

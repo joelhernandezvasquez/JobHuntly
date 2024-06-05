@@ -1,4 +1,4 @@
-import { auth } from "@/auth.config";
+
 import AuthHeader from "@/components/auth/auth-header/AuthHeader";
 import AuthNavBar from "@/components/auth/auth-navigation/AuthNavBar";
 import { redirect } from "next/navigation";

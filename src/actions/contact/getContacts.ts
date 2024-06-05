@@ -10,11 +10,17 @@ export const getContacts = async(userId:string):Promise<Contact[]>=>{
         throw new Error('Error happens while getting contacts');
     }
   
-    const contacts = await request.json();
-    return filterLastItems(contacts,5);
+    const {contacts} = await request.json();
+    
+    if(contacts.length > 0){
+     return filterLastItems(contacts,5);
+    }
+    return contacts;
+    
  }
  catch(error){
     if(error instanceof Error){
+      console.log(error.message)
      throw new Error('Error while getting contacts');
     }
     return []

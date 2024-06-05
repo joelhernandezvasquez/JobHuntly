@@ -9,7 +9,7 @@ interface Props{
 }
 
 const Application = async({params}:Props) => {
-    const userId = AuthAdapter.getUserId() as string;
+    const userId = await AuthAdapter.getUserId() as string;
     const {id}  = params;
     const application = await getApplication(userId,id);
 

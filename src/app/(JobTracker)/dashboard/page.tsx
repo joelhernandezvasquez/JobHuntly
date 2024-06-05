@@ -19,9 +19,9 @@ export default function dashboard ()
         <DashboardJobStatstictics/>
       </Suspense>
    
-        <Suspense fallback={<CardPlaceholderSkeleton/>}>
+        {/* <Suspense fallback={<CardPlaceholderSkeleton/>}>
           <DashboardInterviews/>
-        </Suspense> 
+        </Suspense>  */}
         
        <Suspense fallback={<CardPlaceholderSkeleton/>}>
           <TaskWidget/>

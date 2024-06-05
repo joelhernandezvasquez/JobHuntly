@@ -10,7 +10,7 @@ interface Props{
 
 const InterviewPage = async ({params}:Props) => {
    const {id} = params;
-   const userId = AuthAdapter.getUserId();
+   const userId = await AuthAdapter.getUserId();
    const interview = await getInterview(userId!,id);
 
    if(!interview){

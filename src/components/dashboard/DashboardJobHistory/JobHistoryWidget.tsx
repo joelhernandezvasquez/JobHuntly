@@ -4,7 +4,8 @@ import { AuthAdapter } from "@/config/authAdapter";
 import style from './style.module.css';
 
 export const JobHistoryWidget = async () => {
-  const jobHistory = await getApplications(AuthAdapter.getUserId()!);
+  const userId = await AuthAdapter.getUserId()
+  const jobHistory = await getApplications(userId);
 
   return (
     <section className={`${style.job_history_container} widget_box widget_headline`}>

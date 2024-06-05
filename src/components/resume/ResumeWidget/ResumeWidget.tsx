@@ -5,7 +5,8 @@ import { AuthAdapter } from '@/config/authAdapter';
 import style from './style.module.css';
 
 export const ResumeWidget = async() => {
-  const resumeList = await getResumes(AuthAdapter.getUserId()!);
+  const userId = await AuthAdapter.getUserId()
+  const resumeList = await getResumes(userId);
   
   return (
     <section className={`${style.resume_container} widget_box widget_headline`}>

@@ -6,7 +6,8 @@ import style from './style.module.css';
 
 
 export const TaskWidget = async () => {
-  const tasks = await getTasks(AuthAdapter.getUserId()!);
+  const userId = await AuthAdapter.getUserId()
+  const tasks = await getTasks(userId);
   
   return (
    <section className={`widget_box ${style.task_container}`}>

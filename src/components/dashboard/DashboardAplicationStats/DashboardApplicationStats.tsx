@@ -6,9 +6,10 @@ import JobAppliedIcon from "../ui/JobAppliedIcon";
 import style from './style.module.css';
 
 export const DashboardApplicationStats = async () => {
-    const userId = AuthAdapter.getUserId();
-    const dashboardStats = await getDashboardApplicationStats(userId!);
-  
+
+    const userId = await AuthAdapter.getUserId();
+    const dashboardStats = await getDashboardApplicationStats(userId);
+    
     return (
     <div className={style.application_stats_container}>
     <BenchMarkWidget>

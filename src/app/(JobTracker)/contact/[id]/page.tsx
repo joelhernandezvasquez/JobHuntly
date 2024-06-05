@@ -10,7 +10,7 @@ interface Props{
 
 const ContactPage = async({params}:Props) => {
   const {id} = params;
-  const userId = AuthAdapter.getUserId();
+  const userId = await AuthAdapter.getUserId();
   const contact  = await getContact(userId!,id);
 
   if(!contact){

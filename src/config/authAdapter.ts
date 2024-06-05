@@ -1,3 +1,4 @@
+import { getUserId } from '@/actions/auth/getUserId';
 import { auth } from '@/auth.config';
 import { Session} from 'next-auth';
 
@@ -34,9 +35,22 @@ export const AuthAdapter = {
           throw Error(err.message);
         }
       }
-     
     },
-    getUserId:()=>{
-      if(userID!=='') return userID;
+    getUserId:async()=>{
+      try{
+        const session = await auth();
+
+        if(session?.user?.email){
+          const request = await getUserId(session?.user?.email);
+          return request.userId;
+        }
+       
+      }
+      catch(err){
+        if(err instanceof Error){
+          console.log(err.message)
+          throw Error (err.message);
+         }
+      }
     }
 }
