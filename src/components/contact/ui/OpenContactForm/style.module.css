@@ -1,0 +1,14 @@
+.add_contact_btn{
+    border:none;
+    cursor: pointer;
+    font-family: var(--epilogue_font);
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 5px;
+    margin:.8rem 0;
+    background-color: var(--primary_brand_clr);
+    color:var(--neutral_0_clr);
+    padding: 10px 21px;
+    font-size: .875rem;
+   
+}

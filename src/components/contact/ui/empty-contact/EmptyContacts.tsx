@@ -1,7 +1,8 @@
+
 import Image from "next/image";
-import Button from "@/components/ui/Button/Button";
 import emptyContactImg from '../../../../../public/icons/empty-contact.svg';
 import style from './style.module.css';
+import { OpenContactForm } from "../OpenContactForm/OpenContactForm";
 
 export const EmptyContacts = () => {
   return (
@@ -13,7 +14,7 @@ export const EmptyContacts = () => {
       alt="emptyContact"
      />
      <p>You have no contacts yet.</p>
-     <Button type="primary" size="small">Add Contact</Button>
+     <OpenContactForm/>
     
     </div>
   )

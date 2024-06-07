@@ -12,6 +12,7 @@ export const DashboardApplicationStats = async () => {
     
     return (
     <div className={style.application_stats_container}>
+     
     <BenchMarkWidget>
     <BenchMarkWidget.Header>
       <h2 className={style.bench_mark_heading}>Total Jobs Applied</h2>

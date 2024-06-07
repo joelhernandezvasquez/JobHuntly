@@ -1,11 +1,10 @@
 
-import Link from "next/link";
-import { ContactCard } from "../ContactCard/ContactCard";
 import { EmptyContacts } from "../ui/empty-contact/EmptyContacts";
 import { getContacts } from "@/actions/contact/getContacts";
 import { AuthAdapter } from "@/config/authAdapter";
 import { IoAddOutline } from "react-icons/io5";
 import style from './style.module.css';
+import { ContactList } from "../ContactList/ContactList";
 
 export const ContactWidget = async () => {
   
@@ -21,21 +20,9 @@ export const ContactWidget = async () => {
        </div>
      </div>
      { 
-       contacts.length > 0 ? (
-        <>
-            <ul className={style.contact_list}>
-            {contacts.map((contact)=>{
-              return <ContactCard key={contact.contactId} contact={contact}/>
-            })}
-            </ul>
-             
-            <Link href={'/contact'} className={style.contact_link_btn}> See all contacts </Link>
-            </>
-        ) 
-        :
-        (
-          <EmptyContacts/>
-        )
+       contacts.length > 0 
+       ? <ContactList contacts={contacts}/>
+       : <EmptyContacts/>
     }
     </section>
   )

@@ -14,3 +14,4 @@ export * from './ui/ActionModalMenu/ActionModalMenu';
 export * from './ui/ActionButton/ActionButton';
 export * from './ui/NotFound/PageNotFound';
 export * from './ui/TriggerActionMenu/TriggerActionMenu';
+export * from './ui/Modal/Modal';
