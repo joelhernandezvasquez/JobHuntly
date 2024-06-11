@@ -1,18 +1,18 @@
 'use client';
 
-import Modal from "@/components/ui/Modal/Modal";
 import useToogle from "@/hooks/useToogle";
-import { AddContactForm } from "../ContactForms/AddContactForm";
+import Modal from "@/components/ui/Modal/Modal";
+import { AddContactForm } from "../ui/ContactForms/AddContactForm";
+import { IoAddOutline } from "react-icons/io5"
 import style from './style.module.css';
 
-export const OpenContactForm = () => {
-
-  const {isToggle,handleToggle} = useToogle();
+export const AddContactButton = () => {
+    const {isToggle,handleToggle} = useToogle();
 
   return (
-    <>
-       <button className={style.add_contact_btn} onClick={handleToggle}>Add Contact</button>
-       {
+    <div className={style.add_contact_container_btn}>
+      <IoAddOutline size={22} color={'#fff'} onClick={handleToggle}></IoAddOutline>
+      {
         isToggle && (
         <Modal closeModal={handleToggle}>
           <h2 className={style.contact_form_heading}>Add Contact</h2>
@@ -20,6 +20,6 @@ export const OpenContactForm = () => {
           <AddContactForm/>
         </Modal>
        )}
-    </>
+   </div>
   )
 }

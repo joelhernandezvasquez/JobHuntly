@@ -2,9 +2,9 @@
 import { EmptyContacts } from "../ui/empty-contact/EmptyContacts";
 import { getContacts } from "@/actions/contact/getContacts";
 import { AuthAdapter } from "@/config/authAdapter";
-import { IoAddOutline } from "react-icons/io5";
-import style from './style.module.css';
 import { ContactList } from "../ContactList/ContactList";
+import { AddContactButton } from "../addContactButton/AddContactButton";
+import style from './style.module.css';
 
 export const ContactWidget = async () => {
   
@@ -15,9 +15,7 @@ export const ContactWidget = async () => {
     <section className={`${style.contact_container} widget_box widget_headline`}> 
      <div className={style.contact_container_header}>
        <h2>Contacts</h2>
-       <div className={style.add_contact_container_btn}>
-        <IoAddOutline size={22} color={'#fff'}></IoAddOutline>
-       </div>
+       <AddContactButton/>
      </div>
      { 
        contacts.length > 0 

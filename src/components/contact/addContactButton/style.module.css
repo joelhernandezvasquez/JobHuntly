@@ -1,0 +1,19 @@
+.add_contact_container_btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height: 25px;
+    background:var(--primary_brand_clr);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.contact_form_heading{
+    font-size: 1.25rem;
+}
+.contact_sub_heading{
+    font-size: 1rem;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_80_clr);
+    margin:.5rem 0;
+}

@@ -1,0 +1,12 @@
+
+.upload_btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    margin:.5rem 0;
+    padding:1rem .5rem;
+    border:1px dashed var(--primary_brand_clr);
+    font-size: 1rem;
+    color:var(--neutral_80_clr);
+}

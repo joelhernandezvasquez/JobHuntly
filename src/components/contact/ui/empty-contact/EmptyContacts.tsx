@@ -15,7 +15,6 @@ export const EmptyContacts = () => {
      />
      <p>You have no contacts yet.</p>
      <OpenContactForm/>
-    
     </div>
   )
 }

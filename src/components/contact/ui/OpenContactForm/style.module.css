@@ -10,5 +10,13 @@
     color:var(--neutral_0_clr);
     padding: 10px 21px;
     font-size: .875rem;
-   
+}
+.contact_form_heading{
+    font-size: 1.25rem;
+}
+.contact_sub_heading{
+    font-size: 1rem;
+    font-family: var(--epilogue_font);
+    color:var(--neutral_80_clr);
+    margin:.5rem 0;
 }
