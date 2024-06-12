@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import style from './style.module.css';
+import { MdError } from "react-icons/md";
 
 interface Props{
     children:ReactNode
@@ -7,7 +8,11 @@ interface Props{
 
 const ErrorMessage = ({children}:Props) => {
   return (
-    <p className={style.error_message}>{children}</p>
+    <div className={style.error_message_container}>
+      <MdError color={"#c02f0e"}/>
+      <p role="alert" className={style.error_message}>{children}</p>
+    </div>
+    
   )
 }
 

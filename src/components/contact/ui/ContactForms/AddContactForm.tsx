@@ -1,18 +1,42 @@
+
+'use client';
 import { UploadFileButton } from '@/components/ui/uploadFileButton/UploadFileButton';
+import {useForm} from 'react-hook-form';
 import style from './style.module.css';
+import ErrorMessage from '@/components/ui/Error/ErrorMessage';
+
+type FormInputs = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  role: string;
+  notes?:string;
+  company?:string;
+  avatar?:string
+}
 
 export const AddContactForm = () => {
+  const { handleSubmit, register, formState: { isValid ,errors}, reset } = useForm<FormInputs>({});
+
+  const onSubmit = (data: FormInputs) =>{
+    console.log({data});
+  }
+  
     return (
-    <form className={style.form}>
+    <form onSubmit={ handleSubmit( onSubmit ) } className={style.form}>
        <div className={'form_field'}>
         <label className={style.label}>First Name</label>
         <input 
          type="text"
          className={style.input}
          id='nameContact'
-         name='nameContact'
          placeholder='Enter your first name'
+         { ...register('firstName', { required: true  }) }
         />
+        {errors.firstName?.type === "required" && (
+          <ErrorMessage>First name is required</ErrorMessage>
+        )}
        </div>
 
        <div className={'form_field'}>
@@ -21,9 +45,12 @@ export const AddContactForm = () => {
          type="text"
          className={style.input}
          id='lastNameContact'
-         name='lastNameContact'
          placeholder='Enter your last name'
+         { ...register('lastName', { required: true  }) }
         />
+        {errors.lastName?.type === "required" && (
+          <ErrorMessage>Last name is required</ErrorMessage>
+        )}
        </div>
 
        <div className={'form_field'}>
@@ -32,9 +59,12 @@ export const AddContactForm = () => {
          type="text"
          className={style.input}
          id='emailContact'
-         name='emailContact'
          placeholder='Enter your email address'
+         { ...register('email', { required: true  }) }
         />
+         {errors.email?.type === "required" && (
+          <ErrorMessage>Email is required</ErrorMessage>
+        )}
        </div>
 
        <div className={'form_field'}>
@@ -43,9 +73,12 @@ export const AddContactForm = () => {
          type="text"
          className={style.input}
          id='phoneContact'
-         name='phoneContact'
          placeholder='(646)-841-6874'
+         { ...register('phone', { required: true  }) }
         />
+         {errors.phone?.type === "required" && (
+          <ErrorMessage>Phone number is required</ErrorMessage>
+        )}
        </div>
 
        <div className={'form_field'}>
@@ -54,9 +87,12 @@ export const AddContactForm = () => {
          type="text"
          className={style.input}
          id='roleContact'
-         name='roleContact'
          placeholder='ex: Recruiter'
+         { ...register('role', { required: true  }) }
         />
+         {errors.role?.type === "required" && (
+          <ErrorMessage>Role of the contact is required</ErrorMessage>
+        )}
        </div>
 
        <div className={'form_field'}>
@@ -65,8 +101,8 @@ export const AddContactForm = () => {
          type="text"
          className={style.input}
          id='companyContact'
-         name='companyContact'
          placeholder='Google'
+         { ...register('company') }
         />
        </div>
 
@@ -80,8 +116,8 @@ export const AddContactForm = () => {
         <textarea 
          className={`${style.input} ${style.textarea}`}
          id='notesContact'
-         name='notesContact'
          placeholder='Add Aditional Information.'
+         { ...register('notes') }
         />
        </div>
 

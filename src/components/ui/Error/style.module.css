@@ -1,8 +1,14 @@
 
+.error_message_container{
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    padding:.2rem 0;
+}
+
 .error_message{
-    font-size: .875rem;
-    padding :.5rem;
-    margin-left: .5rem;
+    font-size: 1rem;
+    font-family: var(--epilogue_font);
     color:var(--accent_red_clr);
     font-weight: bold;
     font-family: 700;
