@@ -32,7 +32,7 @@ export const AddContactForm = () => {
          className={style.input}
          id='nameContact'
          placeholder='Enter your first name'
-         { ...register('firstName', { required: true  }) }
+         { ...register('firstName', { required: true}) }
         />
         {errors.firstName?.type === "required" && (
           <ErrorMessage>First name is required</ErrorMessage>
@@ -60,10 +60,16 @@ export const AddContactForm = () => {
          className={style.input}
          id='emailContact'
          placeholder='Enter your email address'
-         { ...register('email', { required: true  }) }
+         { ...register('email', { required: true,pattern: {
+          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+          message: "Invalid email address"
+        }  }) }
         />
          {errors.email?.type === "required" && (
           <ErrorMessage>Email is required</ErrorMessage>
+        )}
+          {errors.email?.type === "pattern" && (
+          <ErrorMessage>{errors.email?.message}</ErrorMessage>
         )}
        </div>
 
@@ -74,10 +80,17 @@ export const AddContactForm = () => {
          className={style.input}
          id='phoneContact'
          placeholder='(646)-841-6874'
-         { ...register('phone', { required: true  }) }
+         { ...register('phone', { required: true , 
+          pattern: {
+          value: /^\(\d{3}\) \d{3}-\d{4}$/,
+          message: "Invalid phone number format"
+        }}) }
         />
          {errors.phone?.type === "required" && (
           <ErrorMessage>Phone number is required</ErrorMessage>
+        )}
+         {errors.phone?.type === 'pattern' && (
+          <ErrorMessage>Invalid phone number format</ErrorMessage>
         )}
        </div>
 
