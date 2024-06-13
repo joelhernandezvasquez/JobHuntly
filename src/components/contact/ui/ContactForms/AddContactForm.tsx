@@ -1,5 +1,6 @@
 
 'use client';
+import { useFormStatus } from 'react-dom';
 import { UploadFileButton } from '@/components/ui/uploadFileButton/UploadFileButton';
 import {useForm} from 'react-hook-form';
 import style from './style.module.css';
@@ -24,7 +25,7 @@ export const AddContactForm = () => {
   }
   
     return (
-    <form onSubmit={ handleSubmit( onSubmit ) } className={style.form}>
+    <form  onSubmit={ handleSubmit( onSubmit ) } className={style.form}>
        <div className={'form_field'}>
         <label className={style.label}>First Name</label>
         <input 
@@ -135,25 +136,34 @@ export const AddContactForm = () => {
        </div>
 
        <div className={style.form_btn_container}>
-         <SubmitContactButton/>
+       <button 
+         disabled={!isValid}
+         type="submit" 
+         className={`${style.add_contact_btn} ${!isValid && style.pending_btn}`}
+      >
+     Add contact
+    </button>
+         {/* <SubmitContactButton/> */}
        </div>
     </form>
   )
 }
-function SubmitContactButton() {
-  //const { pending } = useFormStatus();
+// function SubmitContactButton() {
+//   const { pending } = useFormStatus();
+//   console.log(pending)
+//   return (
+//     <button 
+//       type="submit" 
+//       className={`${style.add_contact_btn} ${pending && style.pending_btn}`}
+//       // className={ clsx({
+//       //   "btn-primary": !pending,
+//       //   "btn-disabled": pending
+//       // })}
+//       disabled={ pending }
+//       >
+//      Add contact
+//     </button>
+//   );
+// }
 
-  return (
-    <button 
-      type="submit" 
-      className={style.add_contact_btn}
-      // className={ clsx({
-      //   "btn-primary": !pending,
-      //   "btn-disabled": pending
-      // })}
-      // disabled={ pending }
-      >
-     Add contact
-    </button>
-  );
-}
+

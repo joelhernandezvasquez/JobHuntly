@@ -41,3 +41,6 @@
     font-size: 1rem;
     width:100%;
 }
+.pending_btn{
+  background-color:gray;
+}
