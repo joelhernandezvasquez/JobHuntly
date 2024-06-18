@@ -6,7 +6,11 @@ import { AddContactForm } from "../ui/ContactForms/AddContactForm";
 import { IoAddOutline } from "react-icons/io5"
 import style from './style.module.css';
 
-export const AddContactButton = () => {
+interface Props{
+  userId:string
+}
+
+export const AddContactButton = ({userId}:Props) => {
     const {isToggle,handleToggle} = useToogle();
 
   return (
@@ -17,7 +21,7 @@ export const AddContactButton = () => {
         <Modal closeModal={handleToggle}>
           <h2 className={style.contact_form_heading}>Add Contact</h2>
           <p className={style.contact_sub_heading}>We would like to know more about your new contact! Please complete the details below.</p>
-          <AddContactForm/>
+          <AddContactForm userId={userId}/>
         </Modal>
        )}
    </div>

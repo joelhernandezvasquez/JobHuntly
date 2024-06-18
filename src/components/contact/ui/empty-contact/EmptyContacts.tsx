@@ -1,10 +1,13 @@
 
 import Image from "next/image";
 import emptyContactImg from '../../../../../public/icons/empty-contact.svg';
-import style from './style.module.css';
+import { AuthAdapter } from "@/config/authAdapter";
 import { OpenContactForm } from "../OpenContactForm/OpenContactForm";
+import style from './style.module.css';
 
-export const EmptyContacts = () => {
+export const EmptyContacts = async () => {
+  const userId = await AuthAdapter.getUserId();
+  
   return (
     <div className={style.empty_contact_container}>
      <Image
@@ -14,7 +17,7 @@ export const EmptyContacts = () => {
       alt="emptyContact"
      />
      <p>You have no contacts yet.</p>
-     <OpenContactForm/>
+     <OpenContactForm userId ={userId}/>
     </div>
   )
 }

@@ -2,19 +2,19 @@ import { getUserId } from '@/actions/auth/getUserId';
 import { auth } from '@/auth.config';
 import { Session} from 'next-auth';
 
-let userID:string = '' ;
+// let userID:string = '' ;
 
-const setUserID = (idValue:string) =>{
-   if(userID === idValue) return;
-     userID = idValue;
-}
+// const setUserID = (idValue:string) =>{
+//    if(userID === idValue) return;
+//      userID = idValue;
+// }
 
 export const AuthAdapter = {
  
     getSession:async () => {
       try{
         const session = await auth();
-        setUserID(session?.user?.id ?? (session?.user as any)?.user?.id);
+        // setUserID(session?.user?.id ?? (session?.user as any)?.user?.id);
         
        return session;
       } 

@@ -1,10 +1,13 @@
 
 'use client';
-import { useFormStatus } from 'react-dom';
+import { useRouter } from 'next/navigation';
 import { UploadFileButton } from '@/components/ui/uploadFileButton/UploadFileButton';
 import {useForm} from 'react-hook-form';
-import style from './style.module.css';
+import { Toaster, toast } from 'sonner';
 import ErrorMessage from '@/components/ui/Error/ErrorMessage';
+import { addContact } from '@/actions/contact/addContact';
+import style from './style.module.css';
+
 
 type FormInputs = {
   firstName: string;
@@ -17,11 +20,33 @@ type FormInputs = {
   avatar?:string
 }
 
-export const AddContactForm = () => {
-  const { handleSubmit, register, formState: { isValid ,errors}, reset } = useForm<FormInputs>({});
+interface Props{
+  userId:string
+}
 
-  const onSubmit = (data: FormInputs) =>{
-    console.log({data});
+export const AddContactForm = ({userId}:Props) => {
+  const router = useRouter();
+  const { handleSubmit, register, formState: { isValid ,errors}, reset } = useForm<FormInputs>({});
+  
+  const onSubmit = async (data: FormInputs) =>{
+    try{
+      const request = await addContact(userId,data);
+      
+      if(!request.ok){
+        toast.error(request.message,{position:'top-center'});
+        return;
+      }
+      toast.success(request.message,{position:'top-center'});
+      reset();
+      router.refresh();
+    }
+    catch(error){
+      if(error instanceof Error){
+        console.log(error.message);
+        toast.error(error.message);
+      }
+      console.log(error);
+    }
   }
   
     return (
@@ -145,7 +170,9 @@ export const AddContactForm = () => {
     </button>
          {/* <SubmitContactButton/> */}
        </div>
+       <Toaster/>
     </form>
+
   )
 }
 // function SubmitContactButton() {

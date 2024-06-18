@@ -5,7 +5,11 @@ import useToogle from "@/hooks/useToogle";
 import { AddContactForm } from "../ContactForms/AddContactForm";
 import style from './style.module.css';
 
-export const OpenContactForm = () => {
+interface Props{
+  userId:string
+}
+
+export const OpenContactForm = ({userId}:Props) => {
 
   const {isToggle,handleToggle} = useToogle();
 
@@ -17,7 +21,7 @@ export const OpenContactForm = () => {
         <Modal closeModal={handleToggle}>
           <h2 className={style.contact_form_heading}>Add Contact</h2>
           <p className={style.contact_sub_heading}>We would like to know more about your new contact! Please complete the details below.</p>
-          <AddContactForm/>
+          <AddContactForm userId={userId}/>
         </Modal>
        )}
     </>

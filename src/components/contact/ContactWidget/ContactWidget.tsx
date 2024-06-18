@@ -15,7 +15,7 @@ export const ContactWidget = async () => {
     <section className={`${style.contact_container} widget_box widget_headline`}> 
      <div className={style.contact_container_header}>
        <h2>Contacts</h2>
-       <AddContactButton/>
+       <AddContactButton userId={userId}/>
      </div>
      { 
        contacts.length > 0 
