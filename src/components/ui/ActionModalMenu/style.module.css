@@ -24,3 +24,9 @@
     font-weight: 500;
     font-family: var(--epilogue_font);
 }
+.action_menu_item:hover{
+    color:var(--primary_brand_clr);
+    font-weight: 700;
+    cursor: pointer;
+   
+}

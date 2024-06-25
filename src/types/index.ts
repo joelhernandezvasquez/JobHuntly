@@ -12,7 +12,7 @@ export type Status = 'To Do'| 'In Progress'| 'Done';
 
 export type ApplicationStatus = 'Applied' | 'Bookmarked' | 'Interviewing' | 'Negotiating' |'Accepted' | 'Offered' | 'Declined' | 'Rejected' | 'Archived'
 
-
+export type views = 'contact'
 
 
 

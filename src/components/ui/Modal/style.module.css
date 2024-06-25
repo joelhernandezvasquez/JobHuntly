@@ -8,20 +8,18 @@
     background:rgba(84, 82, 122,.9);
     z-index:20;
     display:flex;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
 .modal{
     position:absolute;
     top:20px;
     width:97%;
-    height: 600px;
+    max-height:700px;
     border-radius:10px;
     background:white;
     padding:1rem .5rem;
-    overflow: auto;
-
+    overflow:auto;
 }
 .modal_header{
     display:flex;
@@ -42,11 +40,12 @@
 
 .modal_body{
     padding:.5rem;
+    overflow: auto;
+
 }
 
 @media(min-width:600px){
     .modal{
-        top:80px;
         width:500px;
     }
 }
