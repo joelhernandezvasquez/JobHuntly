@@ -8,6 +8,7 @@ interface Props{
 }
 
 export const ContactCard = ({contact}:Props) => {
+
   return (
     <li className={style.contact_card}>
      { 
@@ -23,6 +24,7 @@ export const ContactCard = ({contact}:Props) => {
        actionEntity="contact"
        actionId={contact.contactId}
        actionRoutingUrl={'/contact/'}
+       actionData={contact}
       />
     </li>
   )
