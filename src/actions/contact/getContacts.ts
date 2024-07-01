@@ -12,9 +12,10 @@ export const getContacts = async(userId:string):Promise<Contact[]>=>{
   
     const {contacts} = await request.json();
     
-    if(contacts.length > 0){
-     return filterLastItems(contacts,5);
-    }
+   //  TODO:move this logic to the component that needs to filter
+   //  if(contacts.length > 0){
+   //   return filterLastItems(contacts,5);
+   //  }
     return contacts;
     
  }

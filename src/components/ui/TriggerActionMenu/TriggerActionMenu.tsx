@@ -38,8 +38,8 @@ export const TriggerActionMenu = ({actionId,actionData,actionRoutingUrl,actionEn
     }
  
     return (
-        <div className={`${style.actions_container} ${className && className} ${dotsDirrection === 'row' && style.flex_row}`}>
-        <ActionButton className={style.actions_btn} callback={handleToggle}/>
+        <div className={`${style.actions_container} ${className && className} `}>
+        <ActionButton className={`${style.actions_btn} ${dotsDirrection === 'row' && style.flex_row}`} callback={handleToggle}/>
        
         { isToggle &&
           <div ref={modalRef}>

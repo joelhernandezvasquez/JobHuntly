@@ -9,3 +9,8 @@ export interface Contact{
     company?:string,
     avatar?:string | null
 }
+
+export interface ContactResponse {
+    ok:boolean,
+    contact:Contact
+}

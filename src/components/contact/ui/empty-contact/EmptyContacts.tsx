@@ -5,6 +5,8 @@ import { AuthAdapter } from "@/config/authAdapter";
 import { OpenContactForm } from "../OpenContactForm/OpenContactForm";
 import style from './style.module.css';
 
+
+
 export const EmptyContacts = async () => {
   const userId = await AuthAdapter.getUserId();
   

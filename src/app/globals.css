@@ -164,3 +164,15 @@ a{
   margin-bottom:.5rem;
 }
 
+.fs_14{
+  font-size: 0.875rem;
+}
+
+.clr_neutral_90{
+  color:var(--neutral_90_clr);
+}
+.primary_clr{
+  color:var(--primary_brand_clr);
+}
+
+
